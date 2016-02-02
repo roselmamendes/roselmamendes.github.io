@@ -1,18 +1,16 @@
 ---
 layout: post
-title: Criando seu site/blog com Github Pages e Jekyll
+title: Um dia, Roselma conheceu o Jekyll no Github, então viu que era bom
 categories: frontend
 published: false
 ---
+
+Nada como começar um blog com um texto descrevendo como eu criei o próprio blog.
 
 *Para entendimento desse artigo é necessária uma noção de programação e conhecer certos termos utilizados no desenvolvimento de software.
 Eu tento explicar algumas coisas, mas abordar tudo fica inviável, acredito.
 Tem dúvida? Pergunta aí nos comentários que eu tento responder dentro do possível.
 :) (rosto sorrindo)*
-
-Depois de passar um domingo escrevendo na companhia das divas Beyoncé, Erykah Badu, Jill Scott, Lauryn Hill, eis o resultado.
-
-Nada como começar um blog com um texto descrevendo como eu criei o próprio blog.
 
 
 ## Jekyll
@@ -132,7 +130,7 @@ Perceba que a penúltima mensagem diz `Server address: http://0.0.0.0:4000/`. Is
 
 Vou dar uma passada no que me parece ser o básico para você escrever um artigo no seu site.
 
-Para adicionar um post em seu site/blog crie um arquivo seguindo o seguinte formato em seu nome:
+Para adicionar um post em seu site/blog crie um arquivo no seguinte formato em seu nome:
 
 `YYYY-MM-DD-titulo-do-artigo.markdown`
 
@@ -166,7 +164,7 @@ Entre esses hífens você pode definir variáveis suas e/ou usar as variáveis p
 
 - title: o título do post. O que você definir aqui será usado como Título na página do post, bem como na página inicial na lista de posts do seu site.
 
-Tem várias outras que podem ser definidas. [Aqui](http://jekyllrb.com/docs/frontmatter/) você encontra seu uso.
+Tem várias outras que podem ser definidas. [Aqui](http://jekyllrb.com/docs/frontmatter/) você encontra mais sobre.
 
 Após esse bloco de definições todo o texto colocado é tratado como o corpo do post.
 
@@ -218,7 +216,7 @@ Minha imagem aparecerá no mesmo lugar que foi colocado esse código.
 
 ![Estrutura da pasta](/assets/images/jekyll-estrutura-pasta.png)
 
-Não vou falar de todas as pastas e arquivos mostrados na imagem acima. Somente os que trabalharemos nesse post.
+Não vou falar de todas as pastas e arquivos mostrados na imagem acima. Somente as que acredito que valem a explicação para um ínicio com Jekyll.
 
 **_config.yml** guarda as informações de configuração. Aqui definimos, por exemplo, o nome do site, contatos, e com isso acessá-los em qualquer lugar que quisermos no site.
 
@@ -230,11 +228,40 @@ Não vou falar de todas as pastas e arquivos mostrados na imagem acima. Somente 
 
 **about.md** é onde temos a seção Sobre do site. Aqui você pode colocar uma descrição sobre você ou outra coisa que ache pertinente.
 
-**_posts**, como já falamos na seção `Escrevendo um post`, os posts do seu site ficarão nessa pasta. O legal também é que o Jekyll permite o acesso de todos os posts dentro dessa pasta usando a sintaxe do Liquid. 
+**_posts**, como já falamos na seção `Escrevendo um post`, os posts do seu site ficarão nessa pasta. O legal também é que o Jekyll permite o acesso de todos os posts dentro dessa pasta usando a sintaxe do Liquid nos arquivos .markdown e .html. 
 
-Aí dá pra usar a imaginação nos arquivos .html de como mostrar os posts. Vamos falar um pouco disso na próxima seção.
+Aí dá pra usar a imaginação nos arquivos .html de como mostrar os posts.
 
 ### Visual do seu site
+
+Bem, essa parte talvez seja a que mais pegue ou não. Pelo menos pegou um pouco, ou melhor, demandou um tempo a mais. Eu não tenho tanto domínio de CSS e HTML assim e fui catando a melhor maneira de fazer o que queria para o visual do site.
+
+Eu enxerguei dois caminhos. Pelo menos foram os que me deparei construindo esse blog.
+
+1. Você pode bota a mão na massa com o CSS e HTML. Manuseando e/ou adicionando os arquivos nas pastas _includes, css, _layouts e o arquivo index.html.
+
+...ou...
+
+2. ...você pode procurar por temas prontos na rede mundial de computadores. Para os íntimos, Google (ou DuckDuckGo, ou outro site de busca de sua preferência. Seja feliz).
+
+Eu fui pelo caminho dos temas.
+
+É o caminho mais fácil? Sim.
+
+Procurar temas me ajudou a encontrar visuais que me agradacem, sem que eu tivesse que defini um antes.
+Eu já sei que gosto de coisas com cores, mas ao mesmo tempo o mais clean possível. Assim encontrava os temas nessa categoria e via o que mais se adequava ao meu gosto.
+
+Encontrei o site http://jekyllthemes.org/. Lá tem uma variedade de templates para você escolher.
+
+Escolhido o tema, baixe as pastas e arquivos e substitua na sua pasta do projeto.
+
+Se você já tiver escrito algum post. Lembre-se de mantê-los na pasta _posts. 
+
+Geralmente os temas vem com alguns posts de exemplo, é legal da uma olhada neles para ver quais variáveis (a parte do Front Matter) a pessoa criadora está usando para mostrar as informações nas páginas. Por exemplo, imagem oficial do post para ser exibida na página oficial.
+
+Outra coisa, alguns temas vem com algumas configurações a mais no arquivo _config. Por exemplo, teve um tema que baixei que colocava o endereço local do site como http://localhost:4000/DropeAlgumaCoisa, em vez do padrão que é http://localhost:4000. Ou com uma variável para apontar a foto da pessoa autora do site.
+
+Além disso atentar que muitos temas **não vem com o arquivo Gemfile** ou um [rakefile](http://stackoverflow.com/questions/2881482/what-is-a-rakefile) para executar as dependências do site na máquina. Teve um tema que tive que colocar um arquivo Gemfile e repetir o processo que mencionamos na seção `Instalação do Jekyll`.
 
 ## No Github
 Arquivos a serem ignorados
