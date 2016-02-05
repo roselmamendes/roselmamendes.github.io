@@ -38,6 +38,7 @@ Tutorial sobre Markdown http://markdowntutorial.com/
 **HTML**
 
 **Liquid**
+https://github.com/Shopify/liquid/wiki
 
 **CSS e SASS**
 
@@ -212,6 +213,8 @@ Por exemplo, possuo uma imagem mensagem-bundle-sucesso.png na pasta images dentr
 
 Minha imagem aparecerá no mesmo lugar que foi colocado esse código.
 
+Gosto de usar o [dillinger.io](http://dillinger.io). Um editor online para arquivos markdown. Ele permite que escrevamos o texto e visualizarmos ao mesmo tempo como ficará em um leitor de markdown.
+
 ### Estrutura de um projeto Jekyll
 
 ![Estrutura da pasta](/assets/images/jekyll-estrutura-pasta.png)
@@ -228,7 +231,7 @@ Não vou falar de todas as pastas e arquivos mostrados na imagem acima. Somente 
 
 **about.md** é onde temos a seção Sobre do site. Aqui você pode colocar uma descrição sobre você ou outra coisa que ache pertinente.
 
-**_posts**, como já falamos na seção `Escrevendo um post`, os posts do seu site ficarão nessa pasta. O legal também é que o Jekyll permite o acesso de todos os posts dentro dessa pasta usando a sintaxe do Liquid nos arquivos .markdown e .html. 
+**_posts**, como já falamos na seção `Escrevendo um post`, os posts do seu site ficarão nessa pasta. O legal também é que o Jekyll permite o acesso de todos os posts dentro dessa pasta usando a sintaxe do [Liquid](#o-que-voc-precisa-para-comear) nos arquivos .markdown e .html. 
 
 Aí dá pra usar a imaginação nos arquivos .html de como mostrar os posts.
 
@@ -248,7 +251,7 @@ Eu fui pelo caminho dos temas.
 
 É o caminho mais fácil? Sim.
 
-Procurar temas me ajudou a encontrar visuais que me agradacem, sem que eu tivesse que defini um antes.
+Procurar temas me ajudou a encontrar visuais que me agradacem, sem que eu tivesse que defini um do zero.
 Eu já sei que gosto de coisas com cores, mas ao mesmo tempo o mais clean possível. Assim encontrava os temas nessa categoria e via o que mais se adequava ao meu gosto.
 
 Encontrei o site http://jekyllthemes.org/. Lá tem uma variedade de templates para você escolher.
@@ -261,7 +264,7 @@ Geralmente os temas vem com alguns posts de exemplo, é legal da uma olhada nele
 
 Outra coisa, alguns temas vem com algumas configurações a mais no arquivo _config. Por exemplo, teve um tema que baixei que colocava o endereço local do site como http://localhost:4000/DropeAlgumaCoisa, em vez do padrão que é http://localhost:4000. Ou com uma variável para apontar a foto da pessoa autora do site.
 
-Além disso atentar que muitos temas **não vem com o arquivo Gemfile** ou um [rakefile](http://stackoverflow.com/questions/2881482/what-is-a-rakefile) para executar as dependências do site na máquina. Teve um tema que tive que colocar um arquivo Gemfile e repetir o processo que mencionamos na seção `Instalação do Jekyll`.
+Além disso atentar que muitos temas **não vem com o arquivo Gemfile** ou um [rakefile](http://stackoverflow.com/questions/2881482/what-is-a-rakefile) para executar as dependências do site na máquina. Teve um tema que tive que colocar um arquivo Gemfile e repetir o processo que mencionamos na seção [`Instalação do Jekyll`](#instalao-do-jekyll).
 
 ## No Github
 Arquivos a serem ignorados
