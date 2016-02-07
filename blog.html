@@ -9,7 +9,23 @@ title: Blog
     {% for post in site.posts %}
         <div class="home__sections-single {% if post.star == true %}star{% endif %}">
             <a href="{{ site.url }}{{ post.url }}">
-                <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
+                <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{% assign m = post.date | date: "%-m" %}
+					{{ post.date | date: "%d" }}
+					{% case m %}
+					  {% when '1' %}Jan
+					  {% when '2' %}Fev
+					  {% when '3' %}Mar
+					  {% when '4' %}Abr
+					  {% when '5' %}Maio
+					  {% when '6' %}Jun
+					  {% when '7' %}Jul
+					  {% when '8' %}Ago
+					  {% when '9' %}Set
+					  {% when '10' %}Out
+					  {% when '11' %}Nov
+					  {% when '12' %}Dez
+				    {% endcase %}
+					</time></aside>
                 <h3>{{ post.title }}</h3>
             </a>
         </div>

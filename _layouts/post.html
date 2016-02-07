@@ -5,7 +5,23 @@ layout: default
 
 <h1 class="post__title">{{ page.title }}</h1>
 
-<span><time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time></span>
+<span><time datetime="{{ page.date | date:"%d-%m-%Y" }}">{% assign m = page.date | date: "%-m" %}
+{{ page.date | date: "%-d" }}
+{% case m %}
+  {% when '1' %}Janeiro
+  {% when '2' %}Fevereiro
+  {% when '3' %}Março
+  {% when '4' %}Abril
+  {% when '5' %}Maio
+  {% when '6' %}Junho
+  {% when '7' %}Julho
+  {% when '8' %}Agosto
+  {% when '9' %}Setembro
+  {% when '10' %}Outubro
+  {% when '11' %}Novembro
+  {% when '12' %}Dezembro
+{% endcase %}
+{{ page.date | date: "%Y" }}</time></span>
 
 {{content}}
 
