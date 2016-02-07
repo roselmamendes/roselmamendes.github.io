@@ -2,7 +2,7 @@ name: Roselma Mendes
 bio: 'Feminista negra e desenvolvedora @thoughtworks'
 picture: 'assets/images/eu.jpg'
 
-url: http://roselmamendes.github.io
+url: 'http://roselmamendes.github.io'
 permalink: /:title/
 
 analytics: 'UA-MYANALYTICS'
