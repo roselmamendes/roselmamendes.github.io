@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Um dia, Roselma conheceu o Jekyll no Github, então viu que era bom
-categories: frontend
+title: "Um dia, Roselma conheceu o Jekyll no Github, então viu que era bom"
+tag: frontend
 published: false
+date: 2016-01-31 19:00
 ---
 
 Nada como começar um blog com um texto descrevendo como eu criei o próprio blog.
@@ -10,15 +11,31 @@ Nada como começar um blog com um texto descrevendo como eu criei o próprio blo
 *Para entendimento desse artigo é necessária uma noção de programação e conhecer certos termos utilizados no desenvolvimento de software.
 Eu tento explicar algumas coisas, mas abordar tudo fica inviável, acredito.
 Tem dúvida? Pergunta aí nos comentários que eu tento responder dentro do possível.
+Outra coisa são as referências. Muitas delas estão em inglês porque não consegui achar alguma em português.
 :) (rosto sorrindo)*
 
 
 ## Jekyll
 
-## Github Pages
-Github
+Jekyll é um gerador de páginas estáticas que servem para a criação de blogs pessoais bem como para empresas. Tem uma proposta simples, onde usa um conversor e um renderizador para ajudar a criadora ou criador produzir a informação que desejam que podem ficar hospedados em um servidor web de sua preferência.
 
-Github Pages
+## Github Pages
+
+O Github Pages é uma proposta do Github para hospedar sites, geralmente blogs pessoais ou sites de projetos também versionados no próprio.
+
+Você pode ter um site por conta cadastrada no Github. Além disso, para cada organização e/ou projeto que você tenha é possível criar um site para tal.
+
+Sites pessoais geralmente estão disponíveis na url no formato a seguir: 
+
+<span class="evidence">
+http://username.github.io
+</span>
+
+Para sites de organização será o formato <span class="evidence">http://organizacao.github.io</span>.
+
+E finalmente para projetos será <span class="evidence">http://username.github.io/project-name</span> ou <span class="evidence">http://organizacao.github.io/project-name`</span>.
+
+A diferença entre os tipos de sites é que para os de projeto, o contéudo deve ser colocado na branch <span class="evidence">gh-pages</span>. Para os outros tipos, a branch master é que irá conter tudo que será publicado.
 
 ## O que você precisa para começar
 
@@ -26,16 +43,29 @@ Há alguns termos que achei necessário ter uma breve explicação e serão cois
 
 **Bundler**
 é uma ferramenta que com a ajuda de um arquivo *Gemfile* instala e gerencia as dependências de uma aplicação na linguagem Ruby.
-Muito usado para o compartilhamento entre equipes que programam em Ruby, onde cada desenvolvedora ou desenvolvedor pode ter as mesmas dependências que as outras pessoas do time possuem.
+Muito usada para o compartilhamento entre equipes que programam em Ruby, onde cada desenvolvedora ou desenvolvedor pode ter as mesmas dependências que as outras pessoas do time possuem.
 Esta prática elimina problemas de incompatibilidades no ambiente de desenvolvimento bem como no lançamento das aplicações aos usuários, evitando que o programa não funcione por falta de alguma dependência que não está instalada.
 
 **Gemfile**,
-como mencionado no site oficial do [Bundle](http://bundler.io/), um arquivo nomeado Gemfile sem extensão descreverá todas as dependências necessárias para o funcionamento de um programa na linguagem [Ruby](https://en.wikipedia.org/wiki/Ruby_(programming_language)).
+como mencionado no site oficial do [Bundle](http://bundler.io/), um arquivo nomeado Gemfile sem extensão descreverá todas as dependências necessárias para o funcionamento de um programa na linguagem [Ruby](https://www.ruby-lang.org/pt/)).
 
 **Markdown**
-Tutorial sobre Markdown http://markdowntutorial.com/
 
-**HTML**
+No site do criador, [John Gruber](https://daringfireball.net/projects/markdown/), diz que:
+
+> Markdown é um ferramenta de conversão texto-para-HTML com foco em escritores da web. Markdown permite que você escreva usando um simples formato de texto, fácil de ler e fácil de escrever, e então converte estruturalmente para um formato válido de XHTML (ou HTML).
+
+Além disso, vale dizer que a criação do Markdown deve e muito a [Aaron Swartz](https://pt.wikipedia.org/wiki/Aaron_Swartz) que colaborou bastante na confecção da sintaxe.
+
+Também o Markdown é muito usado nos famosos README dos repositórios do Github.
+
+Enquanto escrevendo esse post me deparei com esse site: <span class="evidence">http://markdowntutorial.com/</span>. Um tutorial bem legal (em inglês) para quem quer aprender mais sobre como escrever arquivos .markdown.
+
+**HTML**, são siglas em inglês de Hyper Text Markup Language. Em português Linguagem de Marcação de Hipertexto.
+
+Baseada em marcações chamadas de tags HTML. Estas são usadas para registrar que tipo de informação desejamos mostrar em uma página web.
+
+Os arquivos HTML são lidos pelos navegadores que traduzem as tags com seus conteúdos formatados agradavelmente (deveria ser) para a leitura humana.
 
 **Liquid**
 https://github.com/Shopify/liquid/wiki
@@ -264,14 +294,16 @@ Geralmente os temas vem com alguns posts de exemplo, é legal da uma olhada nele
 
 Outra coisa, alguns temas vem com algumas configurações a mais no arquivo _config. Por exemplo, teve um tema que baixei que colocava o endereço local do site como http://localhost:4000/DropeAlgumaCoisa, em vez do padrão que é http://localhost:4000. Ou com uma variável para apontar a foto da pessoa autora do site.
 
-Além disso atentar que muitos temas **não vem com o arquivo Gemfile** ou um [rakefile](http://stackoverflow.com/questions/2881482/what-is-a-rakefile) para executar as dependências do site na máquina. Teve um tema que tive que colocar um arquivo Gemfile e repetir o processo que mencionamos na seção [`Instalação do Jekyll`](#instalao-do-jekyll).
+Além disso atentar que muitos temas **não vem com o arquivo Gemfile** ou um [rakefile](http://www.akitaonrails.com/2009/02/16/automatizando-tarefas-com-ruby-e-rake/) para executar as dependências do site na máquina. Teve um tema que tive que colocar um arquivo Gemfile e repetir o processo que mencionamos na seção [`Instalação do Jekyll`](#instalao-do-jekyll).
 
 ## No Github
 Arquivos a serem ignorados
 Diferença entre o site do seu usuario e site para organizações
 Nome do repositório
 
-## Referências (infelizmente em inglês)
+## Referências 
+[HTML](http://tableless.com.br/o-que-html-basico/)
+
 [Página do Github sobre o Jekyll](https://help.github.com/articles/using-jekyll-with-pages/)
 
 [Bundler](http://bundler.io/v1.11/man/bundle.1.html)
@@ -283,3 +315,7 @@ Nome do repositório
 [Jekyll estrura do diretório](http://jekyllrb.com/docs/structure/)
 
 [Yaml Front Matter](http://jekyllrb.com/docs/frontmatter/)
+
+[Jekyll](http://jekyllrb.com/docs/home/)
+
+[Github Pages](https://help.github.com/articles/user-organization-and-project-pages/)
