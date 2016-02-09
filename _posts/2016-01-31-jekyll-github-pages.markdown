@@ -8,24 +8,28 @@ date: 2016-01-31 19:00
 
 Nada como começar um blog com um texto descrevendo como eu criei o próprio blog.
 
-*Para entendimento desse artigo é necessária uma noção de programação e conhecer certos termos utilizados no desenvolvimento de software.
-Eu tento explicar algumas coisas, mas abordar tudo fica inviável, acredito.
-Tem dúvida? Pergunta aí nos comentários que eu tento responder dentro do possível.
-Outra coisa são as referências. Muitas delas estão em inglês porque não consegui achar alguma em português.
-:) (rosto sorrindo)*
+<span class="evidence" style="font-size: 0.9em;">*Para entendimento desse artigo é necessária uma noção de programação e conhecer certos termos utilizados no desenvolvimento de software.
+Eu tento explicar algumas coisas, mas abordar tudo fica inviável. Acredito.*
+
+<span class="evidence" style="font-size: 0.9em;">*Tem dúvida? Pergunta aí nos comentários que eu tento responder dentro do possível.*
+
+<span class="evidence" style="font-size: 0.9em;">*Outra coisa são as referências. Muitas delas estão em inglês porque não consegui achar alguma em português.
+:) (rosto sorrindo)*</span>
 
 
 ## Jekyll
 
-Jekyll é um gerador de páginas estáticas que servem para a criação de blogs pessoais bem como para empresas. Tem uma proposta simples, onde usa um conversor e um renderizador para ajudar a criadora ou criador produzir a informação que desejam que podem ficar hospedados em um servidor web de sua preferência.
+Jekyll é um gerador de páginas estáticas geralmente usado para a criação de blogs pessoais bem como empresariais.
+
+Tem uma proposta simples, onde usa um conversor (Markdown) e um renderizador (Liquid) para ajudar a criadora ou criador a produzir informação e o visual que desejam, e que por sua vez podem ficar hospedados em um servidor web de sua preferência.
 
 ## Github Pages
 
 O Github Pages é uma proposta do Github para hospedar sites, geralmente blogs pessoais ou sites de projetos também versionados no próprio.
 
-Você pode ter um site por conta cadastrada no Github. Além disso, para cada organização e/ou projeto que você tenha é possível criar um site para tal.
+Você pode ter um site por conta no Github. Além disso, para cada organização e/ou projeto que você tenha, é possível criar um site para tal.
 
-Sites pessoais geralmente estão disponíveis na url no formato a seguir: 
+Os sites pessoais (por conta) geralmente estão disponíveis na url no formato a seguir: 
 
 <span class="evidence">
 http://username.github.io
@@ -33,7 +37,7 @@ http://username.github.io
 
 Para sites de organização será o formato <span class="evidence">http://organizacao.github.io</span>.
 
-E finalmente para projetos será <span class="evidence">http://username.github.io/project-name</span> ou <span class="evidence">http://organizacao.github.io/project-name`</span>.
+E finalmente para projetos serão <span class="evidence">http://username.github.io/project-name</span> ou <span class="evidence">http://organizacao.github.io/project-name`</span>.
 
 A diferença entre os tipos de sites é que para os de projeto, o contéudo deve ser colocado na branch <span class="evidence">gh-pages</span>. Para os outros tipos, a branch master é que irá conter tudo que será publicado.
 
@@ -43,8 +47,9 @@ Há alguns termos que achei necessário ter uma breve explicação e serão cois
 
 **Bundler**
 é uma ferramenta que com a ajuda de um arquivo *Gemfile* instala e gerencia as dependências de uma aplicação na linguagem Ruby.
-Muito usada para o compartilhamento entre equipes que programam em Ruby, onde cada desenvolvedora ou desenvolvedor pode ter as mesmas dependências que as outras pessoas do time possuem.
-Esta prática elimina problemas de incompatibilidades no ambiente de desenvolvimento bem como no lançamento das aplicações aos usuários, evitando que o programa não funcione por falta de alguma dependência que não está instalada.
+Muito usada para o compartilhamento de dependências entre equipes que programam em Ruby.
+
+Esta prática elimina problemas de incompatibilidades no ambiente de desenvolvimento bem como no lançamento das aplicações aos usuários, evitando que o programa não funcione por falta de alguma dependência que não esteja instalada.
 
 **Gemfile**,
 como mencionado no site oficial do [Bundle](http://bundler.io/), um arquivo nomeado Gemfile sem extensão descreverá todas as dependências necessárias para o funcionamento de um programa na linguagem [Ruby](https://www.ruby-lang.org/pt/)).
@@ -53,19 +58,20 @@ como mencionado no site oficial do [Bundle](http://bundler.io/), um arquivo nome
 
 No site do criador, [John Gruber](https://daringfireball.net/projects/markdown/), diz que:
 
-> Markdown é um ferramenta de conversão texto-para-HTML com foco em escritores da web. Markdown permite que você escreva usando um simples formato de texto, fácil de ler e fácil de escrever, e então converte estruturalmente para um formato válido de XHTML (ou HTML).
+> Markdown é um ferramenta de conversão texto-para-HTML com foco em escritores da web. Markdown permite que você escreva usando um simples formato de texto, fácil de ler e fácil de escrever, e então converte estruturalmente para um formato válido de XHTML (ou HTML). (Tradução livre)
 
 Além disso, vale dizer que a criação do Markdown deve e muito a [Aaron Swartz](https://pt.wikipedia.org/wiki/Aaron_Swartz) que colaborou bastante na confecção da sintaxe.
 
-Também o Markdown é muito usado nos famosos README dos repositórios do Github.
+Também o Markdown é muito usado nos famosos README dos repositórios Github.
 
+#Dica. 
 Enquanto escrevendo esse post me deparei com esse site: <span class="evidence">http://markdowntutorial.com/</span>. Um tutorial bem legal (em inglês) para quem quer aprender mais sobre como escrever arquivos .markdown.
 
 **HTML**, são siglas em inglês de Hyper Text Markup Language. Em português Linguagem de Marcação de Hipertexto.
 
-Baseada em marcações chamadas de tags HTML. Estas são usadas para registrar que tipo de informação desejamos mostrar em uma página web.
+Baseada em marcações chamadas de tags HTML. Estas são usadas para registrar o tipo de informação que desejamos mostrar em uma página web.
 
-Os arquivos HTML são lidos pelos navegadores que traduzem as tags com seus conteúdos formatados agradavelmente (deveria ser) para a leitura humana.
+Os arquivos HTML são lidos pelos navegadores que traduzem as tags com seus conteúdos formatados agradavelmente (deveriam ser) para a leitura humana.
 
 **Liquid**
 https://github.com/Shopify/liquid/wiki
