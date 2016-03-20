@@ -3,7 +3,20 @@ layout: default
 ---
 {% include header.html %}
 
+{% if page.figura %}
+<table>
+  <tr>
+    <td>
+      <h1 class="post__title">{{ page.title }}</h1>
+    </td>
+    <td>
+      <img src="{{ page.figura }}" height="150">
+    </td>
+  </tr>
+</table>
+{% else %}
 <h1 class="post__title">{{ page.title }}</h1>
+{% endif %}
 
 <span><time datetime="{{ page.date | date:"%d-%m-%Y" }}">{% assign m = page.date | date: "%-m" %}
 {{ page.date | date: "%-d" }}
