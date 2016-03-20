@@ -304,9 +304,12 @@ a {
   color: #4b0082;
   text-decoration: none;
 }
+
 p {
+  text-align: justify;
+  font: 21px Times, serif;
+  color: #404040;
   line-height: 1.7;
-  color: #666;
   font-weight: 300;
   margin-bottom: 20px;
   letter-spacing: 0.4px;

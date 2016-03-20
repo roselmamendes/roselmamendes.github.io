@@ -19,15 +19,16 @@ layout: compress
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
-
+    
     <style>{% include main.css %}</style>
 </head>
 <body>
 
-    <div class="site-wrapper">
         {% if page.tag %}
-            <div class="post">
+             <div class="site-wrapper" style="margin-left: 270px;">
+              <div class="post" style="width: 700px;">
         {% else %}
+            <div class="site-wrapper">
             {% if page.title == "About" %}
                 <div class="page">
             {% else %}
