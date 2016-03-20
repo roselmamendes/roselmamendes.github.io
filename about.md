@@ -12,7 +12,7 @@ img { width: 50%; margin: 0 auto; display: block; }
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
 <p>Desenvolvedora, trabalhou com aplicações Java e atualmente participa de um projeto Python.
-Já atuou como analista de testes, e programou testes automatizados para UI.</p>
+Já atuou como analista de testes.</p>
 <p>Tem curiosidade em outras linguagens. Já brincou um pouco com Ruby, Javascript, Angular, React, Go, e procura mais.
 Querendo começar a brincar com Haskell.</p>
 <p>Se interessa e busca conhecer mais de Arquitetura de Sooftware.
