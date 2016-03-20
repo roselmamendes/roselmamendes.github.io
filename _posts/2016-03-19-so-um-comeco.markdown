@@ -30,7 +30,7 @@ Lançamentos da Netflix.
 Gifs. Claro.
 <iframe src="//giphy.com/embed/NTzW6P8cpt90Q" width="250" height="250" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/cats-NTzW6P8cpt90Q"></a></p>
 
-**Assuntos técnicos de Desenvolvimento de Software.**
+<b>Assuntos técnicos de Desenvolvimento de Software.</b>
 
 Quero ajudar alguém aí do outro lado a obter a mesma informação que tenho. Talvez vão aparecer assuntos que para você são mais do mesmo.
 
