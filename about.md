@@ -15,7 +15,7 @@ img { width: 50%; margin: 0 auto; display: block; }
 Já atuou como analista de testes, e programou testes automatizados para UI.</p>
 <p>Tem curiosidade em outras linguagens. Já brincou um pouco com Ruby, Javascript, Angular, React, Go, e procura mais.
 Querendo começar a brincar com Haskell.</p>
-<p>Se interessa e busca conhecer mais sobre o mundo da Arquitetura de Sistemas. Se interessa por temas como Clean Code, Domain Driven Design, Design Patterns.
+<p>Se interessa e busca conhecer mais de Arquitetura de Sooftware.
 </p>
 
 <p>Acredita no feminismo interseccional. Se considera uma feminista negra, e sabe que existem outras opressões a serem endereçadas também.</p>
