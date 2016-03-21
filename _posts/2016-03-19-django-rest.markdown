@@ -3,7 +3,7 @@ layout: post
 title: "Rest API, python e Django Rest"
 tag: django, rest, api, flask, python, programação, desenvolvimento
 date: 2016-03-21 17:39
-figura: /assets/images/django-rest/django-livre.jpg
+figura: /assets/images/django-rest/Django-Livre.jpg
 published: true
 ---
 <table>
