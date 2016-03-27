@@ -2,7 +2,7 @@
 layout: post
 title: "Um dia, Roselma conheceu o Jekyll no Github, então viu que era bom"
 tag: frontend
-date: 2016-03-27 19:00
+date: 2016-03-27 10:00
 figura: /assets/images/jekyll-github/jesus.jpg
 ---
 
