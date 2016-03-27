@@ -4,7 +4,6 @@ title: "Um dia, Roselma conheceu o Jekyll no Github, então viu que era bom"
 tag: frontend
 date: 2016-03-27 19:00
 figura: /assets/images/jekyll-github/jesus.jpg
-published: true
 ---
 
 Nada como escrever um post no blog com um texto descrevendo como eu criei o próprio blog.
