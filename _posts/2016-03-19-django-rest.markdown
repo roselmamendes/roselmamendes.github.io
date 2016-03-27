@@ -6,6 +6,9 @@ date: 2016-03-21 17:39
 figura: /assets/images/django-rest/Django-Livre.jpg
 published: true
 ---
+
+*Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas estava errada. Existe o Flask-RESTful.*
+
 <table>
   <tr>
     <td width="400">
@@ -115,7 +118,7 @@ Para facilitar a vida de quem desenvolve, o Django Rest disponibiliza uma interf
 
 ### Por fim
 
-Além do Django Rest, para a linguagem Python existem outros frameworks voltados para Rest API's como o [Flask](http://flask.pocoo.org/).
+Além do Django Rest, para a linguagem Python existem outros frameworks voltados para Rest API's como o <strike>Flask</strike>[Flask-RESTful](https://github.com/flask-restful/flask-restful/).
 
 Vale dar uma olhada em outras opções e escolher a que melhor atende as necessidades do seu projeto.
 
