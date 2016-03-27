@@ -4,12 +4,34 @@ title: "Um dia, Roselma conheceu o Jekyll no Github, então viu que era bom"
 tag: frontend
 date: 2016-03-27 10:00
 figura: /assets/images/jekyll-github/jesus.jpg
+published: true
 ---
 
 Nada como escrever um post no blog com um texto descrevendo como eu criei o próprio blog.
 <div align="center">
   <img src="/assets/images/jekyll-github/amazingly-funny.gif" width="230px" height="200px"/>
 </div>
+
+## Conteúdo
+
+1. [Jekyll](#jekyll)
+2. [Github Pages](#github-pages)
+3. [O que você precisa para começar](#o-que-voc-precisa-para-comear)
+  - [Ferramentas Necessárias](#ferramentas-necessrias)
+4. [Começando nosso site](#comeando-nosso-site)
+  - [Instalação do Jekyll](#instalaao-do-jekyll)  
+  - [Principais Comandos](#principais-comandos)
+  - [Executando o site](#executando-o-site)
+  - [Escrevendo um post](#escrevendo-um-post)
+    1. [Font Matter](#font-matter)
+  - [Básico de Markdown](#bsico-de-markdown)
+    1. [Imagens/Arquivos](#imagens-arquivos)
+  - [Estrutura de um projeto Jekyll](#estrutura-de-um-projeto-jekyll)
+  - [Visual do seu site](#visual-do-seu-site)
+5. [No Github](#no-github)
+  - [Arquivos a serem ignorados](#arquivos-a-serem-ignorados)
+  - [Site do seu usuáro e site para organizações](#site-do-seu-usuario-e-site-para-organizaes)
+6. [Links Úteis](#links-teis)
 
 
 ## Jekyll
@@ -329,7 +351,7 @@ Além disso atentar que muitos temas **não vem com o arquivo Gemfile** ou um [r
 
 A partir do momento que você possui um projeto Jekyll configurado ou não, você pode realizar `push` a um repositório no Github.
 
-###Arquivos a serem ignorados
+### Arquivos a serem ignorados
 
 É interessante que você ignore alguns arquivos e pastas no git, no meu caso eu coloquei em meu arquivo `.gitignore` os seguintes arquivos:
 
@@ -349,6 +371,8 @@ Para as contas pessoais e organizações, o repo do site deve ter o seguinte for
 Este blog, por exemplo, é o repositório `roselmamendes.github.io`.
 
 Com isso em mente atente para o que mencionei na seçao `Github Pages` para ver seu site realmente publicado na web.
+
+E sempre se sinta a vontade para perguntar nos comentários :D <a style="color: #f2f2f2">(rosto sorrindo)</a>
 
 ## Links úteis
 
