@@ -7,20 +7,7 @@ figura: /assets/images/django-rest/Django-Livre.jpg
 published: true
 ---
 
-*Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas estava errada. Existe o Flask-RESTful.*
-
-<table>
-  <tr>
-    <td width="400">
-    <p>Este post talvez se torne uma apresentação para o <a href="https://djangogirls.org/">Django Girls</a> que rolará aqui em <b>Recife</b> nos próximos meses.</p>
-    </td>
-    <td>
-        <img style="padding: 50px;" width="150" align="center" src="https://djangogirls.org/static/img/global/logo.png" />
-    </td>
-  </tr>
-</table>
-
-<span class="evidence"> Antes de ler esse post pergunte-se se você entende o que é um arquivo HTML. Se entende um pouco (pode ser pouco mesmo) do que rola no desenvolvimento de aplicações Web.</span>
+*Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas existe o Flask-RESTful.*
 
 ## Rest
 
