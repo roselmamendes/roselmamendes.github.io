@@ -21,11 +21,58 @@ Com o uso dos verbos teremos acesso aos resources (recursos), que são qualquer 
 
 Exemplo de um resource de uma entidade Usuário:
 
-<script src="https://gist.github.com/roselmamendes/778e47dcba28920a480a.js"></script>
+<pre><code>
+{
+
+  "nome": "Roselma Mendes",
+
+  "idade": 27,
+
+  "Ocupação": "desenvolvedora",
+
+  "tipoDeAcesso": "Admin"
+
+}
+</code></pre>
+
 
 Em linhas gerais, se temos uma url `http://servidor-qualquer.com/v1/posts` que recebe um `POST` com um json definido com campos para um usuário. A url gerará uma ação do tipo "Crie um usuário" (um registro na tabela `usuario` será criado). Esta ação gera uma resposta com informações de status e a url <b>única e exclusiva</b> para acessar o registro, entre outras informações da requisição.
 
-<script src="https://gist.github.com/roselmamendes/4e98fe440572658d49cf.js"></script>
+<pre><code>
+201 Created
+
+{
+    "usuario": {
+        "id": 3,
+        "nome": "Roselma Mendes",
+        "idade": 27,
+        "ocupacao": "desenvolvedora",
+        "tipoDeAcesso": "Admin",
+        "links": [
+            {
+                "href": "/usuario/3",
+                "rel": "self",
+                "method": "GET"
+            },
+            {
+                "href": "/usuario/3",
+                "rel": "edit",
+                "method": "PUT"
+            },
+            {
+                "href": "/usuario/3",
+                "rel": "delete",
+                "method": "DELETE"
+            }
+        ]
+    },
+    "links": {
+       "href": "/usuario",
+       "rel": "list",
+       "method": "GET"
+    }
+}
+</code></pre>
 
 Quando temos um serviço baseado em REST costumamos chamá-lo de um serviço <span class="evidence">Restful</span>.
 
