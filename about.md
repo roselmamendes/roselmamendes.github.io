@@ -11,11 +11,10 @@ img { width: 50%; margin: 0 auto; display: block; }
 
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Desenvolvedora, trabalhou com aplicações Java e atualmente participa de um projeto Python.
-Já atuou como analista de testes.</p>
+<p>Desenvolvedora, trabalhou com aplicações em Java e Python.</p>
 <p>Tem curiosidade em outras linguagens. Já brincou um pouco com Ruby, Javascript, Angular, React, Go, e procura mais.
 Querendo começar a brincar com Haskell.</p>
-<p>Se interessa e busca conhecer mais de Arquitetura de Sooftware.
+<p>Se interessa e busca conhecer mais de Arquitetura de Software.
 </p>
 
 <p>Acredita no feminismo interseccional. Se considera uma feminista negra, e sabe que existem outras opressões a serem endereçadas também.</p>
