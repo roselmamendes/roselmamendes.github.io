@@ -4,16 +4,12 @@ layout: default
 {% include header.html %}
 
 {% if page.figura %}
-<table>
-  <tr>
-    <td>
+
       <h1 class="post__title">{{ page.title }}</h1>
-    </td>
-    <td>
-      <img src="{{ page.figura }}" height="150">
-    </td>
-  </tr>
-</table>
+    
+  
+      <div align="center"><img src="{{ page.figura }}" height="150"></div>
+    
 {% else %}
 <h1 class="post__title">{{ page.title }}</h1>
 {% endif %}
