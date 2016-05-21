@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "Um dia, Roselma conheceu o Jekyll no Github, então viu que era bom"
-tag: frontend
-date: 2016-03-27 10:00
-figura: /assets/images/jekyll-github/jesus.jpg
-published: true
+date:             2016-03-27T13:04:19+05:45 # XML Schema Date/Time
+last_modified_at: 2016-03-27T05:20:00+05:45 # last page modified date/time
+excerpt:          "" # Optional for overwriting content excerpt
+categories:       framework # ["category1"] - best is to have one category in a post
+tags:             ["frontend"] # ["tag1", "tag2", "tag3"] - you can have several post tags
+image:
+  feature: jekyll-github/jesus.jpg # image.jpg, suggested size:  2000x700px
+  topPosition: 0px # top position for featured image if needed
+bgContrast: dark
+bgGradientOpacity: darker
 ---
 
 Nada como escrever um post no blog com um texto descrevendo como eu criei o próprio blog.
@@ -75,7 +81,7 @@ Além disso, vale dizer que a criação do Markdown deve e muito a [Aaron Swartz
 
 Markdown está muito presente nos famosos README dos repositórios Github.
 <hr>
-# Dica.
+# Dica
 Enquanto escrevia esse post me deparei com esse site: [http://markdowntutorial.com/](http://markdowntutorial.com/). Um tutorial bem legal (em inglês) para quem quer aprender mais sobre como escrever arquivos .markdown.
 <hr>
 
@@ -155,7 +161,8 @@ bundle install
 
 Isto instalará o Jekyll, bem como suas dependências necessárias para o projeto.
 
-![Sucesso](/assets/images/jekyll-github/mensagem-bundle-sucesso.png)
+<div class="img img--fullContainer"><img src="/assets/images/jekyll-github/mensagem-bundle-sucesso.png"/>
+</div>
 <a style="color: #f2f2f2">Na imagem: Your bundle is complete! Use bundle show [gemname] to see where a bundled gem is installed.</a>
 
 ### Principais comandos
@@ -184,19 +191,22 @@ Surgirá uma pasta com o nome dado em `nome-site`.
 
 IMPORTANTE: passe o arquivo `Gemfile.lock` para a pasta do projeto criada acima. Se não você verá um erro de execução como abaixo quando formos executar o próximo comando.
 
-![Erro](/assets/images/jekyll-github/mensagem-erro-jekyll-sass.png)
-<a style="color: #f2f2f2">Na imagem são mostradas, em inglês, algumas mensagens de aviso em amarelo e mais duas mensagens de erro em vermelho. Sobre as mensagens em vermelho elas falam de um erro que ocorre na execução do arquivo main.scss.</a>
+<div align="center" class="img img--fullContainer"><img src="/assets/images/jekyll-github/mensagem-erro-jekyll-sass.png"/>
+</div>
+<p style="color: #f2f2f2">Na imagem são mostradas, em inglês, algumas mensagens de aviso em amarelo e mais duas mensagens de erro em vermelho. Sobre as mensagens em vermelho elas falam de um erro que ocorre na execução do arquivo main.scss.</p>
 
 Agora execute o comando ``` bundle exec jekyll serve --watch```.
 
 <p style="align-text: left;">Isso acontecerá:</p>
-![Executando o servidor do jekyll](/assets/images/jekyll-github/executando-jekyll-serve.png)
-<a style="color: #f2f2f2">Na imagem são mostradas mensagens em inglês que indicam alguns caminhos de pasta e arquivos e informa qual a url local do site</a>
+<div align="center" class="img img--fullContainer"><img src="/assets/images/jekyll-github/executando-jekyll-serve.png"/>
+</div>
+<p style="color: #f2f2f2">Na imagem são mostradas mensagens em inglês que indicam alguns caminhos de pasta e arquivos e informa qual a url local do site</p>
 
 Perceba que a penúltima mensagem diz `Server address: http://0.0.0.0:4000/`. Isso significa que se formos no navegador e digitarmos `http://localhost:4000` um site padrão do Jekyl será carregado.
 
-![Página inicial](/assets/images/jekyll-github/pagina-inicial.png)
-<a style="color: #f2f2f2">A imagem mostra a página padrão de um site Jekyll. Existem três seções. No título está escrito "Your Awesome Title". Na segunda seção temos os posts. Na terceira seção informações de contato e uma pequena descrição do site.</a>
+<div align="center" class="img img--fullContainer"><img src="/assets/images/jekyll-github/pagina-inicial.png"/>
+</div>
+<p style="color: #f2f2f2">A imagem mostra a página padrão de um site Jekyll. Existem três seções. No título está escrito "Your Awesome Title". Na segunda seção temos os posts. Na terceira seção informações de contato e uma pequena descrição do site.</p>
 
 ### Escrevendo um post
 

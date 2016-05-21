@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "Rest API, python e Django Rest"
-tag: django, rest, api, flask, python, programação, desenvolvimento
-date: 2016-03-21 17:39
-figura: /assets/images/django-rest/Django-Livre.jpg
-published: true
+date:             2016-03-21T13:04:19+05:45 # XML Schema Date/Time
+last_modified_at: 2016-03-21T05:20:00+05:45 # last page modified date/time
+excerpt:          "" # Optional for overwriting content excerpt
+categories:       framework # ["category1"] - best is to have one category in a post
+tags:             ["django", "rest", "api", "flask", "python", "programação", "desenvolvimento"]
+image:
+  feature: django-rest/Django-Livre.jpg
+  topPosition: 0px
+bgContrast: dark
+bgGradientOpacity: darker
 ---
 
 *Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas existe o Flask-RESTful.*
@@ -91,7 +97,7 @@ Uma API é um conjunto de rotinas usadas pelas aplicações com o intuito de usa
 ## Django
 
 <div align="center" >
-<img src="/assets/images/django-rest/django-unchained.gif" />
+<img src="{{site.baseUrl}}/assets/images/django-rest/django-unchained.gif" />
 </div>
 
 Não o [filme](http://www.imdb.com/title/tt1853728/) do Quentin Tarantino estrelado pelo Jamie Foxx.
@@ -135,8 +141,8 @@ Por sua vez, o serializer faz a "conversão" dos dados de um objeto (Model) para
     <td>
       <p>Não necessariamente sou obrigada a retornar uma ou mais entidades da forma como elas estão representadas no banco.</p>
     </td>
-    <td>
-      <img src="/assets/images/django-rest/usurpa.jpg" />
+    <td class="img img--fullContainer">
+      <img style="padding-left: 1em;" src="/assets/images/django-rest/usurpa.jpg" />
     </td>
   </tr>
 </table>
@@ -144,11 +150,15 @@ Pelo serializer tenho liberdade de mexer em como desejo representar uma ou mais 
 
 Tirando alguns outros passos não mencionados, teremos a url `http://localhost:8000/v1/perguntas` recebendo um json (método POST) e recebendo um outro json em resposta.
 
-<img src="/assets/images/django-rest/resposta-exemplo.png" width="500" height="350" hspace="100px" />
+<div align="center" class="img img--fullContainer">
+  <img src="/assets/images/django-rest/resposta-exemplo.png" />
+</div>
 
 Para facilitar a vida de quem desenvolve, o Django Rest disponibiliza uma interface web que nos permite explorar os verbos implementados.
 
-![Resposta](/assets/images/django-rest/print-django-rest-interface.png)
+<div align="center" class="img img--fullContainer">
+  <img src="/assets/images/django-rest/print-django-rest-interface.png" />
+</div>
 
 ### Por fim
 

@@ -1,80 +1,92 @@
 ---
 layout: default
 ---
-{% include header.html %}
+<article class="postWrapper">
+  <section class="section--first is-darkBackgrounded u-table">
+    <div class="section-backgroundImage">
 
-{% if page.figura %}
+      {% if page.image.feature %}
+        <img class="post-featuredImage" src="{{ page.image.feature | prepend: site.baseurl_featured_img }}" style="
+        {% if page.image.topPosition %}
+          top:{{ page.image.topPosition }};
+        {% endif %}
+        " alt="">
+      {% endif %}
 
-      <h1 class="post__title">{{ page.title }}</h1>
-    
-  
-      <div align="center"><img src="{{ page.figura }}" height="150"></div>
-    
-{% else %}
-<h1 class="post__title">{{ page.title }}</h1>
-{% endif %}
-
-<span><time datetime="{{ page.date | date:"%d-%m-%Y" }}">{% assign m = page.date | date: "%-m" %}
-{{ page.date | date: "%-d" }}
-{% case m %}
-  {% when '1' %}Janeiro
-  {% when '2' %}Fevereiro
-  {% when '3' %}Março
-  {% when '4' %}Abril
-  {% when '5' %}Maio
-  {% when '6' %}Junho
-  {% when '7' %}Julho
-  {% when '8' %}Agosto
-  {% when '9' %}Setembro
-  {% when '10' %}Outubro
-  {% when '11' %}Novembro
-  {% when '12' %}Dezembro
-{% endcase %}
-{{ page.date | date: "%Y" }}</time></span>
-
-{{content}}
-
-<section class="author">
-    <div class="author__left">
-        <img class="author__picture reyes" src="{{ site.url }}/{{ site.picture }}" alt="{{ site.name }}">
     </div>
-
-    <div class="author__right">
-        <h4 class="author__name">{{ site.name }}</h4>
-        <p class="author__bio">{{ site.bio }}</p>
-
-        <div class="author__share">
-            <a class="twitter" href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }} - {{ page.title }} by @{{ site.github }}">
-                <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg><span class="icon-twitter">Tweet</span>
-            </a>
-
-            <a class="facebook" href="javascript:void(0)" onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">
-                <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg><span class="icon-facebook-rect">Share</span>
-            </a>
+    <div class="section-gradient
+    {% if page.bgGradientOpacity == "darker" %}
+      section-gradient--darker
+    {% elsif page.bgGradientOpacity == "lighter" %}
+      section-gradient--lighter
+    {% endif %}
+    "></div>
+    <div class="section-title is-darkBackgrounded u-tableCell u-verticalAlignMiddle">
+      <div class="container">
+        <h2>{{ page.title }}</h2>
+        <div class="postMeta-wrapper">
+          <ul class="postMeta">
+            <li class="postMeta-datetime">
+              <time datetime="{{ page.date }}">
+                {{ page.date | date_to_string }}
+              </time>
+            </li>
+            <li class="postMeta-author">
+              By {{ site.author.name }}
+            </li>
+            <li class="postMeta-tags">
+              {{ page.categories }}
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+  <section class="section--last">
+    <div class="container container--content">
+      <div class="content-body">
 
-<section class="disqus">
-	
-	<div id="disqus_thread"></div>
-	<script>
-		var disqus_config = function () {
-		this.page.url = '{{site.url}}'; 
-		this.page.identifier ='{{page.id}}'; 
-		};
+        {{ content }}
 
-		(function() { 
-		var d = document, s = d.createElement('script');
+      </div>
+    </div>
+    <hr class="u-clearHr"/>
+    <hr class="u-clearHr"/>
+    <hr/>
+    <div class="container container--content">
+      <div class="content-body">
+        {% include comments.html %}
+      </div>
+    </div>
+  </section>
+  <footer class="postFooter">
+    {% if page.previous.url %}
+      <section class="section--prePost is-darkBackgrounded u-table">
+        <div class="section-backgroundImage section-backgroundImage--previousPage">
+          <img class="post-featuredImage"
+          {% if page.previous.image.feature %}
+            src="{{ page.previous.image.feature | prepend: site.baseurl_featured_img }}"
+          {% endif %}
+          style="top:0" alt="">
+        </div>
+        <div class="section-gradient
+        {% if page.previous.bgGradientOpacity == "darker" %}
+          section-gradient--darker
+        {% elsif page.previous.bgGradientOpacity == "lighter" %}
+          section-gradient--lighter
+        {% endif %}
+        "></div>
+        <div class="section-title u-tableCell u-verticalAlignMiddle">
+          <div class="container">
+            <h4>Next story:</h4>
+            <a class="prev" href="{{page.previous.url}}">
+              <h2>{{page.previous.title}}</h2>
+            </a>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+  </footer>
+</article>
 
-		s.src = '//{{site.disqus}}.disqus.com/embed.js';
-
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-		})();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-	
-</section>
-
-{% include footer.html %}
+{% include modal.html %}

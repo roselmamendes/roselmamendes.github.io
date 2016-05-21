@@ -4,6 +4,16 @@ title: "The blog is coming"
 tag: inicio
 date: 2016-03-19 12:40
 published: true
+date:             2016-03-19T13:04:19+05:45 # XML Schema Date/Time
+last_modified_at: 2016-03-19T05:20:00+05:45 # last page modified date/time
+excerpt:          "" # Optional for overwriting content excerpt
+categories:       inicio # ["category1"] - best is to have one category in a post
+tags:             ["inicio"] # ["tag1", "tag2", "tag3"] - you can have several post tags
+bgContrast: dark
+bgGradientOpacity: darker
+image:
+  feature: so-um-comeco/sean-bean.jpg
+  topPosition: 0px
 ---
 
 Este é o ínicio de um blog. Mais [um](http://essepequenomundosoueu.blogspot.com.br/).

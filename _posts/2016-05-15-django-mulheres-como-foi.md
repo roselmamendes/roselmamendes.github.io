@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "Django Mulheres no Recife"
-tag: django, python, mulheres, TI, programação
-date: 2016-05-15 12:40
-figura: /assets/images/django-mulheres-como-foi/djangogirls.png
 excerpt: "Este post vem contar como foi o Django Mulheres que aconteceu na cidade do Recife, Pernambuco, Brasil, nos dias 13 e 14 de maio de 2016. Até o momento já participei de 3 eventos voltados para mulheres na computação. E sempre é legal o resultado de como as pessoas ficam felizes (as que ensinam e as que aprendem)."
+date:             2016-05-15T13:04:19+05:45 # XML Schema Date/Time
+last_modified_at: 2016-05-15T05:20:00+05:45 # last page modified date/time
+categories:       mulherTec # ["category1"] - best is to have one category in a post
+tags:             ["django", "python", "mulheres", "TI", "programação"] # ["tag1", "tag2", "tag3"] - you can have several post tags
+image:
+  feature: django-mulheres-como-foi/img1.jpg # image.jpg, suggested size:  2000x700px
+  topPosition: 0px # top position for featured image if needed
+bgContrast: dark
+bgGradientOpacity: darker
 ---
 
 Este post vem contar como foi o Django Mulheres que aconteceu na cidade do Recife, Pernambuco, Brasil, nos dias 13 e 14 de maio de 2016.
@@ -20,10 +26,10 @@ Até o momento já participei de 3 eventos voltados para mulheres na computaçã
 <table>
   <tr>
     <td>
-     <p style="text-align: left;">A proposta são dois dias de atividades voltadas para um tutorial onde as mulheres devem construir um blog. O blog é feito com o <a href="https://www.djangoproject.com/">framework Django</a> na linguagem <a href="https://www.python.org/">Python</a>.</p>
+     <p>A proposta são dois dias de atividades voltadas para um tutorial onde as mulheres devem construir um blog. O blog é feito com o <a href="https://www.djangoproject.com/">framework Django</a> na linguagem <a href="https://www.python.org/">Python</a>.</p>
     </td>
     <td>
-      <img style="padding-left: 1em;" src="../assets/images/django-mulheres-como-foi/django-logo.png" />
+      <img style="padding-left: 1em;" src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/django-logo.png" />
     </td>
   </tr>
 </table>
@@ -44,73 +50,65 @@ Por isso tentamos ao máximo usar Django Mulheres e não Django Girls.
 
 Aqui em Recife, realizamos o evento no escritório da [ThoughtWorks](https://www.thoughtworks.com/pt) recebendo mais ou menos 30 mulheres e 15 treinadora/es.
 
-<div align="center">
-  <img src="../assets/images/django-mulheres-como-foi/panoramica-tw.png" />
-  <a style="color: #f2f2f2">Na imagem a sala da ThoughtWorks Recife com as mulheres no evento</a>
+<div align="center"><img width="100%" height="100%" src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/panoramica-tw.png"/>
+<p style="color: #f2f2f2">Na imagem a sala da ThoughtWorks Recife com as mulheres no evento</p>
 </div>
 
 Como já mencionei, o formato mais executado é o de dois dias que para nós foi sexta a noite e sábado o dia todo.
 
 O primeiro dia, a noite, dedicamos o tempo para instalação do ambiente nas máquinas. Nesse primeiro momento elas, enquanto configurando seus ambientes, já começaram a conhecer umas as outras e trocar experiências.
 
-<table>
-  <tr>
-  <td>
-    <img src="../assets/images/django-mulheres-como-foi/img13.jpg"/>
-  </td>
-   <td>
-    <img src="../assets/images/django-mulheres-como-foi/img10.jpg"/>
-  </td>
-  </tr>
-  <tr>
-  <td>
-    <img src="../assets/images/django-mulheres-como-foi/img11.jpg"/>
-  </td>
-   <td>
-    <img src="../assets/images/django-mulheres-como-foi/img12.jpg"/>
-  </td>
-  </tr>
-</table>
+
+  <div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img13.jpg"/>
+  </div>
+  
+  <div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img10.jpg"/>
+  </div>
+  
+  <div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img11.jpg"/>
+  </div>
+  
+  <div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img12.jpg"/>
+  </div>
 
 O segundo dia, sábado, ajudamos as mulheres a seguirem o tutorial proposto pelo Django Girls onde propomos a elas que se dividissem em grupo a fim de ajudar o suporte da/os treinadora/es. 
 
-<table>
-  <tr>
-  <td>
-    <img src="../assets/images/django-mulheres-como-foi/img4.jpg"/>
-  </td>
-   <td>
-    <img src="../assets/images/django-mulheres-como-foi/img5.jpg"/>
-  </td>
-  </tr>
-  <tr>
-  <td>
-    <img src="../assets/images/django-mulheres-como-foi/img6.jpg"/>
-  </td>
-   <td>
-    <img src="../assets/images/django-mulheres-como-foi/img7.jpg"/>
-  </td>
-  </tr>
-  <tr>
-   
-    <img src="../assets/images/django-mulheres-como-foi/img8.jpg"/>
-  
-  
-  </tr>
-</table>
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img4.jpg"/>
+</div>
+
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img5.jpg"/>
+</div>
+
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img6.jpg"/>
+</div>
+
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img7.jpg"/>
+</div>   
+
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img8.jpg"/>
+</div>
 
 O dia de sábado começou com uma apresentação introduzindo alguns conceitos do desenvolvimento Web e algumas estruturas da linguagem Python. 
 
 Para a primeira apresentação, achamos importante pegar um pouco do que é dito no inicio do tutorial para que as mulheres iniciassem conhecendo um pouco do que elas seriam expostas ali. 
 
-<div align="center">
-    <img width="400px" height="250px" src="../assets/images/django-mulheres-como-foi/img9.jpg"/>
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img9.jpg"/>
 </div>
 
 A tarde tivemos a apresentação da Wandecleya Martins, que falou um pouco sobre Responsividade.
 
-<div align="center">
-    <img width="400px" height="300px" src="../assets/images/django-mulheres-como-foi/img3.jpg"/>
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img3.jpg"/>
 </div>
 
 Ao longo do dia parávamos alguns momentos para que todas conversassem sobre as dúvidas mais frequentes que nós treinadora/es percebíamos. Falamos sobre como é a estrutura de uma aplicação Django (projeto e apps), versionamento, deploy (implantação, produção). Tudo bem simples para não sobrecarregá-las de tanta informação e que no momento achamos que não deveria ser tão profunda.
@@ -118,8 +116,8 @@ Ao longo do dia parávamos alguns momentos para que todas conversassem sobre as 
 No final batemos um papo todas juntas trocando como foi a experiência de cada uma programando :)
 <a style="color: #f2f2f2">rosto sorrindo</a>
 
-<div align="center">
-    <img width="400px" height="300px" src="../assets/images/django-mulheres-como-foi/img2.jpg"/>
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img2.jpg"/>
 </div>
 
 ## Impressões
@@ -138,8 +136,8 @@ Do que eu senti o saldo foi bem positivo. As mulheres foram expostas a um pouco 
 
 Espero que todas prossigam procurando mais sobre programação e quem sabe ensinem outras também.
 
-<div align="center">
-    <img src="../assets/images/django-mulheres-como-foi/img1.jpg"/>
+<div align="center" class="img img--fullContainer">
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img1.jpg"/>
 </div>
 
 
@@ -154,10 +152,10 @@ Na redes sociais existem várias comunidades voltadas para mulheres onde sempre 
 
 ## Ainda não é suficiente
 
-Existem mulheres que ainda não foram alcançadas por essas iniciativas. Como mulheres na computação, e para mim <b><u>mulher negra</u></b>, devemos nos atentar ao fato que ainda estamos longe da inclusão de <b><u>TODAS as mulheres</u></b>. As mulheres da favela, as mulheres negras, as mulheres trans, mães de família, independente de sua idade, e tantas outras especificidades.
+Existem mulheres que ainda não foram alcançadas por essas iniciativas. Como mulheres na computação, e para mim mulher negra, devemos nos atentar ao fato que ainda estamos longe da inclusão de TODAS as mulheres. As mulheres da favela, as mulheres negras, as mulheres trans, mães de família, independente de sua idade, e tantas outras especificidades.
 
-Eu pessoalmente acredito que devemos ser mais intencionais a quem destinamos esses eventos. Se preocupar em nomes em Inglês é só um aspecto, existem muitos outros que impedem de muitas mulheres serem beneficiadas por esses eventos, como a distância, por exemplo. Não podemos nos esquecer das tantas opressões <b><u>(não há somente machismo e sexismo)</u></b> que assolam milhares de mulheres por aí, as impedindo de terem as mesmas oportunidades que nós mulheres da computação temos.
+Eu pessoalmente acredito que devemos ser mais intencionais a quem destinamos esses eventos. Se preocupar em nomes em Inglês é só um aspecto, existem muitos outros que impedem de muitas mulheres serem beneficiadas por esses eventos, como a distância, por exemplo. Não podemos nos esquecer das tantas opressões que assolam milhares de mulheres por aí, as impedindo de terem as mesmas oportunidades que nós mulheres da computação temos.
 
 <div align="center">
-    <img width="40%" height="40%" src="../assets/images/django-mulheres-como-foi/we-all-can-do-it.jpg"/>
+    <img width="40%" height="40%" src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/we-all-can-do-it.jpg"/>
 </div>
