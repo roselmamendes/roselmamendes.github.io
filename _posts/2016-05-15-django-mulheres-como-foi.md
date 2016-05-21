@@ -137,7 +137,7 @@ Do que eu senti o saldo foi bem positivo. As mulheres foram expostas a um pouco 
 Espero que todas prossigam procurando mais sobre programação e quem sabe ensinem outras também.
 
 <div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img1.jpg"/>
+    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img1.png"/>
 </div>
 
 
