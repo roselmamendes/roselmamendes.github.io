@@ -1,30 +1,52 @@
-name: Roselma Mendes
-bio: 'Feminista negra e desenvolvedora @thoughtworks'
-picture: 'assets/images/eu.jpg'
 
-url: 'http://roselmamendes.github.io'
-permalink: /:title/
+# Syntax highlighting
+markdown:            redcarpet
+highlighter:         pygments
 
-analytics: 'UA-MYANALYTICS'
-disqus: roselmamendes
-#facebook: myfacebook
-twitter: roselmamendes
-instagram: roselmamendes
-linkedin: roselma-mendes-99129528
-#youtube: myyoutube
-#spotify: myspotify
-github: roselmamendes
-email: roselma.mendes@gmail.com
+# Permalinks
+#permalink:           
+#relative_permalinks: true
 
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor]
+# Setup
+timezone:            your timezone # eg. Asia/Kathmandu
+locale:              pt_br # eg. en_us
+name:	Roselma Mendes
+title: NegraTec
+tagline:             'tagline'
+description:         'description'
+url: http://roselmamendes.github.io
+rss:                 rss feed url
+baseurl:             '/'
+baseurl_posts_img:   '/assets/images/posts/'
+baseurl_featured_img: '/assets/images/'
+baseurl_featured_thumbnail: '/assets/images/thumbnail/'
+baseurl_javascripts: '/assets/javascripts/'
+icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
+disqus:              roselmamendes # get it on https://disqus.com/admin/
 
-gems:
-  - jemoji
-  - jekyll-mentions
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
+author:
+  name:           	 Roselma Mendes
+  url:            	 http://roselmamendes.github.io
+  facebook:          username
+  twitter:           roselmamendes
+  google_plus:       username
+  linkedin:          roselmamendes
+  dribbble:          username
+  pinterest:         username
+  kiva:              username
 
-jekyll-mentions:
-    base_url: https://github.com
+fb_admins:           your facebook profile id
+fb_appid:            your facebook app id
+
+# Server
+destination:      	 ./_site
+exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml"]
+port:             	 8000
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "default"
