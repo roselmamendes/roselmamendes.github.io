@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /random-posts-liquid-jekyll.html
+permalink: /random-posts-liquid-jekyll/
 ---
 
 <div align="center">

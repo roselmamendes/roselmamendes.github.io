@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /django-mulheres-como-foi.html
+permalink: /django-mulheres-como-foi/
 ---
 
 <div align="center">
