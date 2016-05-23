@@ -23,6 +23,7 @@ Até o momento já participei de 3 eventos voltados para mulheres na computaçã
  
  Para realizar o evento, o grupo do Django Girls estabelece um modelo e ferramentas que ajudam na realização do mesmo. O modelo é uma sugestão permitindo a quem organiza propor outros formatos que sempre deve almejar expor as mulheres ao desenvolvimento Web.
 
+<!--
 <table>
   <tr>
     <td>
@@ -33,6 +34,11 @@ Até o momento já participei de 3 eventos voltados para mulheres na computaçã
     </td>
   </tr>
 </table>
+-->
+
+<img style="display: inline; float: right; padding-left: 1em; width: 30%;" src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/django-logo.png" />
+A proposta são dois dias de atividades voltadas para um tutorial onde as mulheres devem construir um blog. O blog é feito com o <a href="https://www.djangoproject.com/">framework Django</a> na linguagem <a href="https://www.python.org/">Python</a>.
+
 
 ## Por que mulheres e não girls?
 
