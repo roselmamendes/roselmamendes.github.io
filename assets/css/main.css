@@ -440,8 +440,8 @@ hr {
   margin-bottom: 25px;
   border-radius: 100%;
   position: relative;
-  -webkit-transform: translate(1%, 50%);
-  -moz-transform: translate(1%, 50%);
+  -webkit-transform: translate(1%, 70%);
+  -moz-transform: translate(1%, 70%);
 }
 
 @media only screen and (max-width: 480px) {
