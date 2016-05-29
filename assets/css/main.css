@@ -1818,16 +1818,22 @@ body {
   z-index: 500;
 }
 
+.postMeta-wrapper--frontpage h3 {
+  margin: 0;
+  color: darksalmon;
+}
+
 .postMeta-wrapper--frontpage .postMeta-tagline {
   font-weight: 300;
   letter-spacing: 0.04rem;
-  color: #777777;
+  color: darksalmon;
   text-transform: none;
 }
 
 @media (max-width: 767px) {
   .postMeta-wrapper--frontpage .postMeta-tagline {
     width: 100%;
+    letter-spacing: 0.01rem;
   }
 }
 
@@ -1902,7 +1908,7 @@ body {
 
 .section--postsWrapper {
   width: 100%;
-  background: #f2f2f2;
+  background-color: darksalmon;
   padding-top: 0;
   position: relative;
   clear: both;
