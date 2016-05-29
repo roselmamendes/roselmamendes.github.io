@@ -346,6 +346,12 @@ h2 {
   font-weight: 300;
 }
 
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
 h3 {
   /* font-size: 1.33 * $scale * 1rem;
   line-height: 1.34 * $leading;
