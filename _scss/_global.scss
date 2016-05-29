@@ -12,14 +12,6 @@ body {
   }
 }
 
-.profile-img{
-  width: 125px;
-  margin-bottom: 25px;
-  border-radius: 100%;
-  position: relative;
-  top: 2em;
-}
-
 .brandLogo {
   background-image: url(../images/logo-white.svg);
   background-size: contain;
@@ -77,10 +69,10 @@ body {
   background-position: 0;
   opacity: 0.9;
 
-  
+
   font-size: 2rem;
 
-  
+
   @media (max-width: $screen-xs-max) {
     width: 182px;
     height: 33px;
