@@ -2418,7 +2418,7 @@ body {
 .modal-toggle-bubble {
   position: absolute;
   top: 0;
-  background-color: rgba(34, 34, 34, 0.9);
+  background-color: rgba(233, 150, 122, 0.9);
   -webkit-transform: scale(1);
   -webkit-transition: all 0.3s ease-out;
   z-index: 600;
