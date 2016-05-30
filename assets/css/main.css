@@ -1372,7 +1372,7 @@ body {
   padding: 30px 20px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  background-color: #222222;
+  background-color: darksalmon;
   z-index: 900;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -1412,6 +1412,10 @@ body {
   top: 0;
   bottom: 0;
   right: -14rem;
+}
+
+.sidebar--right a {
+  background-image: none;
 }
 
 .postWrapper,
@@ -1634,7 +1638,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #fff;
+  background: darksalmon;
   padding: 0;
 }
 

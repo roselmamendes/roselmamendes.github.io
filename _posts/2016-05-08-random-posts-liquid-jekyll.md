@@ -10,6 +10,6 @@ image:
   feature: random-post/jekyll-logo.jpg # image.jpg, suggested size:  2000x700px
   topPosition: 0px # top position for featured image if needed
 bgContrast: dark
-bgGradientOpacity: darker
+bgGradientOpacity: lighter
 ---
 <script src="https://gist.github.com/roselmamendes/047699832d243fb7138c20d0eeb61668.js"></script>

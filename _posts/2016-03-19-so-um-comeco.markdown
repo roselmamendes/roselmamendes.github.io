@@ -10,7 +10,7 @@ excerpt:          "" # Optional for overwriting content excerpt
 categories:       inicio # ["category1"] - best is to have one category in a post
 tags:             ["inicio"] # ["tag1", "tag2", "tag3"] - you can have several post tags
 bgContrast: dark
-bgGradientOpacity: darker
+bgGradientOpacity: lighter
 image:
   feature: so-um-comeco/sean-bean.jpg
   topPosition: 0px

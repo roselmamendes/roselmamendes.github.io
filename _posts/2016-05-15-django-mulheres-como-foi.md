@@ -10,7 +10,7 @@ image:
   feature: django-mulheres-como-foi/img1.png # image.jpg, suggested size:  2000x700px
   topPosition: 0px # top position for featured image if needed
 bgContrast: dark
-bgGradientOpacity: darker
+bgGradientOpacity: lighter
 ---
 
 Este post vem contar como foi o Django Mulheres que aconteceu na cidade do Recife, Pernambuco, Brasil, nos dias 13 e 14 de maio de 2016.

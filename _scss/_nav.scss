@@ -12,7 +12,7 @@
   padding: 30px 20px;
   font-family: $title-secondary-font;
   font-size: $font-S;
-  background-color: $gray-darker;
+  background-color: darksalmon;
   z-index: $zIndex-9--sidebar;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -52,6 +52,9 @@
   top: 0;
   bottom: 0;
   right: -14rem;
+  a{
+    background-image: none;
+  }
 }
 
 .postWrapper,

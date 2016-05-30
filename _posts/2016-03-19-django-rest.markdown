@@ -10,7 +10,7 @@ image:
   feature: django-rest/Django-Livre.jpg
   topPosition: 0px
 bgContrast: dark
-bgGradientOpacity: darker
+bgGradientOpacity: lighter
 ---
 
 *Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas existe o Flask-RESTful.*

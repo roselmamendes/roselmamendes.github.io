@@ -10,7 +10,7 @@ image:
   feature: jekyll-github/jesus.jpg # image.jpg, suggested size:  2000x700px
   topPosition: 0px # top position for featured image if needed
 bgContrast: dark
-bgGradientOpacity: darker
+bgGradientOpacity: lighter
 ---
 
 Nada como escrever um post no blog com um texto descrevendo como eu criei o próprio blog.
