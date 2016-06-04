@@ -7,7 +7,7 @@ last_modified_at: 2016-05-15T05:20:00+05:45 # last page modified date/time
 categories:       mulherTec # ["category1"] - best is to have one category in a post
 tags:             ["django", "python", "mulheres", "TI", "programação"] # ["tag1", "tag2", "tag3"] - you can have several post tags
 image:
-  feature: django-mulheres-como-foi/img1.png # image.jpg, suggested size:  2000x700px
+  feature: django-mulheres-como-foi/img1.jpg # image.jpg, suggested size:  2000x700px
   topPosition: 0px # top position for featured image if needed
 bgContrast: dark
 bgGradientOpacity: lighter
