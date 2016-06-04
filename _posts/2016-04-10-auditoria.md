@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Logs"
-date:   2016-05-22 12:00:00
-last_modified_at:  2016-05-22 01:00:00
-excerpt: ""
+date:   2016-06-04 13:50:00
+last_modified_at:  2016-06-04 13:50:00
+excerpt: "Se você é uma desenvolvedora ou desenvolvedor, e reparar, logs fazem parte do nosso dia-a-dia, desde aqueles que geramos em nossos sistemas, desde aqueles que **interpretamos** de sistemas de terceiros."
 categories: arquitetura
 tags:  ["auditoria", "logs", "log estruturado"]
 image:
