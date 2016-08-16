@@ -36,7 +36,9 @@ As mulheres contaram suas experiências no desenvolvimento de software, na robó
 
 O [Instituto de Mídia Étnica](http://www.midiaetnica.com.br/), criado em 2005, surgiu da inquietação de um grupo de jovens com a representação das negras e negros na mídia.
 
-Entre as oficinas e cursos que o instituto promove para a comunidade, o instituto é responsável pela existência do [Correio Nagô](http://correionago.com.br/portal/), um portal que posta conteúdo sobre a comunidade local negra bem como a diáspora. E entre essas ações o instituto promove [uma formação para o uso do Vojo](http://www.midiaetnica.com.br/treinamento-da-tecnologia-vojo/).
+Entre as oficinas e cursos que o instituto promove para a comunidade, o instituto é responsável pela existência do [Correio Nagô](http://correionago.com.br/portal/), um portal que posta conteúdo sobre a comunidade local negra bem como a diáspora. 
+
+Entre as ações o instituto promove [uma formação para o uso do Vojo](http://www.midiaetnica.com.br/treinamento-da-tecnologia-vojo/) que vale a pena falar um pouco sobre.
 
 ## A tecnologia Vojo
 
