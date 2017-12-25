@@ -1,0 +1,38 @@
+<ul id="gn-menu" class="gn-menu-main">
+    <li class="gn-trigger">
+        <div id="nav-icon" class="gn-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav role="navigation" class="gn-menu-wrapper">
+            <div class="gn-scroller">
+                <ul class="gn-menu">
+                  {% for link in site.data.navigation %}
+                    {% if link.url contains 'http' %}{% assign domain = '' %}{% else %}{% assign domain = site.baseurl %}{% endif %}
+                    <li>
+                        <a class="gn-icon fa-{{ link.icon }}" href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a>
+                        <!-- example of submenu -->
+                        <!-- <ul class="gn-submenu">
+                            <li><a class="gn-icon gn-icon-illustrator">Illustrations</a></li>
+                            <li><a class="gn-icon gn-icon-photoshop">Photoshop files</a></li>
+                        </ul> -->
+                    </li>
+                  {% endfor %}
+                  <li>
+                    <a class="gn-icon fa-rss" href="{{ site.baseurl }}/feed.xml" title="Atom/RSS feed">Feed</a></li>
+                </ul>
+            </div><!-- /gn-scroller -->
+        </nav>
+    </li>
+    {% if page.categories[0] %}<li><a href="{{ site.baseurl }}/{{ page.categories[0] }}">{{ page.categories[0] }}</a></li>{% endif %}
+    {% if page.layout == "archivepage" %}<li><a class="codrops-icon fa-rss" href="{{ site.baseurl }}/feed.{{ page.categories[0] }}.xml" target="_blank" title="{{ page.categories[0] }} rss" rel="rss"><span>Subscribe</span></a></li>{% endif %}
+    {% if page.previous %}<li><a class="codrops-icon fa-long-arrow-left" href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}" rel="prev"><span>Anterior</span></a></li>{% endif %}
+    {% if page.next %}<li><a class="codrops-icon gn-icon-next" href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}" rel="next"><span>Próximo</span></a></li>{% endif %}
+    {% if page.url != "/" %}<li><a class="codrops-icon fa-home" href="{{ site.baseurl }}/"><span>Home</span></a></li>{% endif %}
+    {% if page.url == "/" %}<li><a class="codrops-icon fa-info" href="{{ site.baseurl }}/sobre"><span>Sobre</span></a></li>{% endif %}
+    {% if page.url == "/" %}<li><a class="codrops-icon fa-search" href="{{ site.baseurl }}/busca"><span>Busca</span></a></li>{% endif %}    
+</ul>
+
+{% include browser-upgrade.html %}

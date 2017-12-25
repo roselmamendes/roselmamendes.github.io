@@ -1,0 +1,29 @@
+# Site navigation links
+
+- title: Sobre
+  url: /sobre/
+  icon: info
+
+- title: Tec
+  url: /tec/
+  icon: pencil
+
+- title: Música
+  url: /musica/
+  icon: music
+  
+- title: Feminismo Negro
+  url: /feminismo-negro/
+  icon: book
+
+- title: Tags
+  url: /tags/
+  icon: tags
+
+- title: Links
+  url: /links/
+  icon: link
+
+- title: Busca
+  url: /busca/
+  icon: search

@@ -1,0 +1,373 @@
+<script type="text/javascript">
+    var BASE_URL = '{{ site.url }}';
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };  
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="{{ site.baseurl }}/assets/js/scripts.min.js"></script>
+
+{% if site.owner.google.analytics %}
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '{{ site.owner.google.analytics }}', 'auto');
+  ga('require', 'linkid');
+  ga('send', 'pageview');
+</script>
+{% endif %}
+<!-- Scroll effect for invisible & lazy elements -->
+<script type="text/javascript">
+/* Check the location of each 'invisible' element and make visible if needed*/
+function ShowInvisibleElements() {
+        $('.invisible').each( function(i) {
+            
+			var middle_of_object = $(this).offset().top + ($(this).outerHeight()  * 0.35);
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is half visible in the window... */
+            if( bottom_of_window > middle_of_object ) { 
+				var thisIsIframe = $(this).is("iframe");
+				var thisIsImg = $(this).is("img");
+				if (thisIsIframe || thisIsImg) {
+					/* 1.a  object is a lazy source, load it*/
+					if ($(this).data('src')) {
+						$(this).prop('src', $(this).data('src')).data('src', false);
+					}				
+				} else {
+					/* 1.b object contains lazy sources, find them and load them*/
+					var $iframe=$(this).find('iframe');
+					if ($iframe.data('src')) { // only do it once per iframe
+						$iframe.prop('src', $iframe.data('src')).data('src', false);
+					}
+					var $img=$(this).find('img').each(function (index, element) { // do it for each nested image
+						if ($(this).data('src')) { // only do it once per image
+							$(this).prop('src', $(this).data('src')).data('src', false);
+						}
+					});
+				}
+				/* 2. fade-in the object  and remove the invisible class*/
+                $(this).animate({'opacity':'1'}, 500);
+				/* 3. remove the invisible class*/
+				$(this).removeClass("invisible");
+            } else {
+			    /*invisible object not completely visible; thus, ignore the remaining invisible items.*/
+                return;
+            }
+            
+        });
+}
+
+$(document).ready(function() {
+
+	/* Hide the 'back-top' element */
+	$("#back-top").hide();
+	ShowInvisibleElements();
+   
+   /* Every time the window is scrolled ... */
+    $(window).scroll( function() {
+        ShowInvisibleElements();
+		/* Show or hide the back-top element */
+		if ($(this).scrollTop() > 500) {
+			$('#back-top').fadeIn(0);
+		} else {
+			$('#back-top').fadeOut(0);
+		}		
+
+    });
+	
+	/* Scroll to top */
+	$(function () {
+		/* scroll body to 0px on click */
+		$('#back-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+	});	
+    
+});
+</script>
+<!-- Toggle Comments -->
+<script type="text/javascript">
+$( "#comments" ).click(function() {
+  $( "#comments-wrap" ).slideToggle( "slow", function() {
+    // Animation complete.
+  });
+});
+</script>
+<!-- Replace missing images -->
+<script type="text/javascript">
+    $('img').error(function(){
+    $(this).attr('src', '/images/Image_Not_Found.png');
+	var alttext = $(this).attr('alt');
+    $(this).attr('title', 'Image ['+alttext+'] Not Found.');
+});
+</script>
+<!-- menu button -->
+<script type="text/javascript">
+    new gnMenu( document.getElementById( 'gn-menu' ) );
+</script>
+<!-- xml data load -->
+{% if page.xmldata %}
+{% include templates/xmltemplates.xml %}
+<script type="text/javascript" language="javascript">
+    $(document).ready(function() {
+        var currentTemplate = "{{ page.xmldata.template }}";
+        var isEmbeddedTimeline = ( currentTemplate == "timelinejs");
+        $.ajax({
+            type: "GET",
+            url: "{{ page.xmldata.data }}",
+            dataType: "xml",
+            success: function(xml) {
+                var nrOfItems = 0;
+                if  (isEmbeddedTimeline) {
+                  nrOfItems = RenderEmbeddedTimeline(xml);
+                } else {
+                    nrOfItems = RenderNativeTimeline(xml);
+                }
+               $("#amountxmldata").text(nrOfItems);
+            },
+            error: function() {
+                alert("An error occurred while processing XML data.");
+            }
+        });
+    });
+ 
+function RenderNativeTimeline(xml) {
+    var counter = 0;
+    $(xml).find('item').each(function() {
+        var dataitem =xml2jsobj(this);
+        dataitem['alignment'] = (counter % 2 === 0) ? 'right' : '';
+        dataitem['iframetype'] = GetFrameType(dataitem.footer);
+       $( "#{{ page.xmldata.template }}" ).tmpl(dataitem).appendTo( "#timeline" );
+       counter++;
+    });
+    return counter;
+}
+
+function RenderEmbeddedTimeline(xml) {
+    var counter = 0;
+    var jsonItems = {};
+    jsonItems.events = [];
+    $(xml).find('item').each(function() {
+        var dataitem =xml2jsobj(this);
+        var event =  jsObj2TimelineEvent(dataitem);
+        jsonItems.events.push(event);
+        counter++;
+    });
+    //console.log(JSON.stringify(jsonItems));
+      var additionalOptions = {
+        start_at_end: true,
+        dragging: true,
+        scale_factor: 10,
+        initial_zoom: 2,
+        duration: 600,
+        //slide_padding_lr: 90,
+        hash_bookmark: true
+      }	
+    timeline = new TL.Timeline('timeline-js', jsonItems, additionalOptions);
+    return counter;
+}
+
+// Conversion is based on a default template; Ideally there should be a way
+// to parse a custom template and generate the Timeline event from there.
+function jsObj2TimelineEvent(dataitem) {
+        var event = {};
+        event.media = {};
+        event.start_date = {};
+        event.text = {};
+        event.background ={};
+        // 1. event background
+        event.background.url = (dataitem.header == null) ?  "" : dataitem.header;
+        // 2. event media
+        var mediaUrl = dataitem.footer; // backwards compatible
+        if (mediaUrl == null) {
+            mediaUrl = (dataitem.mediaurl == null) ? "" : dataitem.mediaurl;
+        }
+        if (GetFrameType(mediaUrl) == "bandcamp") {
+           if (isMobile.any()) {
+                mediaUrl = '<iframe style="border: 0; width: 100%; height: 120px;" src="'+ mediaUrl +'/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=false/artwork=small/" seamless></iframe>';
+           } else {
+                mediaUrl = '<iframe style="border: 0; width: 100%; height: 100%" src="'+ mediaUrl +'/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/transparent=false/" seamless></iframe>';
+           }
+        }
+        event.media.url = mediaUrl; 
+        event.media.caption = (dataitem.mediacaption == null) ? "" : dataitem.mediacaption;        
+        event.media.credit = (dataitem.mediacredit == null) ? "" : "Credit: " + dataitem.mediacredit;
+        //event.media.thumbnail = event.background.url;
+        // 3. event date
+        var date = new Date(dataitem.subtitle);
+        event.start_date.year = date.getFullYear();
+        event.start_date.month = date.getMonth()+1;
+        event.start_date.day = date.getDate();
+        // 4. event text
+        event.text.headline = (dataitem.title == null) ? "" : dataitem.title;
+        var eventText =  (dataitem.body == null) ? " " : dataitem.body;
+        var eventTextSource = "";
+        if (dataitem.source != null) {
+            eventTextSource = '<p class="pull-right inline-quote">source: <a href="'+dataitem.sourcelink+'" target="_blank">'+ dataitem.source +'</a></p>'
+        }
+        var eventTextTags = "";
+        if (dataitem.tags != null) {
+            var tagsString = dataitem.tags;
+            var tagSeparators = [' ', ',', '·', '\\*'];
+            var tags = tagsString.split(new RegExp(tagSeparators.join('|'), 'g'));
+            tags = tags.filter(function(e){return e}); // clean empty values
+            var parsedTags = '';
+            for(var i in tags) {
+                parsedTags += '· <a href="'+ document.location.origin + '/tags/#' + tags[i]+'" target="_blank">'+tags[i]+'</a> ';
+            }
+            parsedTags = parsedTags.substr(1);
+            eventTextTags = '<p><i class="fa fa-tags"></i> ' + parsedTags + '</p>';
+        }
+        event.text.text = eventTextTags + eventText + eventTextSource;
+        
+        return event;
+}
+
+function GetFrameType(footer) {
+        var frametype = "other";
+        if (footer) {
+            if ( footer.indexOf("bandcamp") > -1 ) {
+                frametype = "bandcamp";
+            } else if (footer.indexOf("soundcloud") > -1) {
+                frametype = "soundcloud";
+            }
+        }
+        return frametype;
+}
+	
+function xml2jsobj(node) {
+	var	data = {};
+	// append a value
+	function Add(name, value) {
+		if (data[name]) {
+			if (data[name].constructor != Array) {
+				data[name] = [data[name]];
+			}
+			data[name][data[name].length] = value;
+		}
+		else {
+			data[name] = value;
+		}
+	};
+	
+	// element attributes
+	var c, cn;
+	for (c = 0; cn = node.attributes[c]; c++) {
+		Add(cn.name, cn.value);
+	}
+	
+	// child elements
+	for (c = 0; cn = node.childNodes[c]; c++) {
+		if (cn.nodeType == 1) {
+			if (cn.childNodes.length == 1 && cn.firstChild.nodeType == 3) {
+				// text value
+				if (cn.nodeName) {
+					Add(cn.nodeName, cn.firstChild.nodeValue);
+				}
+			} else {
+				// sub-object
+				if (cn.nodeName) {
+					// added to support cases when node is empty
+					if (cn.childNodes.lenght > 0) {
+						Add(cn.nodeName, xml2jsobj(cn));
+					} else {
+						Add(cn.nodeName, null);
+					}
+				}
+			}
+		}
+	}
+	return data;
+}	
+</script>
+{% endif %}
+{% if page.instafeed %}
+<!-- Instafeed -->
+{% assign instafeedImage = '{{image}}' %}
+{% assign instafeedCaption = '{{caption}}' %}
+{% assign instafeedLink = '{{link}}' %}
+{% assign instafeedLocation = '{{location}}' %}
+{% assign instafeedUserName = '{{model.user.username}}' %}
+<script type="text/javascript">
+    var loadButton = document.getElementById('instafeed-load-more');
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '{{ site.owner.instagram.userId }}',
+        clientId: '{{ site.owner.instagram.clientId }}',
+        accessToken: '6678174.467ede5.205a03ebc4b74d4082823781c3149575',
+        sortBy: '{{ page.instafeed.sortBy }}',
+        limit: 60,
+        resolution: '{{ page.instafeed.resolution }}',
+        filter: function(image) {
+            return image.tags.indexOf('{{ page.instafeed.tag }}') >= 0;
+        },
+        after: function() {
+            if (!this.hasNext() && (loadButton != null)) {
+			    // disable load-more button if no more results to load
+				loadButton.className += " disabled-btn";
+                loadButton.setAttribute('disabled', 'disabled');
+            }
+        },
+        template: '<figure class="center"><a href="{{instafeedLink}}" target="_blank"><img src="{{instafeedImage}}" /></a><figcaption>{{instafeedLocation}}.<br/>Photo Courtesy: <a href="{{instafeedLink}}" target="_blank">@{{instafeedUserName}}</a></figcaption></figure><p>{{instafeedCaption}}</p>'
+    });
+	if (loadButton != null) {
+		// bind the load more button
+		loadButton.addEventListener('click', function() {
+			feed.next();
+		});
+	}
+    feed.run();
+	// load feed when bottom of page if there is no load button
+	if (loadButton == null) {
+		jQuery(document).ready(function(){
+			$(window).scroll(function() {
+				if($(window).scrollTop() + $(window).height() == $(document).height()) {
+					feed.next();
+				}
+			});
+		});	
+	}
+</script>
+{% endif %}
+{% if page.enable_chat %}
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/{{ site.owner.tawkto.siteID }}/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+{% endif %}

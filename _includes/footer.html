@@ -1,22 +1,21 @@
-<footer class="section--footer">
-  <div class="container container--content">
-    <div>
-      <a href="{{ site.baseurl }}about/">Sobre {{site.author.name}}</a>
-    </div>
-    <ul style="text-align: center;" class="socialAccountList">
-      <li><a href="http://twitter.com/{{ site.author.twitter }}" class="socialAccount socialAccount--twitter" target="_blank"></a></li>
-<!--      <li><a href="http://facebook.com/{{ site.author.facebook }}" class="socialAccount socialAccount--facebook" target="_blank"></a></li>-->
-      <li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="socialAccount socialAccount--linkedin" target="_blank"></a></li>
-<!--
-      <li><a href="http://dribbble.com/{{ site.author.dribble }}" class="socialAccount socialAccount--dribbble" target="_blank"></a></li>
-      <li><a href="https://www.pinterest.com/{{ site.author.pinterest }}/" class="socialAccount socialAccount--pinterest" target="_blank"></a></li>
-      <li><a href="http://www.kiva.org/lender/{{ site.author.kiva }}" class="socialAccount socialAccount--kiva" target="_blank"></a></li>
+{% if site.owner.google.ad-client and site.owner.google.ad-slot %}{% include ad-footer.html %}{% endif %}
 
-      <li><a href="{{ site.rss }}" class="socialAccount socialAccount--rss" target="_blank"></a></li>-->
-    </ul>
-    <div>
-      © 2015 All Rights Reserved. Powered by the <a href="https://github.com/vincentchan/mickey" target="_blank">Mickey theme</a> for Jekyll.
-    </div>
-    <div>Icons made by <a href="http://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-  </div>
-</footer>
+<span>&copy; 2017-{{ site.time | date: '%Y' }} {{ site.owner.name }}.<br/>Last update on {{ site.time | date_to_rfc822 }}</span>
+<div class="social-icons">
+    {% if site.owner.twitter %}<a class="social-share" href="https://twitter.com/{{ site.owner.twitter }}" title="{{ site.owner.name}} on Twitter" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>{% endif %}
+    {% if site.owner.facebook %}<a class="social-share" href="https://facebook.com/{{ site.owner.facebook }}" title="{{ site.owner.name}} on Facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>{% endif %}
+    {% if site.owner.google.plus %}<a class="social-share" href="https://plus.google.com/+{{ site.owner.google.plus }}" title="{{ site.owner.name}} on Google+" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>{% endif %}
+    {% if site.owner.linkedin %}<a class="social-share" href="https://linkedin.com/in/{{ site.owner.linkedin }}" title="{{ site.owner.name}} on LinkedIn" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>{% endif %}
+    {% if site.owner.stackexchange %}<a class="social-share" href="{{ site.owner.stackexchange }}" title="{{ site.owner.name}} on StackExchange" target="_blank"><i class="fa fa-stack-exchange fa-2x"></i></a>{% endif %}
+    {% if site.owner.instagram.user %}<a class="social-share" href="https://instagram.com/{{ site.owner.instagram.user }}" title="{{ site.owner.name}} on Instagram" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>{% endif %}
+    {% if site.owner.flickr %}<a class="social-share" href="https://www.flickr.com/photos/{{ site.owner.flickr }}" title="{{ site.owner.name}} on Flickr" target="_blank"><i class="fa fa-flickr fa-2x"></i></a>{% endif %}
+    {% if site.owner.github %}<a class="social-share" href="https://github.com/{{ site.owner.github }}" title="{{ site.owner.name}} on Github" target="_blank"><i class="fa fa-github fa-2x"></i></a>{% endif %}
+    {% if site.owner.tumblr %}<a class="social-share" href="http://{{ site.owner.tumblr }}.tumblr.com" title="{{ site.owner.name}} on Tumblr" target="_blank"><i class="fa fa-tumblr fa-2x"></i></a>{% endif %}
+    {% if site.owner.pinterest %}<a class="social-share" href="https://www.pinterest.com/{{ site.owner.pinterest }}/" title="{{ site.owner.name}} on Pinterest" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a>{% endif %}
+    {% if site.owner.weibo %}<a class="social-share" href="https://www.weibo.com/u/{{ site.owner.weibo }}/" title="{{ site.owner.name}} on Weibo" target="_blank"><i class="fa fa-weibo fa-2x"></i></a>{% endif %}
+    {% if site.owner.lastfm %}<a class="social-share" href="https://www.last.fm/user/{{ site.owner.lastfm }}/" title="{{ site.owner.name}} on Last.fm" target="_blank"><i class="fa fa-lastfm fa-2x"></i></a>{% endif %}
+    {% if site.owner.soundcloud %}<a class="social-share" href="https://www.soundcloud.com/{{ site.owner.soundcloud }}/" title="{{ site.owner.name}} on Soundcloud" target="_blank"><i class="fa fa-soundcloud fa-2x"></i></a>{% endif %}
+    {% if site.owner.mixcloud %}<a class="social-share" href="https://www.mixcloud.com/{{ site.owner.mixcloud }}/" title="{{ site.owner.name}} on Mixcloud" target="_blank"><i class="fa fa-mixcloud fa-2x"></i></a>{% endif %}
+  <a class="social-share" href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss fa-2x"></i></a>
+</div><!-- /.social-icons -->
+<span>Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; the <a href="https://github.com/TheMicronaut/micronaut-theme" rel="nofollow">Modified So Simple Theme</a>.<br/>Except where otherwise noted, content on this site is licensed under a<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons International License.</a><br/><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/licensebuttons-by-nc-sa.svg" /></a></span>

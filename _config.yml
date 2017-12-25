@@ -1,52 +1,74 @@
+# Site wide configuration
 
-# Syntax highlighting
-markdown:            kramdown
-highlighter:         rouge
+title: Blog da Roselma Mendes
+locale: pt_BR
+timezone: CET
+description: 
+logo: ErykahBaduWorldCD.jpg
+search: true
+url: #your-site-url
+external_data_url: # common url for images and other external data
 
-# Permalinks
-#permalink:
-#relative_permalinks: true
+# Jekyll configuration
 
-# Setup
-timezone:            your timezone # eg. Asia/Kathmandu
-locale:              pt_br # eg. en_us
-name:	Roselma Mendes
-title: NegraTec
-tagline:             'tagline'
-description:         'description'
-url: http://roselmamendes.github.io
-rss:                 rss feed url
-baseurl:             '/'
-baseurl_posts_img:   '/assets/images/posts/'
-baseurl_featured_img: '/assets/images/'
-baseurl_featured_thumbnail: '/assets/images/thumbnail/'
-baseurl_javascripts: '/assets/javascripts/'
-icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
-disqus:              roselmamendes # get it on https://disqus.com/admin/
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-paginate
 
-author:
-  name:           	 Roselma Mendes
-  url:            	 http://roselmamendes.github.io
-  facebook:          username
-  twitter:           roselmamendes
-  google_plus:       username
-  linkedin:          roselma-mendes-99129528
-  dribbble:          username
-  pinterest:         username
-  kiva:              username
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
 
-fb_admins:           your facebook profile id
-fb_appid:            your facebook app id
+mathjax: true
 
-# Server
-destination:      	 ./_site
-exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml"]
-port:             	 8000
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
 
-defaults:
-  -
-    scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      layout: "default"
+paginate: 20
+paginate_path: /posts/page:num
+
+
+# Site owner
+owner:
+  name: Roselma Mendes
+  avatar: site-logo.png
+  email: roselma.mendes@gmail.com
+  disqus-shortname: roselmamendes
+  twitter: roselmamendes
+  facebook: #username
+  github: roselmamendes
+  stackexchange: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram:
+    user: #instagram-username
+    userId: #instagram-userId
+    clientId: #instagram-clientId
+  flickr: #username
+  tumblr: #tumblr-name
+  pinterest: #username
+  weibo: #userid
+  soundcloud: #soundcloud-name
+  mixcloud: #mixcloud-name
+  lastfm: #username
+  tawkto:
+    siteID: #tawkto-siteID
+  google:
+    plus:
+    analytics: #google-analytics-id
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
