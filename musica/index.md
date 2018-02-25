@@ -6,7 +6,7 @@ excerpt: "An archive of music posts sorted by date."
 hidelogo: true
 search_omit: true
 archive:
-  image: images/dancing-man.gif
+  image: images/erykah-janelle.gif
 ---
 <ul class="post-list">
 {% for post in site.categories.music %}
