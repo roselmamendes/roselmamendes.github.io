@@ -8,7 +8,7 @@ image:
   feature: entrega-continua/riri-iron-heart.jpeg
   credit: Riri Williams - IronHeart
   creditlink: en.wikipedia.org/wiki/Riri_Williams
-excerpt: "Como utilizar conteinerização para aplicações web e qual a vantagem disso."
+excerpt: "Já ouviu sobre Entrega Contínua? Seu time implementa essa prática?"
 comments: true
 share: true
 hidelogo: true
