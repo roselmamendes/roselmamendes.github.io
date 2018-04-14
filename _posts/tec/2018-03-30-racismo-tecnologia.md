@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Estamos construindo tecnologias racistas?"
-modified:   2017-04-08
+modified:   2018-04-14
 categories: tec
 tags: [bias algorithm, racismo, IA, programação]
 image:

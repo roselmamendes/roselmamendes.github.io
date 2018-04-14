@@ -34,8 +34,46 @@
           {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
         {% endif %}
         <span class="author vcard">Por <span class="fn">{{ author.name }}</span></span>
-        <span class="entry-date date published" title="Published on {{ page.date | date_to_rfc822 }}"><time datetime="{{ page.date | date_to_xmlschema }}"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;{{ page.date | date: "%B %d, %Y" }}</time></span>
-        {% if page.modified %}<span class="entry-date date modified updated" title="Modified on {{ page.modified | date_to_rfc822 }}"><time datetime="{{ page.modified }}"><i class="fa fa-pencil"></i>&nbsp;&nbsp;{{ page.modified | date: "%B %d, %Y" }}</time></span>{% endif %}
+        <span class="entry-date date published" title="Published on {{ page.date | date_to_rfc822 }}"><time datetime="{{ page.date | date_to_xmlschema }}"><i class="fa fa-calendar-o"></i>&nbsp;&nbsp;
+
+	    {{ page.date | date: "%d" }}
+	    {% assign m = page.date | date: "%-m" %}
+{% case m %}
+  {% when '1' %}Janeiro
+  {% when '2' %}Fevereiro
+  {% when '3' %}Março
+  {% when '4' %}Abril
+  {% when '5' %}Maio
+  {% when '6' %}Junho
+  {% when '7' %}Julho
+  {% when '8' %}Agosto
+  {% when '9' %}Setembro
+  {% when '10' %}Outubro
+  {% when '11' %}Novembro
+	    {% when '12' %}Dezembro
+	    {% endcase %}
+{{ page.date | date: "%y" }}
+	</time></span>
+        {% if page.modified %}<span class="entry-date date modified updated" title="Modified on {{ page.modified | date_to_rfc822 }}"><time datetime="{{ page.modified }}"><i class="fa fa-pencil"></i>&nbsp;&nbsp;
+
+	        {{ page.modified | date: "%d" }}
+	    {% assign m = page.modified | date: "%-m" %}
+{% case m %}
+  {% when '1' %}Janeiro
+  {% when '2' %}Fevereiro
+  {% when '3' %}Março
+  {% when '4' %}Abril
+  {% when '5' %}Maio
+  {% when '6' %}Junho
+  {% when '7' %}Julho
+  {% when '8' %}Agosto
+  {% when '9' %}Setembro
+  {% when '10' %}Outubro
+  {% when '11' %}Novembro
+	    {% when '12' %}Dezembro
+	    {% endcase %}
+{{ page.modified | date: "%y" }}
+	</time></span>{% endif %}
         {% capture readtime %}{{ page.content | number_of_words | plus:91 | divided_by:150.0 | append:'.' | split:'.' | first }}{% endcapture %}
         <span class="entry-readingtime" title="{{ page.content | number_of_words }} words"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;{% if readtime == '0' %} &lt; 1{% else %}{{ readtime }}{% endif %} min. lendo</span>
         {% if site.owner.disqus-shortname and page.comments or site.comments %}<span class="entry-comments" title="Click to navigate to comments"><i class="fa fa-comments-o"></i>&nbsp;&nbsp;<a href="{{ page.url }}#comments" data-disqus-identifier="{{ page.path | split:'/' | last | cgi_escape }}">Ver comentários</a></span>{% endif %}
