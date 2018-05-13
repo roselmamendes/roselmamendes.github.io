@@ -10,6 +10,8 @@ github_username:  roselmamendes
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - premonition
+  
 permalink: /:categories/:title/
 
 sass:
