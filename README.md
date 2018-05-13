@@ -1,4 +1,6 @@
 # Blog da Roselma
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/roselmamendes/roselmamendes.github.io.svg?columns=all)](https://waffle.io/roselmamendes/roselmamendes.github.io)
+
 
 **Paleta de cores**
 https://www.colorcombos.com/color-schemes/246/ColorCombo246.html
