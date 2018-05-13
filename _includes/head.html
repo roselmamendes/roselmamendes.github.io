@@ -1,67 +1,37 @@
-<meta charset="utf-8">
-<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
-{% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
-{% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
-{% if page.author %}{% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}{% endif %}
-<meta name="author" content="{{ author.name }}" />
-{% include open-graph.html %}
-{% if site.owner.google.verify %}<!-- Webmaster Tools verfication -->
-<meta name="google-site-verification" content="{{ site.owner.google.verify }}">{% endif %}
-{% if site.owner.bing-verify %}<meta name="msvalidate.01" content="{{ site.owner.bing-verify }}">{% endif %}
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/main.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/css/post.css" media="screen" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  
+  <!-- Place this data between the <head> tags of your website -->
+<title>{{site.title}}</title>
+<meta name="description" content="{{page.excerpt}}" />
 
-{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
-<link rel="canonical" href="{{ canonical }}">
-<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} All Posts Feed">
-<link href="{{ site.url }}/feed.blog.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Blog Feed">
-<link href="{{ site.url }}/feed.music.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Music Feed">
-<link href="{{ site.url }}/feed.stories.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Stories Feed">
+<!-- Twitter Card data -->
+<meta name="twitter:card" value="summary">
 
-<!-- https://t.co/dKP3o1e -->
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph data -->
+<meta property="og:title" content="{{page.title}}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{site.url}}{{page.url}}" />
+<meta property="og:image" content="{{site.url}}/images/{{page.image.feature}}" />
+<meta property="og:description" content="{{page.excerpt}}" />
+</head>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
 
-<!-- For all browsers -->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-<!-- Webfonts -->
-<link href='https://fonts.googleapis.com/css?family=Philosopher:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
 
-<meta http-equiv="cleartype" content="on">
-
-<!-- HTML5 Shiv and Media Query Support -->
-<!--[if lt IE 9]>
-  <script src="{{ site.url }}/assets/js/vendor/html5shiv.min.js"></script>
-  <script src="{{ site.url }}/assets/js/vendor/respond.min.js"></script>
-<![endif]-->
-
-<!-- Modernizr -->
-<script src="{{ site.baseurl }}/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
-<!-- Navigation bar -->
-<script src="{{ site.baseurl }}/assets/js/vendor/classie.js"></script>
-<script src="{{ site.baseurl }}/assets/js/vendor/gnmenu.js"></script>
-
-{% if site.mathjax and page.mathjax %}
-<!-- MathJax -->
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-{% endif %}
-
-{% if page.xmldata.template ==  "timelinejs" %}
-<!-- Knightlab  Timeline 3-->
-<link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
-<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-{% endif %}
-
-<!-- Icons -->
-<!-- 16x16 -->
-<link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
-<!-- 32x32 -->
-<link rel="shortcut icon" href="{{ site.url }}/favicon.png">
-<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/apple-touch-icon-precomposed.png">
-<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.url }}/images/apple-touch-icon-72x72-precomposed.png">
-<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/images/apple-touch-icon-114x114-precomposed.png">
-<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/apple-touch-icon-144x144-precomposed.png">
+  return t;
+}(document, "script", "twitter-wjs"));</script>

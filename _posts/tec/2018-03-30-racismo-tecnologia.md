@@ -9,9 +9,6 @@ image:
   credit: Uhura - Star Trek
   creditlink: https://pt.wikipedia.org/wiki/Uhura
 excerpt: "Enquanto tecnologistas qual nossa parcela de contribuição quanto as injustiças sociais? Eu e tantas Mulheres Negras sabemos qual o papel que uma tecnologia racista tem em nossas vidas."
-comments: true
-share: true
-hidelogo: true
 published: true
 ---
 
@@ -25,7 +22,7 @@ A computação no final das contas é "segui as instruções de um ser humano", 
 
 "Eu só programo meu Rails/Django/React/etc, o que é que eu tenho a ver?"
 
-#### O que é que temos a ver
+## O que é que temos a ver
 
 Quando se é uma Mulher Negra tecnologista, você sabe que ser da área de Tecnologia/Computação não é só uma profissão, é um ato político também.
 
@@ -51,11 +48,13 @@ A luta das Mulheres Negras é por dar acesso a esse grupo os mesmos direitos que
 
 Isso é justiça na vida real <b>e no campo da Computação também</b>.
 
-#### Tecnologia pode ser racista?
+## Tecnologia pode ser racista?
 
 Ovetta Sampson nos questiona com seu [texto](https://www.linkedin.com/pulse/can-technology-racist-ovetta-sampson?articleId=6166609662327152640#comments-6166609662327152640&trk=prof-post). Ela relata a conversa que teve com uma pessoa sobre isso, e já começa o texto falando do vídeo de um rapaz que tenta utlizar um dispenser de sabão:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1lgDiAInFLY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div style="padding-left: 30px; text-align: center;">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/1lgDiAInFLY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
 <br>
 Agora vamos a um [relatório](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) da Propublica sobre o sistema Compas. 
@@ -74,7 +73,7 @@ E ...
 
 [A tecnologia não é racista, mas ela aprende de nós como ser.](https://www.tecmundo.com.br/inteligencia-artificial/102782-tay-twitter-conseguiu-corromper-ia-microsoft-24-horas.htm)
 
-#### A <strike>coisa</strike> tecnologia tá preta
+## A <strike>coisa</strike> tecnologia tá preta
 
 Existem muitas iniciativas voltadas pra discuti sobre o viés algortimico. Alguma delas:
 
@@ -92,7 +91,7 @@ Quando falamos de não construi tecnologias racistas, isso significa também equ
 </figure>
 
 
-#### Links
+## Links
 
 [Sobre estudo da Propublica e o software Compas](https://apublica.org/2016/06/software-que-avalia-reus-americanos-cria-injusticas-na-vida-real/)
 

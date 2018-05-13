@@ -1,15 +1,11 @@
 FROM jekyll/jekyll
 
-RUN mkdir -p /usr/src/app
+COPY Gemfile /srv/jekyll
 
-WORKDIR /usr/src/app
-
-COPY Gemfile /usr/src/app
-
-COPY Gemfile.lock /usr/src/app
+COPY Gemfile.lock /srv/jekyll
 
 RUN bundle install
 
-COPY . /usr/src/app
+COPY . /srv/jekyll
 
 EXPOSE 4000

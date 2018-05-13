@@ -1,0 +1,165 @@
+---
+---
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+$primary-font: "Acme", sans serif;
+$second-font: Arial, Helvetica, sans-serif;
+
+$color-background: #21B6A8;
+$color-text: black;
+$color-blog-section: white;
+$color-highlight: #FFD197;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: $color-background;
+}
+
+.header {
+    color: $color-blog-section;
+    display: flow-root;
+
+    a{
+	text-decoration: none;
+	color: $color-blog-section;
+    }
+    
+    h1 {
+	float: left;
+	font-size: 3em;
+	font-family: $primary-font;
+    }
+    
+    .menu {
+	float: right;
+	margin: 50px;
+
+	a {
+	    text-decoration: none;
+	    font-size: 1.4em;
+	    color: $color-blog-section;
+	    font-family: $second-font;
+	}
+    }
+}
+
+.post-section{
+    margin: 0px auto;
+    width: 70%;
+}
+
+.last-post {
+    border: 2px solid $color-highlight;
+    padding: 10 15 10;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: $second-font;
+    
+    a {
+	text-decoration: none;
+	color: $color-text;
+    }
+    
+    .post-title {
+	text-align: left;
+	font-size: 2.5em;
+	font-family: $primary-font;
+	margin-top: 5px;
+	margin-bottom: 0;
+	span {
+	    background-color: $color-highlight;
+	}
+    }
+
+    p {
+	margin-bottom: 0;
+	color: $color-text;
+	font-size: 1.2em;
+    }
+    
+    img {
+	width: 90%;
+	border-radius: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    }
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 5px;
+    align-content: space-around;
+    justify-content: space-between;
+    
+    .post-list-item {
+	background-color: $color-highlight;
+	padding: 10px;
+	border-radius: 10px;
+	font-family: $second-font;
+	
+	h2 {
+	    font-family: $primary-font;
+	}
+	
+	img {
+	    margin-left: auto;
+	    margin-right: auto;
+	    width: 90%;
+	    border-radius: 5px;
+	}
+
+	a {
+	    text-decoration: none;
+	    color: $color-text;
+	}
+    }
+}
+
+.footer {
+    color: $color-blog-section;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px;
+    font-family: $second-font;
+
+    .social-share {
+	text-decoration: none;
+	color: $color-blog-section;
+    }
+}
+
+.sobre-head {
+    display: flex;
+    margin: 0 auto;
+    width: 900px;
+    
+    h1 {
+	font-family: $primary-font;
+	float: left;
+	margin-left: 20px;
+	
+	span {
+	    background-color: $color-highlight;
+	}
+    }
+
+    .post-content {
+	width: 700px;
+	clear:none;
+	margin-left: 20px;
+	margin-top: 40px;
+    }
+    
+    img {
+	border-radius: 10px;
+	height: 250px;
+    }
+}

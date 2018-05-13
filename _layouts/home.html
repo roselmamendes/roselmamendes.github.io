@@ -1,0 +1,26 @@
+{% include head.html %}
+{% include header.html %}
+
+<div class="post-section">
+<div class="last-post">
+    {% if site.posts[0].image %}
+      <img src="/images/{{site.posts[0].image.feature}}" />
+    {% endif %}
+    <a href="{{site.posts[0].url}}">  <h2 class="post-title"><span>{{ site.posts[0].title }} </span></h2> </a>
+    <p> {{site.posts[0].excerpt}} </p>
+</div>
+
+<div class="post-list">
+  {% for post in site.posts offset:2 %}
+  <div class="post-list-item">
+  {% if post.image %}
+    <img src="/images/{{post.image.feature}}" />
+  {% endif %}
+    <a href="{{post.url}}">  <h2><span>{{ post.title }} </span></h2> </a>
+  <p> {{post.excerpt}} </p>
+  </div>
+  {% endfor %}
+</div>
+</div>
+
+{% include footer.html %}

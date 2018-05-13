@@ -1,74 +1,28 @@
-# Site wide configuration
+title: Blog da Roselma
+email: roselma.mendes@gmail.com
+description: Um pouco de Feminismo Negro Tech e Tecnologia
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: roselmamendes
+github_username:  roselmamendes
 
-title: Blog da Roselma Mendes
-locale: pt_BR
-timezone: CET
-description: 
-logo: eu-fitas.png
-search: true
-url: https://roselmamendes.github.io
-external_data_url: # common url for images and other external data
-
-# Jekyll configuration
-
-permalink:   /:categories/:title/
-markdown:    kramdown
-highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed
+# Build settings
+markdown: kramdown
 plugins:
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-paginate
+permalink: /:categories/:title/
 
-kramdown:
-  input: GFM
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..2
-  enable_coderay: false
+sass:
+  style: compact
 
-mathjax: true
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
-
-paginate: 20
-paginate_path: /posts/page:num
-
-
-# Site owner
-owner:
-  name: Roselma Mendes
-  avatar: site-logo.png
-  email: roselma.mendes@gmail.com
-  disqus-shortname: roselmamendes
-  twitter: roselmamendes
-  facebook: #username
-  github: roselmamendes
-  stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: #username
-  instagram:
-    user: #instagram-username
-    userId: #instagram-userId
-    clientId: #instagram-clientId
-  flickr: #username
-  tumblr: #tumblr-name
-  pinterest: #username
-  weibo: #userid
-  soundcloud: #soundcloud-name
-  mixcloud: #mixcloud-name
-  lastfm: #username
-  tawkto:
-    siteID: #tawkto-siteID
-  google:
-    plus:
-    analytics: #google-analytics-id
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

@@ -5,9 +5,6 @@ modified: 2016-03-27
 excerpt:
 categories: tec
 tags: ["frontend"]
-hidelogo: true
-share: true
-comments: true
 ---
 
 Nada como escrever um post no blog com um texto descrevendo como eu criei o próprio blog.

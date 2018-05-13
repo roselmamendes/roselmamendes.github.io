@@ -3,7 +3,7 @@ layout: post
 title:  "Entrega Contínua, o que aprendi - parte 2"
 modified:   2017-10-07
 categories: tec
-tags: [integracao continua, automacao, segurança, CI/CD, implantação, Mulher Negra, Tecnologia]
+tags: [automacao, segurança, CI/CD, Tecnologia, Implantação]
 image:
   feature: entrega-continua/riri-williams.jpeg
   credit: Riri Williams - IronHeart

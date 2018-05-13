@@ -1,0 +1,12 @@
+---
+---
+@import 'main';
+
+.post-head {
+    h1{
+	font-family: $primary-font;
+	span {
+	    background-color: $color-highlight;
+	}
+    }
+}

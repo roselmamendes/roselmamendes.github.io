@@ -1,7 +1,7 @@
 {% include head.html %}
 {% include header.html %}
 
-<div class="post-head">
+<div class="sobre-head">
   {% if page.image %}
      <img src="/images/{{page.image.feature}}" />
      {% endif %}
@@ -14,15 +14,17 @@
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
-  
-</div>
 
-<div class="post-content">
-  <h1><span>{{page.title}}</span></h1>
   <div>
-  {% include social-media-buttons.html %}
-  {{ content }}
-  {% include social-media-buttons.html %}
+  <h1><span>{{page.title}}</span></h1>
+
+  <div class="post-content">
+
+    {{ content }}
+
+  </div>
   </div>
 </div>
+
+
 {% include footer.html %}
