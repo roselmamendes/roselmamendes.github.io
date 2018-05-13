@@ -42,6 +42,7 @@ $color-highlight: #FFD197;
     }
 
     h2 {
+	font-family: $primary-font;
 	padding-left: 30px;
 	padding-right: 30px;
     }
@@ -51,6 +52,16 @@ $color-highlight: #FFD197;
 	font-size: 1.2em;
 	padding-left: 30px;
 	padding-right: 30px;
+
+	a {
+	    text-decoration: none;
+	    color: black;
+            border-bottom: 3px solid #21B6A8;
+	}
+    }
+
+    ol {
+	margin-left: 40px;
     }
 
     figure {
