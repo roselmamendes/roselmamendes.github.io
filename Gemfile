@@ -31,3 +31,7 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 group :jekyll_plugins do
   gem "premonition", "~> 2.0.0"
 end
+
+group :jekyll_plugins do
+  gem "jektify"
+end
