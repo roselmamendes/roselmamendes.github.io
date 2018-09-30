@@ -1,6 +1,5 @@
 ---
 ---
-@import "jektify";
 @import url('https://fonts.googleapis.com/css?family=Acme');
 
 $primary-font: "Acme", sans serif;
@@ -47,7 +46,6 @@ body {
 	    font-size: 1.4em;
 	    color: $color-blog-section;
 	    font-family: $second-font;
-	    margin-right: 20px;
 	}
     }
 }

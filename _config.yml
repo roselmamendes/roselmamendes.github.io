@@ -11,7 +11,6 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - premonition
-  - jektify
 
 highlighter: pygments 
 redcarpet:
@@ -21,27 +20,6 @@ permalink: /:categories/:title/
 
 sass:
   style: compact
-
-jektify:
-  enable: true
-  open: true
-  toggle:
-    enable: true  
-  spotify:
-    user: roselmamendes
-    text: See me no Spotify
-  sass:
-    jekyll: true
-    other:
-      dir: "css"   
-  title:
-    enable: false
-    text: "Jektify"
-  description:
-    enable: false
-    text: |
-      Jekyll plugin to generate html snippets for embedding Spotify Musics.
-      To listen to the full song, open your Spotify and start these musics.
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
