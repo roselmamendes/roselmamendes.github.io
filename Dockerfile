@@ -2,8 +2,7 @@ FROM jekyll/jekyll
 
 COPY Gemfile /srv/jekyll
 
-COPY Gemfile.lock /srv/jekyll
-
+RUN bundle update
 RUN bundle install
 
 COPY . /srv/jekyll
