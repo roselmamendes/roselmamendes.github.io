@@ -12,7 +12,7 @@ published: true
 share: true
 hidelogo: true
 ---
-#### Emacs
+## Emacs
 
 [GNU Emacs](https://www.gnu.org/software/emacs/) é um editor de texto da família Emacs. É código aberto, portável e customizável. Muito usado pela comunidade de pessoas que desenvolvem software.
 
@@ -27,7 +27,7 @@ Dá pra fazer de um tudo um pouco no Emacs: [abrir sites](https://www.emacswiki.
 	<figcaption><a href="https://www.emacswiki.org/emacs/eww" title="">meu Emacs aberto com o eww e o arquivo markdown deste post.</a>.</figcaption>
 </figure>
 
-#### Major modes
+## Major modes
 
 Um major mode é o modo de edição ativo no momento. Para saber qual está ativo no momento veja na parte de baixo da tela entre parenteses.
 
@@ -48,23 +48,18 @@ Há vários major modes para customizar seu Emacs. Alguns que estou usando:
 
 [Aqui](https://www.emacswiki.org/emacs/List_Of_Major_And_Minor_Modes) uma lista dos major modes disponíveis.
 
-#### Instalando
+## Instalando
 
 Nesta [página](https://www.gnu.org/software/emacs/download.html) você pode encontrar as instruções especificas a seu sistema operacional.
 
-#### Comandos básicos
+## Comandos básicos
 
 A ajuda do Emacs é C-h ?. Onde C significa a tecla Control: segure o Control, pressione h e depois interrogação.
 
 Quando descrevendo os comandos, que se chamam key sequence, a documentação usa das terminologias C e M, onde o primeiro é para a tecla Control e a segunda para a tecla ESC/Alt.
 
-<figure>
-	<img src="http://lduros.net/assets/downloads/gnuemacsref.png">
-	<figcaption>um plano de fundo com comandos do Emacs.</figcaption>
-</figure>
-
 Neste [gist](https://gist.github.com/roselmamendes/41c8d476b6e11712110d7549ede3e71e) coloquei os comandos que me são mais úteis no uso do Emacs.
 
-#### Referências
+## Referências
 
 [Tutorial do Emacs](http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html)

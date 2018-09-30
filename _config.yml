@@ -11,6 +11,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - premonition
+  - jekyll-gist
 
 highlighter: pygments 
 redcarpet:

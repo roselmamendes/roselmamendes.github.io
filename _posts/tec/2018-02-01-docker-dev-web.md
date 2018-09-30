@@ -7,12 +7,9 @@ tags: [docker, node, contêineres]
 image:
   feature: docker-dev-web/group_5622_0.png
 excerpt: "Como utilizar conteinerização para aplicações web e qual a vantagem disso."
-comments: true
-share: true
-hidelogo: true
 published: true
 ---
-#### Conteinerização
+## Conteinerização
 
 Assim como as máquinas virtuais, os contêineres possibilitam o isolamento de um ambiente de execução para uma aplicação.
 Esse isolamento compreende as dependências e componentes da sua aplicação. 
@@ -30,7 +27,7 @@ Diferente de uma máquina virtual, os contêineres são mais "leves". Contêiner
 
 O uso de contêineres não é só para sistemas distribuídos ou microsserviços. A conteinerização é uma vantagem também para arquiteturas simples com componentes como frontend, backend/api, etc. No final a intenção é manter uma implantação segura e fácil de distribuir.
 
-#### Vantagens da Conteinerização
+## Vantagens da Conteinerização
 
 Do [post](https://www.digitalocean.com/community/tutorials/o-ecossistema-do-docker-uma-introducao-aos-componentes-comuns-pt) do Digital Ocean:
 
@@ -42,7 +39,7 @@ Do [post](https://www.digitalocean.com/community/tutorials/o-ecossistema-do-dock
 Estes pontos significam que é possível ter um onboarding no time (pessoas novas no seu time) mais rápido e simples; um processo de implantação rápido e seguro (AWS e Heroku são exemplos de serviços que permitem o deploy de aplicações usando Docker); garantia de que “se na minha máquina funciona na sua também é para funcionar” (desenvolvedora, testadora e ambiente de produção usando a mesma configuração de ambiente).
 
 
-#### Docker
+## Docker
 <figure>
 	<a href="#"><img src="/images/docker-dev-web/dados-docker.png" alt="image"></a>
 	<figcaption><a href="https://www.docker.com/company" title="">https://www.docker.com/company</a></figcaption>
@@ -53,13 +50,13 @@ Estes pontos significam que é possível ter um onboarding no time (pessoas nova
 <img src="/images/docker-dev-web/docker-logo.png" />
 Hoje falar em dockerizar uma aplicação já é um termo na comunidade de TI.
 
-#### Imagem e contêiner
+## Imagem e contêiner
 
 Uma imagem, [como no próprio site do Docker relata](https://docs.docker.com/get-started/#a-brief-explanation-of-containers), é um pacote executável com tudo necessário para rodar um componente de software. Um dockerfile terá as instruções para montar uma imagem, mas ela precisa ser construída para termos um contêiner.
 
 Já um contêiner é uma instância da imagem. Como falamos mais acima sobre o que é um contêiner, um ambiente isolado no "computador host" que acessa arquivos e portas, se configurado para a tal.
 
-#### Dockerizando uma aplicação web
+## Dockerizando uma aplicação web
 A primeira coisa que você precisa é ter um arquivo Dockerfile na pasta do seu repositório.
 
 Como minha aplicação vai usar pacotes Node, vou utilizar uma imagem pronta de Node. No [Docker Hub](https://hub.docker.com/) eu encontrei [essa](https://hub.docker.com/_/node/) imagem e no meu Dockerfile vou colocar:
@@ -102,13 +99,13 @@ Com node, para otimizar a construção de uma imagem você precisa separar o mom
 Para que você possa editar os arquivos e isto reflita no container o comando `docker run` precisa ter `-v <pasta-host>:<pasta-container>` e definido o diretório de trabalho com o parâmetro `-w <pasta-container>`.
 
 
-docker run --rm -p 3000:3000 <b>-v "$PWD":/usr/src/app</b> -w /usr/src/app -it nome-container yarn test
+`docker run --rm -p 3000:3000 <b>-v "$PWD":/usr/src/app</b> -w /usr/src/app -it nome-container yarn test`
 
 <b>Como acessar uma aplicação localmente</b>
 
 Para que seja possível eu acessar na minha máquina o endereço http://localhost:3000, é necessário usar `-p <porta-host>:<port-container>`. No Dockerfile colocar o `EXPOSE <porta-container>`.
 
-docker run --rm <b>-p 3000:3000</b> -v "$PWD":/usr/src/app -w /usr/src/app -it nome-projeto yarn test
+`docker run --rm <b>-p 3000:3000</b> -v "$PWD":/usr/src/app -w /usr/src/app -it nome-projeto yarn test`
 
 Use o parâmetro --rm para garantir que ao "fechar" o container, ele seja destruído. 
  
@@ -125,11 +122,12 @@ O truque que uso é que ao construir a imagem, no Dockerfile, especifico que o n
 ```
 
 No Dockerfile fica como nas linhas 7 a 13:
-<script src="https://gist.github.com/roselmamendes/51c1b0b6ca1f786c9c3d5e018e7316e4.js"></script>
+
+{% gist 51c1b0b6ca1f786c9c3d5e018e7316e4 %}
 
 Perceba que primeiro a construção da imagem começa com o workdir apontando para `usr/src` e depois o workdir passa a ser `usr/src/app`. O último para que o código fonte seja copiado em app em vez de usr.
 
-#### Comandos básicos do Docker
+## Comandos básicos do Docker
 
 docker build: constrói a imagem
 
@@ -141,13 +139,13 @@ docker images: lista as imagens construídas
 
 docker system prune: para remoção de artefatos do Docker (imagens, contêineres, volumes, redes) 
 
-#### Conclusão
+## Conclusão
 
 Conteiner não é um termo novo, mas seu uso tem se tornado mais aparente dentro da comunidade recentemente.
 É um movimento muito defendido no DevOps, e quando se fala de ter uma entrega (release) confiável muitos estão adotando-a, assim como Infraestrutura como código.
 
 
-#### Referências
+## Referências
 [Docker… da teoria ao Hands on](https://www.mundotibrasil.com.br/docker-da-teoria-ao-hands-on/)
 
 [O Ecossistema do Docker: Uma Introdução aos Componentes Comuns](https://www.digitalocean.com/community/tutorials/o-ecossistema-do-docker-uma-introducao-aos-componentes-comuns-pt)
