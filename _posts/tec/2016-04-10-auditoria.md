@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Logging"
-date:   2018-11-02
+date: 2018-11-02
 modified:  2018-11-02
 excerpt: "Muita agua já rolou no meu papel de desenvolvedora, desde 2016 (quando postei pela primeira vez esse post). Agora um texto atualizado sobre a práticas de logs. E se você não loga na sua aplicação, eu aconselho a começar a fazer."
 categories: tec

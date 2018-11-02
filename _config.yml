@@ -2,7 +2,7 @@ title: Blog da Roselma
 email: roselma.mendes@gmail.com
 description: Um pouco de Feminismo Negro Tech e Tecnologia
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://roselmamendes.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: roselmamendes
 github_username:  roselmamendes
 
