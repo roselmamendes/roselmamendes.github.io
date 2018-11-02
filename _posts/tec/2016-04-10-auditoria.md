@@ -22,7 +22,7 @@ Se você é uma pessoa desenvolvedora, e reparar, logs fazem parte do nosso dia-
 
 [De acordo com Gregory Szorc](http://gregoryszorc.com/blog/category/logging/), engenheiro da Mozilla, em 2012:
 
-> info "(Logs são) um fluxo de mensagens distintas geradas a partir da execução de um programa."
+> "(Logs são) um fluxo de mensagens distintas geradas a partir da execução de um programa."
 
 Logs podem ser guardados em simples arquivos de texto, como .npm-log do NPM. e/ou também mostrados em terminais/consoles.
 <figure>

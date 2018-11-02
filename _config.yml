@@ -10,7 +10,6 @@ github_username:  roselmamendes
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - premonition
   - jekyll-gist
 
 highlighter: pygments 
