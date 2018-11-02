@@ -5,3 +5,4 @@ node_modules
 *.md~
 .DS_Store
 *.html~
+.idea/
