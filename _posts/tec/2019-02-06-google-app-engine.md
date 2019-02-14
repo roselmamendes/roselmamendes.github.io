@@ -5,7 +5,7 @@ modified:   2019-02-06
 categories: tec
 tags: [] 
 excerpt: ""
-published: false
+published: true
 ---
 
 ## Google App Engine - GAE
@@ -120,9 +120,23 @@ To create a workspace, on Google Console UI at the left menu, go to Stackdriver,
 
 Other interesting tools on Alerts are the [UpTime Checks](https://cloud.google.com/monitoring/uptime-checks/).
 
-## Database
+## Secrets in the code
 
 Environment variables
+
+- Encrypted files
+
+https://cloud.google.com/kms/docs/store-secrets
+
+- Datastore: need changes on the code to use the Google library.
+
+https://stackoverflow.com/questions/22669528/securely-storing-environment-variables-in-gae-with-app-yaml
+
+- Metadata
+
+https://medium.com/google-cloud/google-compute-engine-metadata-service-de9d71ea44e0
+
+## Database
 
 [Cloud SQL](https://cloud.google.com/sql/)
 
