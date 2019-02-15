@@ -122,19 +122,29 @@ Other interesting tools on Alerts are the [UpTime Checks](https://cloud.google.c
 
 ## Secrets in the code
 
-Environment variables
+It was difficult to understand how to deal with sensible information on GCP. Basically my application needs to read the database uri which has sensible information including the password. The good practice is to read it from an environment variable to avoid secrets on the code. But the thing is how to load environment variable while deploying and keep the secrets safe on GCP?
 
-- Encrypted files
+In the app.yaml, you can use the keyword `env_variables` to set environment variables for your app. However, as I mentioned before, having secrets in this file, commited in a Github repository, is definitely not a good thing to do.
 
-https://cloud.google.com/kms/docs/store-secrets
+After reading many times the Google documentation and stackoverflow, I got this approach:
 
-- Datastore: need changes on the code to use the Google library.
+1. Have a encrypted file called env.yaml in the repository. It is encrypted using the [KMS (Key Management Service)](https://cloud.google.com/kms/), other Google Cloud product;
 
-https://stackoverflow.com/questions/22669528/securely-storing-environment-variables-in-gae-with-app-yaml
+2. [Include the env.yaml file in the app.yaml to "import" the needed environment variables](https://github.com/NegraTec/conteudo-tech-negro/blob/master/app.yaml);
 
-- Metadata
+3. When deploying it to app engine:
+ 
+ > a. I need to decrypt the env.yaml;
+ 
+ > b. call the command `gcloud app deploy` which will use the env.yaml to load the environment variables.
+ 
+ This approach can be used locally in your machine or from a CI/CD tool. For conteudo-negro-tech, [I am using TravisCI for that](https://github.com/NegraTec/conteudo-tech-negro/blob/master/.travis.yml).
 
-https://medium.com/google-cloud/google-compute-engine-metadata-service-de9d71ea44e0
+Other approaches I found on the Internet:
+
+- [Datastore: need changes on the code to use the Google library.](https://stackoverflow.com/questions/22669528/securely-storing-environment-variables-in-gae-with-app-yaml)
+
+- [Metadata](https://medium.com/google-cloud/google-compute-engine-metadata-service-de9d71ea44e0)
 
 ## Database
 
@@ -149,6 +159,10 @@ https://medium.com/google-cloud/google-compute-engine-metadata-service-de9d71ea4
 [Best practices for securing your Google Cloud databases](https://cloud.google.com/blog/products/gcp/best-practices-for-securing-your-google-cloud-databases)
 
 [Google App Engine and Python: a correct way to store configuration variables](https://www.andreafortuna.org/programming/google-app-engine-and-python-a-correct-way-to-store-configuration-variables/)
+
+[Secrets Management](https://cloud.google.com/kms/docs/secret-management)
+
+[Google Cloud SDK with Docker](https://hub.docker.com/r/google/cloud-sdk)
 
 
 
