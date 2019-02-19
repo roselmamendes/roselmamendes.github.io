@@ -138,7 +138,7 @@ After reading many times the Google documentation and stackoverflow, I got this 
  
  > b. call the command `gcloud app deploy` which will use the env.yaml to load the environment variables.
  
- This approach can be used locally in your machine or from a CI/CD tool. For conteudo-negro-tech, [I am using TravisCI for that](https://github.com/NegraTec/conteudo-tech-negro/blob/master/.travis.yml).
+ This approach would be used locally in your machine or from a CI/CD tool.
 
 Other approaches I found on the Internet:
 
@@ -146,13 +146,7 @@ Other approaches I found on the Internet:
 
 - [Metadata](https://medium.com/google-cloud/google-compute-engine-metadata-service-de9d71ea44e0)
 
-## Database
-
-[Cloud SQL](https://cloud.google.com/sql/)
-
-- Go to Cloud SQL page and create an instance
-
-- Choose PostGres
+Now it is possible to access the app on https://conteudo-negro-tech.appspot.com/.
 
 ## References
 
