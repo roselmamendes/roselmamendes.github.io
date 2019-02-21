@@ -158,6 +158,8 @@ Now it is possible to access the app on https://conteudo-negro-tech.appspot.com/
 
 [Google Cloud SDK with Docker](https://hub.docker.com/r/google/cloud-sdk)
 
+[Using psycopg2 directly on Google AppEngine](https://stackoverflow.com/questions/51061722/using-psycopg2-directly-on-google-appengine)
+
 
 
 
