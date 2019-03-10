@@ -146,7 +146,15 @@ Other approaches I found on the Internet:
 
 - [Metadata](https://medium.com/google-cloud/google-compute-engine-metadata-service-de9d71ea44e0)
 
-Now it is possible to access the app on https://conteudo-negro-tech.appspot.com/.
+## Downsides
+
+It was an adventurous make the database works. I have to change the original code that worked very well on Heroku: 
+
+- I needed to understand how to connect to the socket connections with psycopg2 library. Outdated information in the App Engine standard environment documentation;
+
+- I struggled to get an approach to run the migrations on the database. At the end I added the migration command on the initialization of the server, programatically. Before I could use `flask db upgrade` while deploying in Heroku but App Engine doesn't allow run more than one command on the entrypoint for the deploy. Also, I couldn't find a ["easy"](https://stackoverflow.com/questions/36698070/how-to-use-flask-migrate-with-google-app-engine) way to run commands on the application machine;
+
+It is possible to access the app on https://conteudo-negro-tech.appspot.com/.
 
 ## References
 
