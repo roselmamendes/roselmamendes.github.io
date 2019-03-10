@@ -3,8 +3,10 @@ layout: post
 title:  "Deploying an application with Google App Engine"
 modified:   2019-02-06
 categories: tec
-tags: [] 
-excerpt: ""
+tags: [GCP, GAE, Monitoring, KMS] 
+excerpt: "Learning how to deploy a Flask application in Google App Engine."
+image:
+  feature: /google-app-engine/print-conteudo-tech-negro.png
 published: false
 ---
 
@@ -16,13 +18,13 @@ Other Google Cloud products can be checked [here](https://cloud.google.com/produ
 
 ## Deploying an application
 
-I am going to use my repository [conteudo-negro-tech](https://github.com/NegraTec/conteudo-tech-negro). It is a Python project using [Flask](http://flask.pocoo.org/).
+I am going to use my repository [conteudo-tech-negro](https://github.com/NegraTec/conteudo-tech-negro). It is a Python project using [Flask](http://flask.pocoo.org/).
 
 **Create an app.yaml in the repository**
 
-First of all, the project needs to have an [app.yaml](https://cloud.google.com/appengine/docs/standard/go/config/appref). This file is responsible to describe how the deploy will be configured and started.
+First of all, the project needs to have an [app.yaml](https://cloud.google.com/appengine/docs/standard/go/config/appref). This file is responsible to describe how the deploy will be configured.
 
-For conteudo-negro-tech I have the follow:
+For conteudo-tech-negro I have the follow:
 
 ```yaml
 runtime: python37
@@ -86,7 +88,7 @@ In the Google world, who takes care of Monitoring is the [Stackdriver](https://c
 
 To see the logs of the app, on the Google Console UI, on the menu at left side, go to StackDriver, then Logs.
 
-As the page is splitted in two sections (up and down). At the down section click on Logs. It will show all the last logs.
+As the page is splitted in two sections (up and down), at the down section click on Logs. It will show all the last logs.
 
 <figure>
 	<img src="/images/google-app-engine/stackdriver-logs.png" alt="image">
@@ -128,33 +130,33 @@ In the app.yaml, you can use the keyword `env_variables` to set environment vari
 
 After reading many times the Google documentation and stackoverflow, I got this approach:
 
-1. Have a encrypted file called env.yaml in the repository. It is encrypted using the [KMS (Key Management Service)](https://cloud.google.com/kms/), other Google Cloud product;
+1. Have an encrypted file called env.yaml in the repository. It is encrypted using the [KMS (Key Management Service)](https://cloud.google.com/kms/), other Google Cloud product;
 
 2. [Include the env.yaml file in the app.yaml to "import" the needed environment variables](https://github.com/NegraTec/conteudo-tech-negro/blob/master/app.yaml);
 
-3. When deploying it to app engine:
+When deploying it to app engine:
  
  > a. I need to decrypt the env.yaml;
  
  > b. call the command `gcloud app deploy` which will use the env.yaml to load the environment variables.
- 
- This approach would be used locally in your machine or from a CI/CD tool.
 
 Other approaches I found on the Internet:
 
-- [Datastore: need changes on the code to use the Google library.](https://stackoverflow.com/questions/22669528/securely-storing-environment-variables-in-gae-with-app-yaml)
+- [Datastore: it is necessary to make changes on the code to use the Google library.](https://stackoverflow.com/questions/22669528/securely-storing-environment-variables-in-gae-with-app-yaml)
 
 - [Metadata](https://medium.com/google-cloud/google-compute-engine-metadata-service-de9d71ea44e0)
 
 ## Downsides
 
-It was an adventurous make the database works. I have to change the original code that worked very well on Heroku: 
+It was an adventure make the database works. I have to change the original code that worked already on Heroku: 
 
-- I needed to understand how to connect to the socket connections with psycopg2 library. Outdated information in the App Engine standard environment documentation;
+* I needed to understand how to connect to the socket connections with psycopg2 library. Outdated information in the App Engine standard environment documentation;
 
-- I struggled to get an approach to run the migrations on the database. At the end I added the migration command on the initialization of the server, programatically. Before I could use `flask db upgrade` while deploying in Heroku but App Engine doesn't allow run more than one command on the entrypoint for the deploy. Also, I couldn't find a ["easy"](https://stackoverflow.com/questions/36698070/how-to-use-flask-migrate-with-google-app-engine) way to run commands on the application machine;
+* I struggled to get an approach to run the migrations on the database with [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/). At the end I added the migration command on the initialization of the server, programatically. Before I could use `flask db upgrade` deploying in Heroku but App Engine doesn't allow run more than one command on the entrypoint for the deploy. Also, I couldn't find an ["easy"](https://stackoverflow.com/questions/36698070/how-to-use-flask-migrate-with-google-app-engine) way to run commands on the application machine;
 
-It is possible to access the app on https://conteudo-negro-tech.appspot.com/.
+## And that is all...
+
+It is possible to access the app on [https://conteudo-negro-tech.appspot.com/](https://conteudo-negro-tech.appspot.com/).
 
 ## References
 
@@ -166,7 +168,7 @@ It is possible to access the app on https://conteudo-negro-tech.appspot.com/.
 
 [Google Cloud SDK with Docker](https://hub.docker.com/r/google/cloud-sdk)
 
-[Using psycopg2 directly on Google AppEngine](https://stackoverflow.com/questions/51061722/using-psycopg2-directly-on-google-appengine)
+[Using psycopg2 directly on Google App Engine](https://stackoverflow.com/questions/51061722/using-psycopg2-directly-on-google-appengine)
 
 
 
