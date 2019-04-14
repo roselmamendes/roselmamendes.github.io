@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection">
+
+    <link rel="stylesheet" href="../theme/estilo.css" media="screen,projection">
+
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta charset="UTF-8">
+
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <!-- Place this data between the <head> tags of your website -->
+  <title>Blog da Roselma Mendes</title>
+  <meta name="description" content="<p>Having a web site usigin Pelican</p>" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="A blog with Pelican" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="drafts/tec/static-sites-pelican.html" />
+  <meta property="og:image" content="theme/images/pelican.jpg" />
+  <meta property="og:description" content="<p>Having a web site usigin Pelican</p>" />
+
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+</head>
+
+
+
+<body>
+  <div class="container brown">
+
+<div class="row">
+    <div class="col s12">
+        <a href="/"><h1 class="blog-titulo">Blog da Roselma Mendes</h1></a>
+    </div>
+</div>
+    <div class="row">
+
+      <div class="col s12 m12">
+
+        <div class="card">
+
+          <div class="card-image">
+            <img src="../theme/imagespelican.jpg">
+          </div>
+
+          <div class="card-content">
+            <span class="post-titulo card-title"><h1>A blog with Pelican</h1></span>
+            <p>10 January 2019</p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text=A blog with Pelican&url=drafts/tec/static-sites-pelican.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>            <h2>Pelican</h2>
+<p>What is it</p>
+<h2>Preparing the local environment</h2>
+<p>I am using Docker. So first I created a Dockerfile as following:</p>
+<div class="highlight"><pre><span></span><span class="k">FROM</span><span class="s"> python:latest</span>
+
+<span class="k">WORKDIR</span><span class="s"> /usr/src/app</span>
+
+<span class="k">COPY</span> requirements.txt ./
+<span class="k">RUN</span> pip install --no-cache-dir -r requirements.txt
+
+<span class="k">COPY</span> . .
+
+<span class="k">EXPOSE</span><span class="s"> 8000</span>
+</pre></div>
+
+
+<p><strong>How I organized the folder</strong></p>
+<p>I highlighted only the folders and files mentioned on this post. I may miss others from pelican-quickstart command.</p>
+<div class="highlight"><pre><span></span>blog-root
+--theme
+    -static
+    -templates
+--content
+    - pages
+--pelicanconf.py
+--publishconf.py
+--Dockerfile
+--requirements.txt
+</pre></div>
+
+
+<h2>Preparing Pelican</h2>
+<p>start the project with pelican-quickstart</p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text=A blog with Pelican&url=drafts/tec/static-sites-pelican.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

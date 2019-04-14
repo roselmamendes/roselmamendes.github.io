@@ -1,0 +1,53 @@
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection">
+
+    <link rel="stylesheet" href="../theme/estilo.css" media="screen,projection">
+
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta charset="UTF-8">
+
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <!-- Place this data between the <head> tags of your website -->
+  <title>{{ SITENAME }}</title>
+  <meta name="description" content="{{article.summary}}" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{article.title}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{article.url}}" />
+  <meta property="og:image" content="theme/images/{{article.image}}" />
+  <meta property="og:description" content="{{article.summary}}" />
+
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+</head>
+
+
+

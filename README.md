@@ -1,12 +1,10 @@
-# Blog da Roselma
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/roselmamendes/roselmamendes.github.io.svg?columns=all)](https://waffle.io/roselmamendes/roselmamendes.github.io)
+# Blog with Pelican
 
+## [Contributing](contributing.md)
 
-**Paleta de cores**
-https://www.colorcombos.com/color-schemes/246/ColorCombo246.html
+## Publishing
 
-**Comandos**
+1. Add a .md file with the proper attributes (check existent .md files to get examples) on contents folder.
+2. Run `sh cli/blog.sh build-layout`.
 
-`docker build -t roselma.github .`
-
-`docker run --rm -v $PWD:/srv/jekyll -p 4000:4000 -it roselmamendes.github jekyll serve`
+To see locally run `sh cli/blog.sh start-server`.

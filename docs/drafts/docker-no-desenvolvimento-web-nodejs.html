@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection">
+
+    <link rel="stylesheet" href="../theme/estilo.css" media="screen,projection">
+
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta charset="UTF-8">
+
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <!-- Place this data between the <head> tags of your website -->
+  <title>Blog da Roselma Mendes</title>
+  <meta name="description" content="<p>Como utilizar conteinerização para aplicações web e qual a vantagem disso.</p>" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Docker no desenvolvimento web (nodejs)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="drafts/docker-no-desenvolvimento-web-nodejs.html" />
+  <meta property="og:image" content="theme/images//docker-dev-web/group_5622_0.png" />
+  <meta property="og:description" content="<p>Como utilizar conteinerização para aplicações web e qual a vantagem disso.</p>" />
+
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+</head>
+
+
+
+<body>
+  <div class="container brown">
+
+<div class="row">
+    <div class="col s12">
+        <a href="/"><h1 class="blog-titulo">Blog da Roselma Mendes</h1></a>
+    </div>
+</div>
+    <div class="row">
+
+      <div class="col s12 m12">
+
+        <div class="card">
+
+          <div class="card-image">
+            <img src="../theme/images/docker-dev-web/group_5622_0.png">
+          </div>
+
+          <div class="card-content">
+            <span class="post-titulo card-title"><h1>Docker no desenvolvimento web (nodejs)</h1></span>
+            <p>01 February 2018</p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text=Docker no desenvolvimento web (nodejs)&url=drafts/docker-no-desenvolvimento-web-nodejs.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>            <h2>Conteinerização</h2>
+<p>Assim como as máquinas virtuais, os contêineres possibilitam o isolamento de um ambiente de execução para uma aplicação.
+Esse isolamento compreende as dependências e componentes da sua aplicação. </p>
+<p>Em outras palavras, se chamarmos container de pacote então: temos um pacote com as configurações necessárias para executar seu programa, e esse pacote é facilmente distribuído entre seu time e/ou ambientes (implantação e desenvolvimento local).</p>
+<p>O processo de implantação pode ser otimizado com a ajuda de contêineres no que diz respeito às práticas de Entrega e Implantação Contínua, quando se pensa na propagação da configuração de mais um ambiente ao longo de uma pipeline. Ou pensando simples, na garantia de que a mesma configuração do ambiente da desenvolvedora vai ser replicado para o ambiente de produção.</p>
+<p>Diferente de uma máquina virtual, os contêineres são mais "leves". Contêineres se utilizam dos recursos do sistema operacional do "computador host" para execução dos processos. Enquanto as máquinas virtuais "levantam" um sistema operacional completo dentro do "computador host".</p>
+<figure>
+    <a href="#"><img src="/images/docker-dev-web/Container-Overview.png" alt="image"></a>
+    <figcaption>visão geral de um container</figcaption>
+</figure>
+
+<p>O uso de contêineres não é só para sistemas distribuídos ou microsserviços. A conteinerização é uma vantagem também para arquiteturas simples com componentes como frontend, backend/api, etc. No final a intenção é manter uma implantação segura e fácil de distribuir.</p>
+<h2>Vantagens da Conteinerização</h2>
+<p>Do <a href="https://www.digitalocean.com/community/tutorials/o-ecossistema-do-docker-uma-introducao-aos-componentes-comuns-pt">post</a> do Digital Ocean:</p>
+<ul>
+<li>Utilização leve de recursos: Em vez da virtualização de um sistema operacional inteiro, os contêineres isolam no nível de processos e utilizam o kernel do host.</li>
+<li>Portabilidade: Todas as dependências para uma aplicação conteinerizada são empacotadas dentro do contêiner, permitindo-a executar em qualquer host Docker.</li>
+<li>Previsibilidade: O host não se importa com o que está sendo executado dentro do contêiner e o contêiner não se importa em qual host ele está executando. As interfaces são padronizadas e as interações são previsíveis.</li>
+</ul>
+<p>Estes pontos significam que é possível ter um onboarding no time (pessoas novas no seu time) mais rápido e simples; um processo de implantação rápido e seguro (AWS e Heroku são exemplos de serviços que permitem o deploy de aplicações usando Docker); garantia de que “se na minha máquina funciona na sua também é para funcionar” (desenvolvedora, testadora e ambiente de produção usando a mesma configuração de ambiente).</p>
+<h2>Docker</h2>
+<p><figure>
+    <a href="#"><img src="/images/docker-dev-web/dados-docker.png" alt="image"></a>
+    <figcaption><a href="https://www.docker.com/company" title="">https://www.docker.com/company</a></figcaption>
+</figure></p>
+<p><a href="https://www.docker.com/">Docker</a> é uma plataforma open source para a construção e execução de contêineres. Em 2013, a plataforma começou sua história que revolucionou o uso de contêineres no desenvolvimento de software. </p>
+<p><img src="/images/docker-dev-web/docker-logo.png" />
+Hoje falar em dockerizar uma aplicação já é um termo na comunidade de TI.</p>
+<h2>Imagem e contêiner</h2>
+<p>Uma imagem, <a href="https://docs.docker.com/get-started/#a-brief-explanation-of-containers">como no próprio site do Docker relata</a>, é um pacote executável com tudo necessário para rodar um componente de software. Um dockerfile terá as instruções para montar uma imagem, mas ela precisa ser construída para termos um contêiner.</p>
+<p>Já um contêiner é uma instância da imagem. Como falamos mais acima sobre o que é um contêiner, um ambiente isolado no "computador host" que acessa arquivos e portas, se configurado para a tal.</p>
+<h2>Dockerizando uma aplicação web</h2>
+<p>A primeira coisa que você precisa é ter um arquivo Dockerfile na pasta do seu repositório.</p>
+<p>Como minha aplicação vai usar pacotes Node, vou utilizar uma imagem pronta de Node. No <a href="https://hub.docker.com/">Docker Hub</a> eu encontrei <a href="https://hub.docker.com/_/node/">essa</a> imagem e no meu Dockerfile vou colocar:</p>
+<p _="%" endhighlight>{% highlight python linenos %}
+FROM node:8.7.0</p>
+<p>Node possui imagens para várias versões. Isso acontece com outras imagens no Docker Hub, como por exemplo, <a href="https://hub.docker.com/_/postgres/">essa</a> imagem para Postgres.</p>
+<p>Para construir uma imagem para minha aplicação posso executar o comando <code>docker build -t docker-apresentacao .</code>, e então eu obtenho mais ou menos essa saída no meu terminal:</p>
+<figure>
+    <img src="/images/docker-dev-web/saida-docker-build-from.png" />
+</figure>
+
+<p>Dentro do arquivo Dockerfile, a palavra reservada <code>FROM</code> seguida de <code>node:8.7.0</code>, diz ao Docker para montar minha imagem "herdando" da imagem <code>node:8.7.0</code> (linha 1). A imagem do node copia o arquivo <code>package.json</code> para a pasta do container (linha 8) e executa o <code>npm install</code> dentro do próprio container (linha 9).</p>
+<figure><img src="/images/docker-dev-web/dockerfile-node-onbuild.png" />
+<figcaption><a href="https://github.com/nodejs/docker-node/blob/15d780e932fc8cd4a145a36cff405610c8c71b0c/8.7/onbuild/Dockerfile">Veja mais no Github</a></figcaption>
+</figure>
+
+<figure><img src="/images/docker-dev-web/docker-build-image-diagram.png" />
+<figcaption>construindo uma imagem</figcaption></figure>
+
+<p>Executando <code>docker images</code> veremos a imagem para <code>docker-apresentacao</code> na lista de imagens.</p>
+<figure><img src="/images/docker-dev-web/saida-docker-images.png" /></figure>
+
+<p>Após construir a imagem, executo o <code>docker run -p 3000:3000 -t docker-apresentacao npm start</code>. Isto deve permiti que eu acesse em <i>http://localhost:3000</i> a aplicação.</p>
+<p><b>package.json</b></p>
+<p>Com node, para otimizar a construção de uma imagem você precisa separar o momento de instalar os pacotes da cópia do código fonte para o container. Isto facilita quando você modifica um arquivo em específico e isso não dispara a instalação das dependências desnecessariamente.</p>
+<figure><img src="/images/docker-dev-web/dockerfile-packagejson.png"/></figure>
+
+<p><b>Montando volumes</b></p>
+<p>Para que você possa editar os arquivos e isto reflita no container o comando <code>docker run</code> precisa ter <code>-v &lt;pasta-host&gt;:&lt;pasta-container&gt;</code> e definido o diretório de trabalho com o parâmetro <code>-w &lt;pasta-container&gt;</code>.</p>
+<p><code>docker run --rm -p 3000:3000 &lt;b&gt;-v "$PWD":/usr/src/app&lt;/b&gt; -w /usr/src/app -it nome-container yarn test</code></p>
+<p><b>Como acessar uma aplicação localmente</b></p>
+<p>Para que seja possível eu acessar na minha máquina o endereço http://localhost:3000, é necessário usar <code>-p &lt;porta-host&gt;:&lt;port-container&gt;</code>. No Dockerfile colocar o <code>EXPOSE &lt;porta-container&gt;</code>.</p>
+<p><code>docker run --rm &lt;b&gt;-p 3000:3000&lt;/b&gt; -v "$PWD":/usr/src/app -w /usr/src/app -it nome-projeto yarn test</code></p>
+<p>Use o parâmetro --rm para garantir que ao "fechar" o container, ele seja destruído. </p>
+<p><b>node_modules<b></p>
+<p>Quando docker, na construção da imagem, chama o npm install, o node_modules é criado e a pasta fica na raiz do repositório. Porém isto traz problemas se você executa o comando docker run com -v. O -v diz para "sincronizar" sua pasta do repositório (sem node_modules) para a pasta do container. Então o comando quebra dizendo que o mesmo não existe, porque o node_modules já não está lá.</p>
+<p>O truque que uso é que ao construir a imagem, no Dockerfile, especifico que o npm install execute dentro de uma pasta acima da pasta onde ficará o código fonte.</p>
+<div class="highlight"><pre><span></span>+-- /usr/src
+    +-- node_modules
+    +-- app
+</pre></div>
+
+
+<p>No Dockerfile fica como nas linhas 7 a 13:</p>
+<p>{% gist 51c1b0b6ca1f786c9c3d5e018e7316e4 %}</p>
+<p>Perceba que primeiro a construção da imagem começa com o workdir apontando para <code>usr/src</code> e depois o workdir passa a ser <code>usr/src/app</code>. O último para que o código fonte seja copiado em app em vez de usr.</p>
+<h2>Comandos básicos do Docker</h2>
+<p>docker build: constrói a imagem</p>
+<p>docker run: executa o container</p>
+<p>docker ps / docker ps -a: mostra os contêineres em execução / mostra os contêineres parados e executando</p>
+<p>docker images: lista as imagens construídas</p>
+<p>docker system prune: para remoção de artefatos do Docker (imagens, contêineres, volumes, redes) </p>
+<h2>Conclusão</h2>
+<p>Conteiner não é um termo novo, mas seu uso tem se tornado mais aparente dentro da comunidade recentemente.
+É um movimento muito defendido no DevOps, e quando se fala de ter uma entrega (release) confiável muitos estão adotando-a, assim como Infraestrutura como código.</p>
+<h2>Referências</h2>
+<p><a href="https://www.mundotibrasil.com.br/docker-da-teoria-ao-hands-on/">Docker… da teoria ao Hands on</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/o-ecossistema-do-docker-uma-introducao-aos-componentes-comuns-pt">O Ecossistema do Docker: Uma Introdução aos Componentes Comuns</a></p>
+<p><a href="https://medium.com/google-cloud/a-survival-guide-for-containerizing-your-infrastructure-part-1-why-switch-8e8dee9fc66">A Survival Guide for Containerizing your Infrastructure — Part 1: Why switch?</a></p>
+<p><a href="http://blog.aquasec.com/a-brief-history-of-containers-from-1970s-chroot-to-docker-2016">A Brief History of Containers: From 1970s chroot to Docker 2016</a></p>
+<p><a href="https://www.sdxcentral.com/listings/docker-inc/">Docker Inc</a></p>
+<p><a href="https://docs.docker.com/get-started/#a-brief-explanation-of-containers">Get Started, Part 1: Orientation and setup</a></p>
+<p><a href="https://docs.docker.com/get-started/part2/">Get Started, Part 2: Containers</a></p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text=Docker no desenvolvimento web (nodejs)&url=drafts/docker-no-desenvolvimento-web-nodejs.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

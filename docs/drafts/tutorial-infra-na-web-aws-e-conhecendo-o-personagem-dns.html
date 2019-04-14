@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection">
+
+    <link rel="stylesheet" href="../theme/estilo.css" media="screen,projection">
+
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta charset="UTF-8">
+
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <!-- Place this data between the <head> tags of your website -->
+  <title>Blog da Roselma Mendes</title>
+  <meta name="description" content="<p>No início a intenção com esse post era aprender sobre AWS, mas acabei percebendo que o valor desse texto vem dos conceitos por volta do uso dos serviços da AWS. Este post relata minha aventura aprendendo um pouco do uso das ferramentas da AWS e explico sobre DNS nesse contexto …</p>" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content=""[Tutorial] Infra na web - AWS e conhecendo o personagem DNS"" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="drafts/tutorial-infra-na-web-aws-e-conhecendo-o-personagem-dns.html" />
+  <meta property="og:image" content="theme/images/" />
+  <meta property="og:description" content="<p>No início a intenção com esse post era aprender sobre AWS, mas acabei percebendo que o valor desse texto vem dos conceitos por volta do uso dos serviços da AWS. Este post relata minha aventura aprendendo um pouco do uso das ferramentas da AWS e explico sobre DNS nesse contexto …</p>" />
+
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+</head>
+
+
+
+<body>
+  <div class="container brown">
+
+<div class="row">
+    <div class="col s12">
+        <a href="/"><h1 class="blog-titulo">Blog da Roselma Mendes</h1></a>
+    </div>
+</div>
+    <div class="row">
+
+      <div class="col s12 m12">
+
+        <div class="card">
+
+
+          <div class="card-content">
+            <span class="post-titulo card-title"><h1>"[Tutorial] Infra na web - AWS e conhecendo o personagem DNS"</h1></span>
+            <p>13 May 2018</p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text="[Tutorial] Infra na web - AWS e conhecendo o personagem DNS"&url=drafts/tutorial-infra-na-web-aws-e-conhecendo-o-personagem-dns.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>            <p>No início a intenção com esse post era aprender sobre AWS, mas acabei percebendo que o valor desse texto vem dos conceitos por volta do uso dos serviços da AWS. Este post relata minha aventura aprendendo um pouco do uso das ferramentas da AWS e explico sobre DNS nesse contexto. </p>
+<p>A <a href="">AWS</a> (Amazon Web Service) é a maior empresa que tenho conhecimento no mercado de infraestrura de software (<a href="">IaaS - Infrastructure as Service - Infraestrutura como Serviço</a>), além dela existem outros serviços como o <a href="">GCP</a> do Google. <a href="">Existe um vasto número de serviços que a AWS fornece</a>. Neste post vou colocar um site estático "no ar" o que <strong>não cobre boa parte dos serviços da Amazon</strong>.</p>
+<h2>Qual a primeira coisa a fazer colocando um site no ar na AWS?</h2>
+<p>Encontrei esse <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html">link</a> da própria AWS que explica como colocar um site no ar. Nele são mencionados os seguintes passos:</p>
+<ol>
+<li>
+<p>Obter seu domínio por uma empresa Registrar (palavra em Inglês) - para esse passo eu escolhi a ?;</p>
+</li>
+<li>
+<p>Criar buckets no serviço S3 (vê <a href="#servicos-da-aws-utilizados-neste-post">Serviços da AWS utlizados neste post</a>);</p>
+</li>
+<li>
+<p>Importar os arquivos do site para esses buckets criados no passo anterior;</p>
+</li>
+</ol>
+<blockquote>
+<p>info ""
+Enquanto escrevia esse texto, onde houve uma pausa de 1 mês mais ou menos, a AWS mudou o conteúdo do tutorial onde mencionava sobre Registrar.
+AWS oferece o registro de domínio com o Route53.</p>
+</blockquote>
+<h2>Antes de falarmos de DNS, vamos criar buckets e importar os arquivos do site</h2>
+<p>Para o conteúdo do site estático tudo gira em torno do S3 (Simple Storage Service - serviço básico de armazenamento) da AWS, você manda os arquivos para um bucket, configura a permissão de acesso (AWS policies) e diz que esse bucket irá servir como um site estático.</p>
+<p>Eu criei dois buckets na minha conta da AWS: um chamado <code>roselmamendes.com</code> e outro <code>www.roselmamendes.com</code>. A intenção com esses dois buckets é que seja possível acessar o site se digitado <code>roselmamendes.com</code> ou <code>www.roselmamendes.com</code>.</p>
+<p>Para o bucket <code>roselmamendes.com</code> eu carrego um arquivo <code>index.html</code>.</p>
+<p>Também para o <code>roselmamendes.com</code> configuro um bucket policy para ter acesso publico.</p>
+<figure>
+    <img src="/images/implantacao-web-app-aws/bucket-policy.png" alt="image">
+    <figcaption>no <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html">link de tutorial sobre implantar site estatico</a> tem um exemplo de um bucket policy.</figcaption>
+</figure>
+
+<p><a href="https://s3.us-east-2.amazonaws.com/roselmamendes.com/index.html">É possível depois abrir o arquivo no bucket para acessar seu link</a>. Se você clica nele é aberto o arquivo como uma página. Afinal estamos acessando um arquivo .html pelo navegador, e o bucket age como se fosse uma pasta na internet que possui nosso arquivo.</p>
+<p>Mas como não pretendo usar a url padrão do bucket, é necessário configurar os buckets como site estático. Para o <code>roselmamendes.com</code>, em Properties eu escolho Static Web hosting, escolho a primeira opção e coloco o nome do arquivo index.html. Para o <code>www.roselmamendes.com</code>, em Properties eu escolho também Static Web hosting, escolho Redirect requests e coloco o nome do bucket roselmamendes.com.</p>
+<h2>Nessa história toda onde entra esse danado de DNS?</h2>
+<p>DNS vem de Domain Name System (Sistema de Nome de Domínio - tradução livre). DNS faz a tradução de toda url que conhecemos para um endereço de IP. Isso quer dizer que existe alguem que traduz toda vez que você acessa <a href="https://www.lifewire.com/what-is-the-ip-address-of-google-818153">o <code>google.com</code> para <code>http://74.125.224.72/</code></a>, por exemplo.</p>
+<p>Dito isso, todo o site na Internet aponta para um endereço de IP. Para o seu site não será diferente. Por isso você precisa registrar um domínio.</p>
+<p>Com toda a configuração acima feita no S3, eu já tenho a url <code>http://roselmamendes.com.s3-website.us-east-2.amazonaws.com</code>. Mas esta não é uma url muito amigável de ler e escrever. Eu gostaria de usar somente <code>roselmamendes.com</code>. Aí é que entra o DNS.</p>
+<p>Para uma leiga como eu, que não sabe nada de configuração de DNS, achei bem difícil compreender o que fazer se não quero usar o Route53 da AWS como meu serviço de DNS. Depois de várias tentativas com palavras-chave no Google, achei <a href="https://stackoverflow.com/a/8357318">esse stackoverflow</a>.</p>
+<p><strong>DNS record</strong></p>
+<p>Name server</p>
+<p>CNAME</p>
+<p>A</p>
+<h2>Serviços/termos da AWS utilizados neste post</h2>
+<p><a href="">S3</a></p>
+<p><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-dns-service.html">Route53</a></p>
+<p><a href="">AWS policies</a></p>
+<h2>Referências</h2>
+<p><strong>Em Inglês</strong></p>
+<p><a href="https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Domain_name_registrar">Registrar para DNS</a></p>
+<p><a href="https://fusion.easydns.com/Knowledgebase/Article/View/159/17/domain-registration-vs-dns-service-vs-web-hosting">Domain Registration vs DNS Service vs Web-Hosting</a></p>
+<p><a href="https://www.icann.org/resources/pages/registrars-0d-2012-02-25-en">List de Registrars</a></p>
+<p><a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html">Tutorial da AWS para uma aplicação web estática</a></p>
+<p><a href="https://www.keycdn.com/blog/best-free-dns-hosting-providers/">Os 10 melhores provedores de DNS</a></p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text="[Tutorial] Infra na web - AWS e conhecendo o personagem DNS"&url=drafts/tutorial-infra-na-web-aws-e-conhecendo-o-personagem-dns.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

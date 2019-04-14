@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Acme");
+
+body{
+    background-color: #795548;
+}
+
+.blog-titulo{
+    text-align: center;
+    font-family: "Acme", sans serif;
+    color: #ffcc80;
+    font-size: 3em;
+}
+
+.post-index-titulo{
+    font-family: "Acme", sans serif !important;
+    color: black;
+}
+
+.outros-textos-link h3 a{
+    font-family: "Acme", sans serif !important;
+    color: #ffcc80;
+    text-decoration: none;
+}
+
+.social-share{
+    color: black;
+}
+
+.sobre-responsive{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .sobre {
+        display: none;
+    }
+
+    .sobre-responsive{
+        display: inherit;
+    }
+
+}
+
+.post-titulo{
+  font-family: "Acme", sans serif;
+}
+
+.post-titulo h1{
+    font-size: 1.5em;
+    margin: 0 0 1.68rem 0;
+}
+
+.card-content h2 {
+  font-family: "Acme", sans serif;
+  font-size: 2em;
+  margin: 0 0 20px 0;
+}
+
+.card-content p{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+.card-content p strong{
+    font-weight: bolder;
+}
+
+.card-content p img{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-content ul{
+    list-style-type: circle;
+    padding-left: 40px;
+}
+
+.card-content ul li{
+    list-style-type: unset;
+}
+
+.card-content .highlight span{
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;       /* css-3 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+    word-break: break-all;
+    white-space: normal;
+}
+/*https://stackoverflow.com/questions/3949762/how-to-wrap-text-using-css*/
+
+.card-content pre:last-child{
+    padding-bottom: 20px;
+}

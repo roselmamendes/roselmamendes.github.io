@@ -1,10 +1,10 @@
-FROM jekyll/jekyll
+FROM python:latest
 
-COPY Gemfile /srv/jekyll
+WORKDIR /usr/src/app
 
-RUN bundle update
-RUN bundle install
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /srv/jekyll
+COPY . .
 
-EXPOSE 4000
+EXPOSE 8000

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection">
+
+    <link rel="stylesheet" href="../theme/estilo.css" media="screen,projection">
+
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta charset="UTF-8">
+
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <!-- Place this data between the <head> tags of your website -->
+  <title>Blog da Roselma Mendes</title>
+  <meta name="description" content="<p><em>Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas existe o Flask-RESTful.</em></p>
+<h2>Rest</h2>
+<p style="text-align: left;">REST = Representative State Transfer (Transferência de Estado Representacional)</p>
+
+<p>O REST é um estilo arquitetural para aplicações Web, cunhado por <a href="http://roy.gbiv.com/">Roy Fielding</a>, em 2000, na sua tese <b>Architectural …</b></p>" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content=""Rest API, python e Django Rest"" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="drafts/rest-api-python-e-django-rest.html" />
+  <meta property="og:image" content="theme/images/" />
+  <meta property="og:description" content="<p><em>Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas existe o Flask-RESTful.</em></p>
+<h2>Rest</h2>
+<p style="text-align: left;">REST = Representative State Transfer (Transferência de Estado Representacional)</p>
+
+<p>O REST é um estilo arquitetural para aplicações Web, cunhado por <a href="http://roy.gbiv.com/">Roy Fielding</a>, em 2000, na sua tese <b>Architectural …</b></p>" />
+
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+</head>
+
+
+
+<body>
+  <div class="container brown">
+
+<div class="row">
+    <div class="col s12">
+        <a href="/"><h1 class="blog-titulo">Blog da Roselma Mendes</h1></a>
+    </div>
+</div>
+    <div class="row">
+
+      <div class="col s12 m12">
+
+        <div class="card">
+
+
+          <div class="card-content">
+            <span class="post-titulo card-title"><h1>"Rest API, python e Django Rest"</h1></span>
+            <p>19 March 2016</p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text="Rest API, python e Django Rest"&url=drafts/rest-api-python-e-django-rest.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>            <p><em>Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas existe o Flask-RESTful.</em></p>
+<h2>Rest</h2>
+<p style="text-align: left;">REST = Representative State Transfer (Transferência de Estado Representacional)</p>
+
+<p>O REST é um estilo arquitetural para aplicações Web, cunhado por <a href="http://roy.gbiv.com/">Roy Fielding</a>, em 2000, na sua tese <b>Architectural Styles and the Design of Network-based Software Architectures</b> [1].</p>
+<p>Em termos gerais, uma aplicação que segue as especificações REST disponibiliza métodos (verbos), geralmente pelo protocolo <a href="http://br.ccm.net/contents/266-o-protocolo-http">HTTP</a>, que agirão no servidor, modificando ou obtendo informação.</p>
+<p>Com o uso dos verbos teremos acesso aos resources (recursos), que são qualquer mapeamento de um conjunto de dados para uma determinada entidade.</p>
+<p>Exemplo de um resource de uma entidade Usuário:</p>
+<div class="highlight"><pre><span></span><span class="p">{</span>
+
+  <span class="nt">&quot;nome&quot;</span><span class="p">:</span> <span class="s2">&quot;Roselma Mendes&quot;</span><span class="p">,</span>
+
+  <span class="nt">&quot;idade&quot;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
+
+  <span class="nt">&quot;Ocupação&quot;</span><span class="p">:</span> <span class="s2">&quot;desenvolvedora&quot;</span><span class="p">,</span>
+
+  <span class="nt">&quot;tipoDeAcesso&quot;</span><span class="p">:</span> <span class="s2">&quot;Admin&quot;</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Em linhas gerais, se temos uma url <code>http://servidor-qualquer.com/v1/posts</code> que recebe um <code>POST</code> com um json definido com campos para um usuário. A url gerará uma ação do tipo "Crie um usuário" (um registro na tabela <code>usuario</code> será criado). Esta ação gera uma resposta com informações de status e a url <b>única e exclusiva</b> para acessar o registro, entre outras informações da requisição.</p>
+<div class="highlight"><pre><span></span><span class="m">201</span> Created
+
+<span class="o">{</span>
+    <span class="s2">&quot;usuario&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;id&quot;</span>: <span class="m">3</span>,
+        <span class="s2">&quot;nome&quot;</span>: <span class="s2">&quot;Roselma Mendes&quot;</span>,
+        <span class="s2">&quot;idade&quot;</span>: <span class="m">27</span>,
+        <span class="s2">&quot;ocupacao&quot;</span>: <span class="s2">&quot;desenvolvedora&quot;</span>,
+        <span class="s2">&quot;tipoDeAcesso&quot;</span>: <span class="s2">&quot;Admin&quot;</span>,
+        <span class="s2">&quot;links&quot;</span>: <span class="o">[</span>
+            <span class="o">{</span>
+                <span class="s2">&quot;href&quot;</span>: <span class="s2">&quot;/usuario/3&quot;</span>,
+                <span class="s2">&quot;rel&quot;</span>: <span class="s2">&quot;self&quot;</span>,
+                <span class="s2">&quot;method&quot;</span>: <span class="s2">&quot;GET&quot;</span>
+            <span class="o">}</span>,
+            <span class="o">{</span>
+                <span class="s2">&quot;href&quot;</span>: <span class="s2">&quot;/usuario/3&quot;</span>,
+                <span class="s2">&quot;rel&quot;</span>: <span class="s2">&quot;edit&quot;</span>,
+                <span class="s2">&quot;method&quot;</span>: <span class="s2">&quot;PUT&quot;</span>
+            <span class="o">}</span>,
+            <span class="o">{</span>
+                <span class="s2">&quot;href&quot;</span>: <span class="s2">&quot;/usuario/3&quot;</span>,
+                <span class="s2">&quot;rel&quot;</span>: <span class="s2">&quot;delete&quot;</span>,
+                <span class="s2">&quot;method&quot;</span>: <span class="s2">&quot;DELETE&quot;</span>
+            <span class="o">}</span>
+        <span class="o">]</span>
+    <span class="o">}</span>,
+    <span class="s2">&quot;links&quot;</span>: <span class="o">{</span>
+       <span class="s2">&quot;href&quot;</span>: <span class="s2">&quot;/usuario&quot;</span>,
+       <span class="s2">&quot;rel&quot;</span>: <span class="s2">&quot;list&quot;</span>,
+       <span class="s2">&quot;method&quot;</span>: <span class="s2">&quot;GET&quot;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>Quando temos um serviço baseado em REST costumamos chamá-lo de um serviço <span class="evidence">Restful</span>.</p>
+<h3>Verbos</h3>
+<p>Os verbos mais comumente usados são o GET (visualizar), POST (criar), PUT (atualizar/substituir), PATCH (atualizar/modificar) e DELETE (remover). Além desses verbos, existem outros, mas pouco usados.</p>
+<p>No caso do GET, por exemplo, dado que uma aplicação que interage com sua API "chame" <code>http://servidor-qualquer.com/v1/usuario/1</code>, ela obterá as informações do registro 1 da tabela usuario. O método GET serve tanto para uma lista de usuários como para obter um único registro.</p>
+<h2>API</h2>
+<p style="text-align: left;">API = Application Programming Interface (Interface de Programação de Aplicação)</p>
+
+<p>Uma API é um conjunto de rotinas usadas pelas aplicações com o intuito de usar um serviço sem conhecer sua implementação. No caso de <span class="evidence">Rest API's</span>, estamos falando de um conjunto de operações disponibilizadas por um serviço Restful.</p>
+<h2>Django</h2>
+<figure>
+    <img src="/images/django-rest/django-unchained.gif" alt="image" >
+</figure>
+
+<p>Não o <a href="http://www.imdb.com/title/tt1853728/">filme</a> do Quentin Tarantino estrelado pelo Jamie Foxx.</p>
+<p>Em se falando de Python, <a href="https://www.djangoproject.com/">Django</a> é um framework para construção de aplicações Web "que encoraja o desenvolvimento rápido e um design limpo e pragramático".</p>
+<p>Imagine que temos uma pesquisa de satisfação que possui uma questão com algumas opções para as pessoas escolherem como resposta.</p>
+<p>Aqui abaixo temos um HTML que exibe o enunciado da questão e quantos votos cada resposta recebeu.</p>
+<p>Django permite acessarmos, dentro de um arquivo HTML, o objeto Pergunta e com um <code>for</code> percorrer suas respostas (linha 4).</p>
+<script src="https://gist.github.com/roselmamendes/840de27ecf0ad20ed767.js"></script>
+
+<hr>
+
+<p>E abaixo definimos uma classe View onde relacionamos a classe Pergunta com o resultados.html (linha 8).</p>
+<script src="https://gist.github.com/roselmamendes/e814c41b5f201870b491.js"></script>
+
+<h2>Django Rest</h2>
+<p>Já o Django Rest é a implementação do Django para fazermos Rest API's.</p>
+<p>Dado que tenho uma classe herdando de <code>models.Model</code> do Django, chamada <code>Pergunta</code>, e a classe <code>Resposta</code>. Ambas relacionadas visto que uma pergunta pode ter várias respostas.</p>
+<script src="https://gist.github.com/roselmamendes/85583b5a5b8a14f035db.js"></script>
+
+<p>Criarei uma view (PerguntaView) que terá definido um serializer chamado PerguntaSerializer.</p>
+<script src="https://gist.github.com/roselmamendes/adb4ebdfbe9329aebe36.js"></script>
+
+<p>O Django Rest possui uma quantidade de classes View que já abstraem os principais verbos que um serviço Restful precisa. No exemplo acima utilizamos o <code>ListCreateAPIView</code> que possui POST e GET já implementados.</p>
+<p>Por sua vez, o serializer faz a "conversão" dos dados de um objeto (Model) para a representação em json (ou outro formato). E vice-versa.</p>
+<script src="https://gist.github.com/roselmamendes/03fc0c08e69eb8287585.js"></script>
+
+<table>
+  <tr>
+    <td>
+      <p>Não necessariamente sou obrigada a retornar uma ou mais entidades da forma como elas estão representadas no banco.</p>
+    </td>
+    <td class="img img--fullContainer">
+      <img style="padding-left: 1em;" src="/assets/images/django-rest/usurpa.jpg" />
+    </td>
+  </tr>
+</table>
+
+<p>Pelo serializer tenho liberdade de mexer em como desejo representar uma ou mais entidades. Adicionando, removendo campos de acordo com a necessidade do projeto.</p>
+<p>Tirando alguns outros passos não mencionados, teremos a url <code>http://localhost:8000/v1/perguntas</code> recebendo um json (método POST) e recebendo um outro json em resposta.</p>
+<div align="center" class="img img--fullContainer">
+  <img src="/assets/images/django-rest/resposta-exemplo.png" />
+</div>
+
+<p>Para facilitar a vida de quem desenvolve, o Django Rest disponibiliza uma interface web que nos permite explorar os verbos implementados.</p>
+<div align="center" class="img img--fullContainer">
+  <img src="/assets/images/django-rest/print-django-rest-interface.png" />
+</div>
+
+<h3>Por fim</h3>
+<p>Além do Django Rest, para a linguagem Python existem outros frameworks voltados para Rest API's como o <strike>Flask</strike><a href="https://github.com/flask-restful/flask-restful/">Flask-RESTful</a>.</p>
+<p>Vale dar uma olhada em outras opções e escolher a que melhor atende as necessidades do seu projeto.</p>
+<p>Esse post foi muito mais uma visão geral do que é o Django Rest, não entrei em detalhes de como colocar a aplicação para funcionar, então se você se interessou em saber mais sobre visite a página oficial do <a href="http://www.django-rest-framework.org/">projeto</a>. Lá tem alguns tutoriais para aprofundar melhor no framework.</p>
+<p>No mais deixe suas perguntas nos comentários que ficarei feliz em responder :) <a style="color: #f2f2f2">(rosto sorrindo)</a></p>
+<p>Claro que críticas, sugestões também são bem-vindas!</p>
+<h2>Referências</h2>
+<p style="text-align: left;">[1]<a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"> Architectural Styles and
+the Design of Network-based Software Architectures - Chapter 5</a></p>
+
+<p style="text-align: left;">[2] <a href="http://www.drdobbs.com/web-development/restful-web-services-a-tutorial/240169069"> RESTful Web Services: A Tutorial</a> </p>
+
+<p style="text-align: left;">[3] <a href="http://www.restapitutorial.com/lessons/httpmethods.html">Using HTTP Methods for RESTful Services</a></p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text="Rest API, python e Django Rest"&url=drafts/rest-api-python-e-django-rest.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

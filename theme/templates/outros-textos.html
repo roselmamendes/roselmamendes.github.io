@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "head.html" %}
+<body>
+    <div class="container brown">
+
+        {% include "blog-titulo.html" %}
+
+        <!-- Page Layout here -->
+        <div class="row">
+
+          {% include "sobre.html" %}
+
+          <div class="col s12 m9">
+
+              <div class="row">
+
+                  {% for post in articles[3:] %}
+                  <div class="col m6 s12">
+                      <div class="card">
+                        {% if articles[0].image %}
+                          <div class="card-image">
+                            <img src="theme/images{{post.image}}">
+                          </div>
+                        {% endif %}
+
+                        <div class="card-content black-text">
+                            <a href="{{ post.slug}}.html"><span class="post-index-titulo card-title orange lighten-3">{{ post.title }}</span></a>
+                          <p>{{ post.summary }}</p>
+                        </div>
+                      </div>
+                  </div>
+                  {% endfor %}
+
+                  {% if not articles[3:] %}
+                  <p>Em processo de restaurar os outros textos.</p>
+                  {% endif %}
+
+              </div>
+
+              {% include "sobre-responsive.html" %}
+
+          </div>
+
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
+  </html>

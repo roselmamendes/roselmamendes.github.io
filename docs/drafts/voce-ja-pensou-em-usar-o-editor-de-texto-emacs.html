@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection">
+
+    <link rel="stylesheet" href="../theme/estilo.css" media="screen,projection">
+
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta charset="UTF-8">
+
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <!-- Place this data between the <head> tags of your website -->
+  <title>Blog da Roselma Mendes</title>
+  <meta name="description" content="<h2>Emacs</h2>
+<p><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a> é um editor de texto da família Emacs. É código aberto, portável e customizável. Muito usado pela comunidade de pessoas que desenvolvem software.</p>
+<p>O Emacs (estou suprimindo o GNU) funciona na maior parte dos sistemas operacionais conhecidos, como Mac OS, Windows e Linux. E você pode customizar …</p>" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content=""Você já pensou em usar o editor de texto Emacs?"" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="drafts/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html" />
+  <meta property="og:image" content="theme/images/" />
+  <meta property="og:description" content="<h2>Emacs</h2>
+<p><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a> é um editor de texto da família Emacs. É código aberto, portável e customizável. Muito usado pela comunidade de pessoas que desenvolvem software.</p>
+<p>O Emacs (estou suprimindo o GNU) funciona na maior parte dos sistemas operacionais conhecidos, como Mac OS, Windows e Linux. E você pode customizar …</p>" />
+
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+</head>
+
+
+
+<body>
+  <div class="container brown">
+
+<div class="row">
+    <div class="col s12">
+        <a href="/"><h1 class="blog-titulo">Blog da Roselma Mendes</h1></a>
+    </div>
+</div>
+    <div class="row">
+
+      <div class="col s12 m12">
+
+        <div class="card">
+
+
+          <div class="card-content">
+            <span class="post-titulo card-title"><h1>"Você já pensou em usar o editor de texto Emacs?"</h1></span>
+            <p>02 December 2017</p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text="Você já pensou em usar o editor de texto Emacs?"&url=drafts/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>            <h2>Emacs</h2>
+<p><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a> é um editor de texto da família Emacs. É código aberto, portável e customizável. Muito usado pela comunidade de pessoas que desenvolvem software.</p>
+<p>O Emacs (estou suprimindo o GNU) funciona na maior parte dos sistemas operacionais conhecidos, como Mac OS, Windows e Linux. E você pode customizar seu Emacs tanto usando <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Major-Modes.html#Major-Modes">major modes</a> como criando customizações com a linguagem Lisp, na qual GNU Emacs é feito.</p>
+<p>O seu uso é geralmente por teclado (atalhos). O uso do mouse é desencorajado. Acredito que por isso, e pela proposta de uma interface que diminui o número de interrupções ao longo da escrita, é que o GNU Emacs é amplamente usado pela comunidade de tecnologia. Assim como seu concorrente o <a href="http://www.vim.org/">Vim</a>.</p>
+<p>Dá pra fazer de um tudo um pouco no Emacs: <a href="https://www.emacswiki.org/emacs/CategoryWebBrowser">abrir sites</a>, <a href="https://github.com/krisajenkins/helm-spotify">usar o Spotify</a>, <a href="http://www.nongnu.org/emacsdoc-fr/manuel/shell.html">executar linha de comando</a>, <a href="https://www.masteringemacs.org/article/how-to-write-a-book-in-emacs">escrever livros</a>, artigos, e claro escrever código, etc. Esse post eu fiz todo usando Emacs.</p>
+<figure>
+    <a href="#"><img src="/images/este-post-emacs.png" alt="image"></a>
+    <figcaption><a href="https://www.emacswiki.org/emacs/eww" title="">meu Emacs aberto com o eww e o arquivo markdown deste post.</a>.</figcaption>
+</figure>
+
+<h2>Major modes</h2>
+<p>Um major mode é o modo de edição ativo no momento. Para saber qual está ativo no momento veja na parte de baixo da tela entre parenteses.</p>
+<p>Eles dizem respeito algumas configurações específicas para o tipo de conteúdo editado no momento, por exemplo, quando eu abro um arquivo markdown, o Emacs identifica isso e carrega o major mode Markdown. Veja a figura abaixo.</p>
+<figure>
+    <a href="#"><img src="/images/major-mode.png" alt="image"></a>
+</figure>
+
+<p>Há vários major modes para customizar seu Emacs. Alguns que estou usando:</p>
+<p><a href="https://github.com/dominikh/go-mode.el">Go</a></p>
+<p><a href="https://jblevins.org/projects/markdown-mode/">Markdown</a></p>
+<p><a href="https://www.emacswiki.org/emacs/ScssMode">SCSS</a></p>
+<p><a href="https://www.emacswiki.org/emacs/List_Of_Major_And_Minor_Modes">Aqui</a> uma lista dos major modes disponíveis.</p>
+<h2>Instalando</h2>
+<p>Nesta <a href="https://www.gnu.org/software/emacs/download.html">página</a> você pode encontrar as instruções especificas a seu sistema operacional.</p>
+<h2>Comandos básicos</h2>
+<p>A ajuda do Emacs é C-h ?. Onde C significa a tecla Control: segure o Control, pressione h e depois interrogação.</p>
+<p>Quando descrevendo os comandos, que se chamam key sequence, a documentação usa das terminologias C e M, onde o primeiro é para a tecla Control e a segunda para a tecla ESC/Alt.</p>
+<p>Neste <a href="https://gist.github.com/roselmamendes/41c8d476b6e11712110d7549ede3e71e">gist</a> coloquei os comandos que me são mais úteis no uso do Emacs.</p>
+<h2>Referências</h2>
+<p><a href="http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html">Tutorial do Emacs</a></p>
+<div class="social-media">
+
+  <a class="twitter-share-button"
+     href="https://twitter.com/intent/tweet?text="Você já pensou em usar o editor de texto Emacs?"&url=drafts/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html&via=@roselmamendes"
+     data-size="small">
+    Tweet
+  </a>
+  </div>          </div>
+
+        </div>
+
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>
