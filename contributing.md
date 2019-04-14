@@ -14,4 +14,4 @@ To build the static content run `sh cli/blog.sh build-layout`.
 
 ## Deploy
 
-With Github Pages, `git push` the folder /docs and configure the repository to use the folder /docs to publish the blog.
+With Github Pages, `git push` the folder /blog and configure the repository to use the folder /blog to publish the blog.
