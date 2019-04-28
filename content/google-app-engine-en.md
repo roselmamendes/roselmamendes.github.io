@@ -1,11 +1,14 @@
 Title:  Deploying an application with Google App Engine
-Modified: 2019-02-06
+Date: 2019-02-06
 Category: DevOps
 Tags: GCP, GAE, Monitoring, KMS
 Summary: Learning how to deploy a Flask application in Google App Engine.
 Image: /google-app-engine/print-conteudo-tech-negro.png
-Status: published
+Status: draft
 Slug: tec/google-app-engine
+Lang: en
+
+[Portuguese](/tec/google-app-engine.html)
 
 ## Google App Engine - GAE
 
@@ -127,7 +130,9 @@ It was an adventure make the database works. I have to change the original code 
 
 ## And that is all...
 
-It is possible to access the app on [https://conteudo-negro-tech.appspot.com/](https://conteudo-negro-tech.appspot.com/).
+It is possible to access the app on [https://conteudo-negro-tech.appspot.com/](https://conteudo-negro-tech.appspot.com/). To check the code: https://github.com/NegraTec/conteudo-tech-negro
+
+Also I have another example of application on GAE: https://github.com/roselmamendes/vamos-fazer-compras
 
 ## References
 

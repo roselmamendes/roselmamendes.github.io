@@ -21,17 +21,17 @@
 
     <!-- Place this data between the <head> tags of your website -->
   <title>Blog da Roselma Mendes</title>
-  <meta name="description" content="<p>Aprenda como implantar uma aplicação Flask no Google App Engine.</p>" />
+  <meta name="description" content="<p>Learning how to deploy a Flask application in Google App Engine.</p>" />
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" value="summary">
 
   <!-- Open Graph data -->
-  <meta property="og:title" content="Implantando aplicações com Google App Engine" />
+  <meta property="og:title" content="Deploying an application with Google App Engine" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="tec/google-app-engine.html" />
+  <meta property="og:url" content="tec/google-app-engine-en.html" />
   <meta property="og:image" content="theme/images//google-app-engine/print-conteudo-tech-negro.png" />
-  <meta property="og:description" content="<p>Aprenda como implantar uma aplicação Flask no Google App Engine.</p>" />
+  <meta property="og:description" content="<p>Learning how to deploy a Flask application in Google App Engine.</p>" />
 
   <script>window.twttr = (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0],
@@ -73,30 +73,30 @@
           </div>
 
           <div class="card-content">
-            <span class="post-titulo card-title"><h1>Implantando aplicações com Google App Engine</h1></span>
+            <span class="post-titulo card-title"><h1>Deploying an application with Google App Engine</h1></span>
             <p>06 February 2019</p>
 <div class="social-media">
 
   <a class="twitter-share-button"
-     href="https://twitter.com/intent/tweet?text=Implantando aplicações com Google App Engine&url=tec/google-app-engine.html&via=@roselmamendes"
+     href="https://twitter.com/intent/tweet?text=Deploying an application with Google App Engine&url=tec/google-app-engine-en.html&via=@roselmamendes"
      data-size="small">
     Tweet
   </a>
-  </div>            <p><a href="/tec/google-app-engine-en.html">English</a></p>
+  </div>            <p><a href="/tec/google-app-engine.html">Portuguese</a></p>
 <h2>Google App Engine - GAE</h2>
-<p>O App Engine é parte do ecossistema do Google Cloud Platform (GCP) para hospedar aplicações web. Como na própria <a href="https://cloud.google.com/appengine/">página</a> diz <em>"Foco apenas em escrever código, sem a preocupação de gerenciar a infraestrutura por baixo."</em>. Além de implantar sua aplicação, o serviço prover algumas ferramentas para monitora-la.</p>
-<p>Outros produtos do Google Cloud podem ser encontradas <a href="https://cloud.google.com/products/">aqui</a>.</p>
-<h2>Implantando uma aplicação</h2>
-<p>Eu vou usar o meu repositorio <a href="https://github.com/NegraTec/conteudo-tech-negro">conteudo-tech-negro</a>. Ele é um projeto Python usando <a href="http://flask.pocoo.org/">Flask</a>.</p>
-<p><strong>Crie um app.yaml no repositório</strong></p>
-<p>Primeiramente, o projeto precisa ter um  <a href="https://cloud.google.com/appengine/docs/standard/go/config/appref">app.yaml</a>. Este arquivo contém a descrição de como a implantação é configurada.</p>
-<p>Para conteudo-tech-negro teremos o seguinte:</p>
+<p>The App Engine is  part of the Google Cloud Platform (GCP) ecosystem to host Web applications. As it says in its <a href="https://cloud.google.com/appengine/">page</a> <em>"Focus just on writing code, without the worry of managing the underlying infrastructure."</em>. Besides to deploy your app, it provides a lot of monitoring tools over it.</p>
+<p>Other Google Cloud products can be checked <a href="https://cloud.google.com/products/">here</a>.</p>
+<h2>Deploying an application</h2>
+<p>I am going to use my repository <a href="https://github.com/NegraTec/conteudo-tech-negro">conteudo-tech-negro</a>. It is a Python project using <a href="http://flask.pocoo.org/">Flask</a>.</p>
+<p><strong>Create an app.yaml in the repository</strong></p>
+<p>First of all, the project needs to have an <a href="https://cloud.google.com/appengine/docs/standard/go/config/appref">app.yaml</a>. This file is responsible to describe how the deploy will be configured.</p>
+<p>For conteudo-tech-negro I have the follow:</p>
 <div class="highlight"><pre><span></span><span class="nt">runtime</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python37</span>
 <span class="nt">entrypoint</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gunicorn app:app &amp;&amp; flask db migrate &amp;&amp; flask db upgrade</span>
 </pre></div>
 
 
-<p><strong>No Google Console crie um projeto</strong></p>
+<p><strong>On Google Console create a project</strong></p>
 <p>When logged on cloud.google.com, you can access the <a href="https://cloud.google.com/cloud-console/">Console</a> where you can manage, create the Cloud products of Google using an UI. To go to the Console, usually it is placed at the right up, beside your photo.</p>
 <p>Along all the functionalities the Console brings, you can use the <a href="https://cloud.google.com/sdk/gcloud/">CLI gcloud</a>. But if you prefer use it locally, it is possible install the CLI in your machine as well.</p>
 <p>In this post, I use the Google Console UI.</p>
@@ -181,7 +181,7 @@
 <div class="social-media">
 
   <a class="twitter-share-button"
-     href="https://twitter.com/intent/tweet?text=Implantando aplicações com Google App Engine&url=tec/google-app-engine.html&via=@roselmamendes"
+     href="https://twitter.com/intent/tweet?text=Deploying an application with Google App Engine&url=tec/google-app-engine-en.html&via=@roselmamendes"
      data-size="small">
     Tweet
   </a>
