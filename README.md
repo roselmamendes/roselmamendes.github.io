@@ -1,4 +1,4 @@
-To see the blog/para vsitar o blog: https://roselmamendes.github.io/blog
+To see the blog/para visitar o blog: https://roselmamendes.github.io/blog
 
 # Blog with Pelican
 
