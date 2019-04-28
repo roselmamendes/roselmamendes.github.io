@@ -1,3 +1,5 @@
+To see the blog/para vsitar o blog: https://roselmamendes.github.io/blog
+
 # Blog with Pelican
 
 ## [Contributing](contributing.md)
