@@ -38,4 +38,6 @@ SITELOGO = SITEURL + 'theme/img/IMG_2576.jpg'
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-TEMPLATE_PAGES = {'outros-textos.html': 'outros-textos.html'}
+TEMPLATE_PAGES = {'outros-textos.html': 'outros-textos.html',
+'404.html': '404.html'
+}
