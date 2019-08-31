@@ -4,7 +4,7 @@ Category: DevOps
 Tags: GCP, GAE, Monitoring, KMS
 Summary: Aprenda como implantar uma aplicação Flask no Google App Engine.
 Image: /google-app-engine/print-conteudo-tech-negro.png
-Status: draft
+Status: published
 Slug: tec/google-app-engine
 Lang: pt-br
 
@@ -12,7 +12,7 @@ Lang: pt-br
 
 ## Google App Engine - GAE
 
-O App Engine é parte do ecossistema do Google Cloud Platform (GCP) para hospedar aplicações web. Como na própria [página](https://cloud.google.com/appengine/) diz *"Foco apenas em escrever código, sem a preocupação de gerenciar a infraestrutura por baixo."*. Além de implantar sua aplicação, o serviço também prover algumas ferramentas para monitora-la.
+O App Engine é parte do ecossistema do Google Cloud Platform (GCP) para hospedar aplicações web. Como na própria [página](https://cloud.google.com/appengine/) diz *"Foco apenas em escrever código, sem a preocupação de gerenciar a infraestrutura por baixo."*. Além de implantar sua aplicação, o serviço também prover algumas ferramentas para monitoramento.
 
 Os produtos do Google Cloud podem ser encontradas [aqui](https://cloud.google.com/products/).
 
@@ -62,15 +62,15 @@ Mas meu app tem erros...
 
 ## Ferramentas de Monitoramento
 
-Not only host your application in the infrastructure, Google Cloud allows to use monitoring tools to follow the health of those services deployed.
+Não só infraestrutura na Cloud, o Google Cloud oferece ferramentas de monitoração para entender a saúde das aplicações.
 
-In the Google world, who takes care of Monitoring is the [Stackdriver](https://cloud.google.com/stackdriver/). To use with Google Cloud and AWS, Stackdriver is a platform to manage  techniques in monitoring for your applications and/or infrastructure.
+No ambiente google, quem cuida de Monitoramento é o [Stackdriver](https://cloud.google.com/stackdriver/). Esta ferramenta funciona com Google Cloud e AWS. 
 
 **Logs**
 
-To see the logs of the app, on the Google Console UI, on the menu at left side, go to StackDriver, then Logs.
+Para vê os logs do app, no Google Console, no menu ao lado esquerdo da tela, vá para Stackdriver, e escolha Logs.
 
-As the page is splitted in two sections (up and down), at the down section click on Logs. It will show all the last logs.
+Como a página é dividida em duas seções (superior e inferior), na seção de baixo clique em Logs. Isto mostrará todos os últimos logs.
 
 ![Logs on Stackdriver painel](../theme/images/google-app-engine/stackdriver-logs.png)
 

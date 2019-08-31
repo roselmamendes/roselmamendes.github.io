@@ -62,9 +62,9 @@ But my app got errors...
 
 ## Monitoring tools
 
-Not only host your application in the infrastructure, Google Cloud allows to use monitoring tools to follow the health of those services deployed.
+Not only offer Cloud deployment, Google Cloud allows to use monitoring tools to follow the health of those services deployed.
 
-In the Google world, who takes care of Monitoring is the [Stackdriver](https://cloud.google.com/stackdriver/). To use with Google Cloud and AWS, Stackdriver is a platform to manage  techniques in monitoring for your applications and/or infrastructure.
+In the Google world, who takes care of Monitoring is the [Stackdriver](https://cloud.google.com/stackdriver/). It works for Google Cloud and AWS.
 
 **Logs**
 
