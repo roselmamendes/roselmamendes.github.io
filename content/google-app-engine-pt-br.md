@@ -12,9 +12,9 @@ Lang: pt-br
 
 ## Google App Engine - GAE
 
-O App Engine é parte do ecossistema do Google Cloud Platform (GCP) para hospedar aplicações web. Como na própria [página](https://cloud.google.com/appengine/) diz *"Foco apenas em escrever código, sem a preocupação de gerenciar a infraestrutura por baixo."*. Além de implantar sua aplicação, o serviço prover algumas ferramentas para monitora-la.
+O App Engine é parte do ecossistema do Google Cloud Platform (GCP) para hospedar aplicações web. Como na própria [página](https://cloud.google.com/appengine/) diz *"Foco apenas em escrever código, sem a preocupação de gerenciar a infraestrutura por baixo."*. Além de implantar sua aplicação, o serviço também prover algumas ferramentas para monitora-la.
 
-Outros produtos do Google Cloud podem ser encontradas [aqui](https://cloud.google.com/products/).
+Os produtos do Google Cloud podem ser encontradas [aqui](https://cloud.google.com/products/).
 
 ## Implantando uma aplicação
 
@@ -32,37 +32,35 @@ Para conteudo-tech-negro teremos o seguinte:
 
 **No Google Console crie um projeto**
 
-When logged on cloud.google.com, you can access the [Console](https://cloud.google.com/cloud-console/) where you can manage, create the Cloud products of Google using an UI. To go to the Console, usually it is placed at the right up, beside your photo.
+Quando você loga em cloud.google.com, você pode acessar o [Console](https://cloud.google.com/cloud-console/). Nele é possível gerenciar os produtos para Cloud do Google usando o navegador. Para acessar o Console, geralmente isto está localizado na parte direita da tela, ao lado da sua foto.
 
-Along all the functionalities the Console brings, you can use the [CLI gcloud](https://cloud.google.com/sdk/gcloud/). But if you prefer use it locally, it is possible install the CLI in your machine as well.
+Entre todas as funcionalidades que o Console traz, você pode usar o [CLI gcloud](https://cloud.google.com/sdk/gcloud/). Contudo, se você prefere usar localmente, é possível instalar o CLI em sua máquina local.
 
-In this post, I use the Google Console UI.
+Neste post, eu uso o Google Console no navegador.
 
-To create a new project, go to the name of the project beside the title "Google Cloud Platform" and click in the arrow. It will show a window with the list of projects and a button "New project".
+Para criar um novo projeto, ao lado do título "Google Cloud Platform" existe uma seta que abre uma janela com a lista dos projetos e o botão "Novo projeto".
 
 ![Google Console - list of projects](../theme/images/google-app-engine/google-console-new-project.png)
 
-**Create an app on the Google App Engine**
+**Crie um app no Google App Engine**
 
-With the project selected, on the Cloud Shell use the command `glcoud app create` or on App Engine page click on "Create an app". You need to choose a region, the language and [the environment](https://cloud.google.com/appengine/docs/the-appengine-environments). I am using the standard environment.
+Com o projeto selecionado, no Cloud Shell use o comando `glcoud app create` ou na seção App Engine clique em "Crie um app". Você precisa escolher uma região, a linguagem e o [the environment (ambiente)](https://cloud.google.com/appengine/docs/the-appengine-environments). Estou usando o ambiente standard (padrão).
 
 ![Cloud Shell button, it is on the right up of the screen](../theme/images/google-app-engine/google-cloud-shell-button.png)
 
 ![Google Cloud Shell](../theme/images/google-app-engine/google-shell.png)
 
-**Clone the project to the environment of Cloud shell**
+**Clone o projeto para o ambiente do Cloud Shell**
 
-As I am using the Google Console UI, I need to clone the repository to this.
+Como estou usando o Google Console no navegador, eu preciso clonar o repositório no Cloud Shell.
 
-Open the Cloud shell and run the git clone of the project. On the project folder, run `gcloud app deploy`. Now the app is available on project-name.appspot.com
+Abra o Cloud Shell e rode o git clone do projeto. Na pasta do projeto, rode `gcloud app deploy`. Agora o app está disponível em nome-do-projeto.appspot.com
 
-But my app got errors...
-
-![Summary Chart on App Engine Painel](../theme/images/google-app-engine/app-engine-chart-summary.png)
+Mas meu app tem erros...
 
 ![App Errors on App Engine Painel](../theme/images/google-app-engine/app-engine-found-errors.png)
 
-## Monitoring tools
+## Ferramentas de Monitoramento
 
 Not only host your application in the infrastructure, Google Cloud allows to use monitoring tools to follow the health of those services deployed.
 
@@ -124,13 +122,15 @@ Other approaches I found on the Internet:
 
 It was an adventure make the database works. I have to change the original code that worked already on Heroku: 
 
-* I needed to understand how to connect to the socket connections with psycopg2 library. Outdated information in the App Engine standard environment documentation;
+* I needed to understand how to connect to the socket connections with psycopg2 library. At the time I was writing this post there was outdated information in the App Engine standard environment documentation;
 
 * I struggled to get an approach to run the migrations on the database with [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/). At the end I added the migration command on the initialization of the server, programatically. Before I could use `flask db upgrade` deploying in Heroku but App Engine doesn't allow run more than one command on the entrypoint for the deploy. Also, I couldn't find an ["easy"](https://stackoverflow.com/questions/36698070/how-to-use-flask-migrate-with-google-app-engine) way to run commands on the application machine;
 
+* I shut down the app since I was charged. It was not simple to understand what is going to be billed or not. I decided to remove all the resources configured there...
+
 ## And that is all...
 
-It is possible to access the app on [https://conteudo-negro-tech.appspot.com/](https://conteudo-negro-tech.appspot.com/). To check the code: https://github.com/NegraTec/conteudo-tech-negro
+To check the code: https://github.com/NegraTec/conteudo-tech-negro
 
 Also I have another example of application on GAE: https://github.com/roselmamendes/vamos-fazer-compras
 

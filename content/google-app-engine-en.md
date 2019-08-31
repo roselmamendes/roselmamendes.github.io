@@ -14,7 +14,7 @@ Lang: en
 
 The App Engine is  part of the Google Cloud Platform (GCP) ecosystem to host Web applications. As it says in its [page](https://cloud.google.com/appengine/) *"Focus just on writing code, without the worry of managing the underlying infrastructure."*. Besides to deploy your app, it provides a lot of monitoring tools over it.
 
-Other Google Cloud products can be checked [here](https://cloud.google.com/products/).
+The Google Cloud products can be checked [here](https://cloud.google.com/products/).
 
 ## Deploying an application
 
@@ -24,17 +24,17 @@ I am going to use my repository [conteudo-tech-negro](https://github.com/NegraTe
 
 First of all, the project needs to have an [app.yaml](https://cloud.google.com/appengine/docs/standard/go/config/appref). This file is responsible to describe how the deploy will be configured.
 
-For conteudo-tech-negro I have the follow:
+For conteudo-tech-negro I have the following:
 
 	:::yaml
 	runtime: python37
 	entrypoint: gunicorn app:app && flask db migrate && flask db upgrade
 
-**On Google Console create a project**
+**On Google Console, create a project**
 
 When logged on cloud.google.com, you can access the [Console](https://cloud.google.com/cloud-console/) where you can manage, create the Cloud products of Google using an UI. To go to the Console, usually it is placed at the right up, beside your photo.
 
-Along all the functionalities the Console brings, you can use the [CLI gcloud](https://cloud.google.com/sdk/gcloud/). But if you prefer use it locally, it is possible install the CLI in your machine as well.
+Along all the functionalities the Console brings, you can use the [CLI gcloud](https://cloud.google.com/sdk/gcloud/). But if you prefer use it locally, it is possible install the CLI locally in your machine.
 
 In this post, I use the Google Console UI.
 
@@ -57,8 +57,6 @@ As I am using the Google Console UI, I need to clone the repository to this.
 Open the Cloud shell and run the git clone of the project. On the project folder, run `gcloud app deploy`. Now the app is available on project-name.appspot.com
 
 But my app got errors...
-
-![Summary Chart on App Engine Painel](../theme/images/google-app-engine/app-engine-chart-summary.png)
 
 ![App Errors on App Engine Painel](../theme/images/google-app-engine/app-engine-found-errors.png)
 
@@ -124,13 +122,15 @@ Other approaches I found on the Internet:
 
 It was an adventure make the database works. I have to change the original code that worked already on Heroku: 
 
-* I needed to understand how to connect to the socket connections with psycopg2 library. Outdated information in the App Engine standard environment documentation;
+* I needed to understand how to connect to the socket connections with psycopg2 library. At the time I was writing this post there was outdated information in the App Engine standard environment documentation;
 
 * I struggled to get an approach to run the migrations on the database with [Flask Migrate](https://flask-migrate.readthedocs.io/en/latest/). At the end I added the migration command on the initialization of the server, programatically. Before I could use `flask db upgrade` deploying in Heroku but App Engine doesn't allow run more than one command on the entrypoint for the deploy. Also, I couldn't find an ["easy"](https://stackoverflow.com/questions/36698070/how-to-use-flask-migrate-with-google-app-engine) way to run commands on the application machine;
 
+* I shut down the app since I was charged. It was not simple to understand what is going to be billed or not. I decided to remove all the resources configured there...
+
 ## And that is all...
 
-It is possible to access the app on [https://conteudo-negro-tech.appspot.com/](https://conteudo-negro-tech.appspot.com/). To check the code: https://github.com/NegraTec/conteudo-tech-negro
+To check the code: https://github.com/NegraTec/conteudo-tech-negro
 
 Also I have another example of application on GAE: https://github.com/roselmamendes/vamos-fazer-compras
 
