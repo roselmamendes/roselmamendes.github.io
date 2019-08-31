@@ -3,7 +3,7 @@
 case "$1" in
 'build-layout')
 echo "Building the blog"
-docker run --rm -v "$PWD":/usr/src/app -it roselma-pelican pelican
+sudo docker run --rm -v "$PWD":/usr/src/app -it roselma-pelican pelican
 ;;
 
 'build-layout-watch')
