@@ -6,6 +6,11 @@ echo "Building the blog"
 sudo docker run --rm -v "$PWD":/usr/src/app -it roselma-pelican pelican
 ;;
 
+'publicar')
+echo "Usa o publishconf para gerar a pasta blog"
+sudo docker run --rm -v "$PWD":/usr/src/app -it roselma-pelican pelican content -s publishconf.py
+;;
+
 'build-layout-watch')
 echo "Building the blog"
 sudo docker run --rm -v "$PWD":/usr/src/app -it roselma-pelican pelican -r
