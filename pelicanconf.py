@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Roselma Mendes'
 SITENAME = 'Blog da Roselma Mendes'
-SITEURL = ''
+SITEURL = 'http://locahost:8000'
 
 PATH = 'content'
 OUTPUT_PATH = 'blog'
