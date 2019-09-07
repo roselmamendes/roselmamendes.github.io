@@ -44,8 +44,8 @@ Isso é justiça na vida real <b>e no campo da Computação também</b>.
 
 Ovetta Sampson nos questiona com seu [texto](https://www.linkedin.com/pulse/can-technology-racist-ovetta-sampson?articleId=6166609662327152640#comments-6166609662327152640&trk=prof-post). Ela relata a conversa que teve com uma pessoa sobre isso, e já começa o texto falando do vídeo de um rapaz que tenta utlizar um dispenser de sabão:
 
-<div style="padding-left: 30px; text-align: center;">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/1lgDiAInFLY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="video-container">
+	<iframe height="315" src="https://www.youtube.com/embed/1lgDiAInFLY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 <br>
