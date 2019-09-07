@@ -88,7 +88,7 @@ It is possible to link an error log with an issue in your repository.
 
 ![Policy creation page](../theme/images/google-app-engine/stackdriver-policy.png)
 
-To create alerts on GCP it is necessary to create a workspace for the project. There you need to create policies where you can define conditions, notifications and any type of documentation you want to send with the alert.
+To create alerts on GCP it is necessary to create a workspace for the project. Then you need to create policies to define conditions, notifications and any type of documentation you want to send with the alert.
 
 To create a workspace, on Google Console UI at the left menu, go to Stackdriver, then Monitoring. It will trigger the creation of a workspace for the project. More info about creating policies on Stackdriver Monitoring [here](https://cloud.google.com/monitoring/alerts/ui-conditions-ga).
 
@@ -96,7 +96,9 @@ Other interesting tools on Alerts are the [UpTime Checks](https://cloud.google.c
 
 ## Secrets in the code
 
-It was difficult to understand how to deal with sensible information on GCP. Basically my application needs to read the database uri which has sensible information including the password. The good practice is to read it from an environment variable to avoid secrets on the code. But the thing is how to load environment variable while deploying and keep the secrets safe on GCP?
+It was difficult to understand how to deal with sensible information on GCP. 
+
+Basically my application needs to read the database uri which has sensible information including the password. The good practice is to read it from an environment variable to avoid secrets on the code. But the thing is how to load environment variable while deploying and keep the secrets safe on GCP?
 
 In the app.yaml, you can use the keyword `env_variables` to set environment variables for your app. However, as I mentioned before, having secrets in this file, commited in a Github repository, is definitely not a good thing to do.
 
