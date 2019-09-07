@@ -4,7 +4,7 @@ Category: DevOps
 Tags: GCP, GAE, Monitoring, KMS
 Summary: Aprenda como implantar uma aplicação Flask no Google App Engine.
 Image: /google-app-engine/print-conteudo-tech-negro.png
-Status: published
+Status: draft
 Slug: tec/google-app-engine
 Lang: pt-br
 
