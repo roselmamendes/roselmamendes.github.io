@@ -1,10 +1,9 @@
 Title: Estamos construindo tecnologias racistas?
 Modified: 2018-04-14
-Category: tec
+Category: raca-tecnologia
 Tags: bias algorithm, racismo, IA, programação
-Image: /racismo-tecnologia/start-trek-old-version.jpg
+cover: images/racismo-tecnologia/start-trek-old-version.jpg
 Summary: Enquanto tecnologistas qual nossa parcela de contribuição quanto as injustiças sociais?
-Status: published
 Slug: tec/racismo-tecnologia
 
 Enquanto tecnologistas qual nossa parcela de contribuição quanto as injustiças sociais?
@@ -29,7 +28,7 @@ Há uma frase da [Angela Davis](https://www.cartacapital.com.br/sociedade/angela
 
 Eu e tantas outras Mulheres Negras sabemos o papel que uma tecnologia racista tem em nossas vidas.
 
-![](../theme/images/racismo-tecnologia/franchesca-ramsey-equality.gif)
+![](/images/racismo-tecnologia/franchesca-ramsey-equality.gif)
 
 <br>
 <b>Aliado/Aliada são verbos.</b> 
@@ -77,7 +76,7 @@ Existem muitas iniciativas voltadas pra discuti sobre o viés algortimico. Algum
 
 Quando falamos de não construi tecnologias racistas, isso significa também equipes racialmente diversas, onde pessoas negras possam ter suas vozes escutadas. Pois somos, contra tudo e todos, programadoras, cientistas, engenheiras, analistas, e tudo o mais.
 
-![Michael Burnham - Star Trek](../theme/images/racismo-tecnologia/burnham-tardigrade-scans.jpg)
+![Michael Burnham - Star Trek](/images/racismo-tecnologia/burnham-tardigrade-scans.jpg)
 
 ## Links
 

@@ -1,15 +1,9 @@
-title:  "Mulheres Negras na Computação"
-modified:   2017-09-21
-categories: tec
-tags: [Mulher Negra, Mulher Negra Tecnologia, Computação, Racismo, Feminismo Negro]
-image:
-  feature: /mulher-negra-computacao/hidden-figures.jpg
-excerpt: "O Racismo não começou na área da Computação, ele vem de como vivemos em nossa sociedade, e isso é mantido e replicado em todos os seus subsetores. Incluindo a nossa área, Computação."
-Status: draft
+title: Mulheres Negras na Computação
+date: 2017-09-21
+categories: feminismo
+tags: Mulher Negra, Mulher Negra Tecnologia, Computação, Racismo, Feminismo Negro
+Summary: O Racismo não começou na área da Computação, ele vem de como vivemos em nossa sociedade, e isso é mantido e replicado em todos os seus subsetores. Incluindo a nossa área, Computação.
 
-*Na imagem Dorothy Vaughan, Katherine Johnson e Mary Jackson que têm sua história contada pelo filme [Hidden Figures](https://pt.wikipedia.org/wiki/Hidden_Figures) sobre sua atuação na corrida espacial dos Estados Unidos*
-
-*[Fonte da imagem](https://entertainment.howstuffworks.com/5-cool-things-women-who-inspired-hidden-figures-accomplished.htm)*
 
 É muito difícil encontrar informação sobre as Mulheres Negras e eventos na área de desenvolvimento de software/hardware no Brasil.
 
@@ -41,18 +35,14 @@ Os impactos são diretos quando somos excluídas da construção das tecnologias
 
 Joy Buolamwini iniciou um projeto, o [Algorithmic Justice League](https://www.ajlunited.org/fight), onde ela aborda como os algoritmos de reconhecimento facial e outras tecnologias voltadas para Inteligência Artificial estão sendo construídos em bases racistas. O projeto tem o intuito de chamar atenção a situação e iniciar um novo pensamento sobre o treino desses algoritmos (que precisam ir além dos moldes brancos).
 
-<div style="text-align: center;"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fchukwuemeka.afigbo%2Fvideos%2F1666843806667985%2F&show_text=0&width=261" width="261" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe></div>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/87QwWpzVy7I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 *“Se você alguma vez teve problema pra entender a importância da diversidade em tecnologia e seus impactos na sociedade, assista este vídeo[…] Uma pessoa [negra] no time daria melhores resultados.”*
 
 ## O que é diversidade?
 
 Para além de só consumir tecnologias. Nós mulheres negras fazemos tecnologia. E vamos ser reconhecidas por isso.
 
-<figure>
-	<img src="/images/mulher-negra-computacao/post-facebook.png"/>
-	<figcaption>vcs sabem de alguma iniciativa como o Black Girls Code aqui no Brasil?</figcaption>
-</figure>
+![](/images/post-mulheres-negras-em-ti.png)
 
 Mesmo em tempos onde vemos [várias iniciativas bacanas de incentivo a mais mulheres na programação](https://mulheresnacomputacao.com/2016/03/12/mapeamento-colaborativo-das-iniciativas-de-mulheres-na-tecnologia-pelo-pais-3/) — se faz necessário fazer recortes.
 

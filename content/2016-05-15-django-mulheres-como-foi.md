@@ -1,12 +1,9 @@
 Title: Django Mulheres no Recife
 Summary: Este post vem contar como foi o Django Mulheres que aconteceu na cidade do Recife, Pernambuco, Brasil, nos dias 13 e 14 de maio de 2016. Até o momento já participei de 3 eventos voltados para mulheres na computação. E sempre é legal o resultado de como as pessoas ficam felizes (as que ensinam e as que aprendem).
 Date: 2016-05-15
-Modified: 2016-05-15
-Category: mulherTec
+Category: Feminismo
 Tags: django, python, mulheres, TI, programação
-Image:django-mulheres-como-foi/img1.jpg
-Status: draft
-Slug: /tec/django-mulheres-como-foi
+Slug: tec/django-mulheres-como-foi
 
 Este post vem contar como foi o Django Mulheres que aconteceu na cidade do Recife, Pernambuco, Brasil, nos dias 13 e 14 de maio de 2016.
 
@@ -18,21 +15,12 @@ Até o momento já participei de 3 eventos voltados para mulheres na computaçã
  
  Para realizar o evento, o grupo do Django Girls estabelece um modelo e ferramentas que ajudam na realização do mesmo. O modelo é uma sugestão permitindo a quem organiza propor outros formatos que sempre deve almejar expor as mulheres ao desenvolvimento Web.
 
-<!--
-<table>
-  <tr>
-    <td>
-     <p>A proposta são dois dias de atividades voltadas para um tutorial onde as mulheres devem construir um blog. O blog é feito com o <a href="https://www.djangoproject.com/">framework Django</a> na linguagem <a href="https://www.python.org/">Python</a>.</p>
-    </td>
-    <td>
-      <img style="padding-left: 1em;" src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/django-logo.png" />
-    </td>
-  </tr>
-</table>
--->
 
-<img style="display: inline; float: right; padding-left: 1em; width: 30%;" src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/django-logo.png" />
+![](/images/django-girls/django-girls-logo.png)
+
 A proposta são dois dias de atividades voltadas para um tutorial onde as mulheres devem construir um blog. O blog é feito com o <a href="https://www.djangoproject.com/">framework Django</a> na linguagem <a href="https://www.python.org/">Python</a>.
+
+![](/images/django-girls/django-python.png)
 
 
 ## Por que mulheres e não girls?
@@ -43,7 +31,7 @@ Algumas pessoas da organização, e me coloco nesse bolo, já ouvimos que para m
 
 A realidade brasileira é bem diferente da indiana, por exemplo, onde o Inglês é uma "segunda língua" já falada por uma boa parte da população.
 
-As linguagens de programação são em Inglês sim, mas isso não é desculpa para que não usemos nossa própria língua para falarmos o que estamos fazendo ali. E mais importante. Quem queremos ali entenda realmente para quem é o evento e a quê ele se propõe.
+As linguagens de programação são em Inglês sim, mas isso não é desculpa para que não usemos nossa própria língua para falarmos o que estamos fazendo ali. E mais importante. Quem queremos ali, entenda realmente para quem é o evento e a quê ele se propõe.
 
 Por isso tentamos ao máximo usar Django Mulheres e não Django Girls.
 
@@ -51,75 +39,36 @@ Por isso tentamos ao máximo usar Django Mulheres e não Django Girls.
 
 Aqui em Recife, realizamos o evento no escritório da [ThoughtWorks](https://www.thoughtworks.com/pt) recebendo mais ou menos 30 mulheres e 15 treinadora/es.
 
-<div align="center"><img width="100%" height="100%" src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/panoramica-tw.png"/>
-<p style="color: #f2f2f2">Na imagem a sala da ThoughtWorks Recife com as mulheres no evento</p>
-</div>
+![](/images/django-girls/django-girls-1.jpg)
+Na imagem a sala da ThoughtWorks Recife com as mulheres no evento
 
 Como já mencionei, o formato mais executado é o de dois dias que para nós foi sexta a noite e sábado o dia todo.
 
 O primeiro dia, a noite, dedicamos o tempo para instalação do ambiente nas máquinas. Nesse primeiro momento elas, enquanto configurando seus ambientes, já começaram a conhecer umas as outras e trocar experiências.
 
 
-  <div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img13.jpg"/>
-  </div>
-  
-  <div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img10.jpg"/>
-  </div>
-  
-  <div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img11.jpg"/>
-  </div>
-  
-  <div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img12.jpg"/>
-  </div>
+ ![](/images/django-girls/django-girls-2.jpg)
 
 O segundo dia, sábado, ajudamos as mulheres a seguirem o tutorial proposto pelo Django Girls onde propomos a elas que se dividissem em grupo a fim de ajudar o suporte da/os treinadora/es. 
 
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img4.jpg"/>
-</div>
-
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img5.jpg"/>
-</div>
-
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img6.jpg"/>
-</div>
-
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img7.jpg"/>
-</div>   
-
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img8.jpg"/>
-</div>
+![](/images/django-girls/django-girls-3.jpg)
 
 O dia de sábado começou com uma apresentação introduzindo alguns conceitos do desenvolvimento Web e algumas estruturas da linguagem Python. 
 
 Para a primeira apresentação, achamos importante pegar um pouco do que é dito no inicio do tutorial para que as mulheres iniciassem conhecendo um pouco do que elas seriam expostas ali. 
 
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img9.jpg"/>
-</div>
+![](/images/django-girls/django-girls-4.jpg)
 
 A tarde tivemos a apresentação da Wandecleya Martins, que falou um pouco sobre Responsividade.
 
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img3.jpg"/>
-</div>
+![](/images/django-girls/django-girls-5.jpg)
 
 Ao longo do dia parávamos alguns momentos para que todas conversassem sobre as dúvidas mais frequentes que nós treinadora/es percebíamos. Falamos sobre como é a estrutura de uma aplicação Django (projeto e apps), versionamento, deploy (implantação, produção). Tudo bem simples para não sobrecarregá-las de tanta informação e que no momento achamos que não deveria ser tão profunda.
 
 No final batemos um papo todas juntas trocando como foi a experiência de cada uma programando :)
 <a style="color: #f2f2f2">rosto sorrindo</a>
 
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img2.jpg"/>
-</div>
+![](/images/django-girls/django-girls-6.jpg)
 
 ## Impressões
 
@@ -137,10 +86,6 @@ Do que eu senti o saldo foi bem positivo. As mulheres foram expostas a um pouco 
 
 Espero que todas prossigam procurando mais sobre programação e quem sabe ensinem outras também.
 
-<div align="center" class="img img--fullContainer">
-    <img src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/img1.png"/>
-</div>
-
 
 ## Quer organizar ou participar de um Django Mulheres?
 
@@ -156,7 +101,3 @@ Na redes sociais existem várias comunidades voltadas para mulheres onde sempre 
 Existem mulheres que ainda não foram alcançadas por essas iniciativas. Como mulheres na computação, e para mim mulher negra, devemos nos atentar ao fato que ainda estamos longe da inclusão de TODAS as mulheres. As mulheres da favela, as mulheres negras, as mulheres trans, mães de família, independente de sua idade, e tantas outras especificidades.
 
 Eu pessoalmente acredito que devemos ser mais intencionais a quem destinamos esses eventos. Se preocupar em nomes em Inglês é só um aspecto, existem muitos outros que impedem de muitas mulheres serem beneficiadas por esses eventos, como a distância, por exemplo. Não podemos nos esquecer das tantas opressões que assolam milhares de mulheres por aí, as impedindo de terem as mesmas oportunidades que nós mulheres da computação temos.
-
-<div align="center">
-    <img width="40%" height="40%" src="{{site.baseUrl}}/assets/images/django-mulheres-como-foi/we-all-can-do-it.jpg"/>
-</div>

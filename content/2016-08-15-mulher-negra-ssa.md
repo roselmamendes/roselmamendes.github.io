@@ -1,11 +1,8 @@
-title: "Eu, mulher negra, desenvolvedora em Salvador"
-modified:   2016-08-15
-excerpt: ""
-categories: tec
-tags:  ["mulher negra", "vojo", "midia etnica"]
-image:
-  feature: /vojo/mulheres-negras-cover.png
-Status: draft
+title: Eu, mulher negra, desenvolvedora em Salvador
+date: 2016-08-15
+categories: feminismo
+tags:  mulher negra, vojo, midia etnica
+cover: images/midia-etnica-1.jpg
 
 ## Mulheres Pretas e  Tecnologias
 
@@ -15,17 +12,13 @@ Mulheres negras ocupando os espaços digitais, mostrando que produzimos sim tecn
 
 As mulheres contaram suas experiências no desenvolvimento de software, na robótica,, nas comunicações, nas artes audiovisuais, na academia e o papel da mulher negra nesses espaços.
 
-<div align="center" class="img img--fullContainer">
-  <img src="/assets/images/vojo/mulheres-negras-midia-etnica.jpg"/>
-  <p style="font-size: 14px; text-align: center;"></p>
-</div>
+![](/images/)
 
 ## Instituto Mídia Étnica
 
-<div align="center" class="img img--fullContainer">
-  <img src="/assets/images/vojo/midia_etnica.jpg"/>
-  <p style="font-size: 14px; text-align: center;"></p>
-</div>
+
+ ![](/images/midia-etnica2.jpg)
+  
 
 O [Instituto de Mídia Étnica](http://www.midiaetnica.com.br/), criado em 2005, surgiu da inquietação de um grupo de jovens com a representação das negras e negros na mídia.
 
@@ -41,10 +34,8 @@ O Vojo, através de voz , SMS ou [MMS](https://en.wikipedia.org/wiki/Multimedia_
 
 A tecnologia é open source, criada por pesquisadores do Center for Civic Media do MIT ( Instituto de Tecnologia de Massachusetts) com suporte da [VozMob](https://vozmob.net/en/main), [VOIP Drupal](https://www.drupal.org/project/voipdrupal) e  [Mirabot Technology Cooperative](http://mirabot.coop/).
 
-<div align="center" class="img img--fullContainer">
-  <img src="/assets/images/vojo/vojo-primeiros-passos.png"/>
-  <p style="font-size: 14px; text-align: center;"></p>
-</div>
+
+  ![](/images/midia-etnica-3.jpg)
 
 ### Vojo Brasil
 

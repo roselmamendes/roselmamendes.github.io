@@ -1,14 +1,10 @@
-title: "Rest API, python e Django Rest"
-modified: 2016-03-21
-categories: tec
-tags: ["django", "rest", "api", "flask", "python", "programação", "desenvolvimento"]
-image:
-  feature: django-rest/Django-Livre.jpg
-excerpt: "Sobre o framework Django Rest"
-comments: true
-share: true
-hidelogo: true
-Status: draft
+title: Rest API, python e Django Rest
+date: 2016-03-21
+categories: programacao
+tags: django, restful, api, python, programação
+cover: images/django-livre.png
+summary: Sobre o framework Django Rest
+
 
 *Correções: originalmente o post dizia que outra opção de frameworks para Rest API em Python seria o Flask. Mas existe o Flask-RESTful.*
 
@@ -93,9 +89,7 @@ Uma API é um conjunto de rotinas usadas pelas aplicações com o intuito de usa
 
 ## Django
 
-<figure>
-	<img src="/images/django-rest/django-unchained.gif" alt="image" >
-</figure>
+![django-unchained](images/django-unchained.gif)
 
 Não o [filme](http://www.imdb.com/title/tt1853728/) do Quentin Tarantino estrelado pelo Jamie Foxx.
 
@@ -139,7 +133,7 @@ Por sua vez, o serializer faz a "conversão" dos dados de um objeto (Model) para
       <p>Não necessariamente sou obrigada a retornar uma ou mais entidades da forma como elas estão representadas no banco.</p>
     </td>
     <td class="img img--fullContainer">
-      <img style="padding-left: 1em;" src="/assets/images/django-rest/usurpa.jpg" />
+      <img style="padding-left: 1em;" src="/images/usurpa.jpg" />
     </td>
   </tr>
 </table>
@@ -147,15 +141,12 @@ Pelo serializer tenho liberdade de mexer em como desejo representar uma ou mais 
 
 Tirando alguns outros passos não mencionados, teremos a url `http://localhost:8000/v1/perguntas` recebendo um json (método POST) e recebendo um outro json em resposta.
 
-<div align="center" class="img img--fullContainer">
-  <img src="/assets/images/django-rest/resposta-exemplo.png" />
-</div>
+
+![resposta-exemplo](/images/resposta-exemplo.png)
 
 Para facilitar a vida de quem desenvolve, o Django Rest disponibiliza uma interface web que nos permite explorar os verbos implementados.
 
-<div align="center" class="img img--fullContainer">
-  <img src="/assets/images/django-rest/print-django-rest-interface.png" />
-</div>
+![print-django-rest-interface](images/print-django-rest-interface.png)
 
 ### Por fim
 
@@ -171,9 +162,9 @@ Claro que críticas, sugestões também são bem-vindas!
 
 ## Referências
 
-<p style="text-align: left;">[1]<a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"> Architectural Styles and
-the Design of Network-based Software Architectures - Chapter 5</a></p>
+[Architectural Styles and
+the Design of Network-based Software Architectures - Chapter 5](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
 
-<p style="text-align: left;">[2] <a href="http://www.drdobbs.com/web-development/restful-web-services-a-tutorial/240169069"> RESTful Web Services: A Tutorial</a> </p>
+[RESTful Web Services: A Tutorial](http://www.drdobbs.com/web-development/restful-web-services-a-tutorial/240169069)
 
-<p style="text-align: left;">[3] <a href="http://www.restapitutorial.com/lessons/httpmethods.html">Using HTTP Methods for RESTful Services</a></p>
+[Using HTTP Methods for RESTful Services](http://www.restapitutorial.com/lessons/httpmethods.html)

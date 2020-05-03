@@ -1,13 +1,9 @@
-Title:  "Entrega Contínua, o que aprendi - parte 1"
-modified:   2017-10-01
-categories: tec
-tags: [entrega continua, automacao, dev cli, Mulher Negra, Tecnologia]
-image:
-  feature: entrega-continua/riri-iron-heart.jpeg
-  credit: Riri Williams - IronHeart
-  creditlink: en.wikipedia.org/wiki/Riri_Williams
-excerpt: "Já ouviu sobre Entrega Contínua? Seu time implementa essa prática?"
-Status: draft
+Title: Entrega Contínua, o que aprendi - parte 1
+date: 2017-10-01
+categories: programacao
+tags: entrega continua, automacao, dev cli, Mulher Negra, Tecnologia
+cover: images/entrega-continua/RiriBanner.jpg
+summary: Já ouviu sobre Entrega Contínua? Seu time implementa essa prática?
 
 Já ouviu sobre Entrega Contínua? Seu time implementa essa prática?
 
@@ -37,10 +33,7 @@ Pela felicidade de todas as pessoas envolvidas com sua aplicação, você precis
 
 E isso é automatizado o máximo possível.
 
-<figure>
-	<a href="#"><img src="/images/entrega-continua/deployment-pipeline.png" alt="image"></a>
-	<figcaption>Um processo de implantação (deployment pipeline), termo do livro Entrega Contínua.</figcaption>
-</figure>
+![Um processo de implantação (deployment pipeline), termo do livro Entrega Contínua](/images/entrega-continua/entrega-continua-1.png)
 
 #### Ao blog
 
@@ -82,7 +75,7 @@ Ter uma nova funcionalidade ou bug consertado significa também um onboarding tr
 
 <b>Este é só o começo</b>
 
-No [próximo post](https://medium.com/@roselmamendes/entrega-cont%C3%ADnua-o-que-aprendi-cap%C3%ADtulo-2-2cfbcb09c8bf) escrevo sobre Integração Contínua, Segurança e Implantação.
+No [próximo post](/entrega-continua-o-que-aprendi-parte-2.html) escrevo sobre Integração Contínua, Segurança e Implantação.
 
 Como é o processo para você e/ou seu time para começar um novo projeto?
 

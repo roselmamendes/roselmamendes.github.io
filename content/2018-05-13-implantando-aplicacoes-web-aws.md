@@ -2,9 +2,8 @@ Title:  "[Tutorial] Infra na web - AWS e conhecendo o personagem DNS"
 modified:   2018-05-13
 categories: tec
 tags: [implantacao, DEVOPS, AWS, DNS]
-image:
-  feature: /implantacao-web-app-aws/janelle-monae-afroturismo-1.png
-excerpt: "Implantar uma aplicação web envolve certos conceitos que aproveito nesse artigo para aprender e compartilhar."
+cover: /implantacao-web-app-aws/janelle-monae-afroturismo-1.png
+summary: Implantar uma aplicação web envolve certos conceitos que aproveito nesse artigo para aprender e compartilhar."
 Status: draft
 
 No início a intenção com esse post era aprender sobre AWS, mas acabei percebendo que o valor desse texto vem dos conceitos por volta do uso dos serviços da AWS. Este post relata minha aventura aprendendo um pouco do uso das ferramentas da AWS e explico sobre DNS nesse contexto. 

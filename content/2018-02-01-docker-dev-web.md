@@ -1,10 +1,9 @@
-Title:  Docker no desenvolvimento web (nodejs)
-Modified: 2018-02-01
-Category: tec
+Title: Docker no desenvolvimento web (nodejs)
+date: 2018-02-01
+Category: programacao
 Tags: docker, node, contêineres
-Image: /docker-dev-web/group_5622_0.png
+cover: images/docker-dev-web/group_5622_0.png
 Summary: Como utilizar conteinerização para aplicações web e qual a vantagem disso.
-Status: draft
 
 ## Conteinerização
 
@@ -17,10 +16,7 @@ O processo de implantação pode ser otimizado com a ajuda de contêineres no qu
 
 Diferente de uma máquina virtual, os contêineres são mais "leves". Contêineres se utilizam dos recursos do sistema operacional do "computador host" para execução dos processos. Enquanto as máquinas virtuais "levantam" um sistema operacional completo dentro do "computador host".
 
-<figure>
-	<a href="#"><img src="/images/docker-dev-web/Container-Overview.png" alt="image"></a>
-	<figcaption>visão geral de um container</figcaption>
-</figure>
+![visão geral de um container](/images/docker-dev-web/Container-Overview.png)
 
 O uso de contêineres não é só para sistemas distribuídos ou microsserviços. A conteinerização é uma vantagem também para arquiteturas simples com componentes como frontend, backend/api, etc. No final a intenção é manter uma implantação segura e fácil de distribuir.
 
@@ -106,7 +102,7 @@ Para que seja possível eu acessar na minha máquina o endereço http://localhos
 
 Use o parâmetro --rm para garantir que ao "fechar" o container, ele seja destruído. 
  
-<b>node_modules<b>
+**node_modules**
 
 Quando docker, na construção da imagem, chama o npm install, o node_modules é criado e a pasta fica na raiz do repositório. Porém isto traz problemas se você executa o comando docker run com -v. O -v diz para "sincronizar" sua pasta do repositório (sem node_modules) para a pasta do container. Então o comando quebra dizendo que o mesmo não existe, porque o node_modules já não está lá.
 
@@ -120,21 +116,21 @@ O truque que uso é que ao construir a imagem, no Dockerfile, especifico que o n
 
 No Dockerfile fica como nas linhas 7 a 13:
 
-{% gist 51c1b0b6ca1f786c9c3d5e018e7316e4 %}
+<script src="https://gist.github.com/roselmamendes/51c1b0b6ca1f786c9c3d5e018e7316e4.js"></script>
 
 Perceba que primeiro a construção da imagem começa com o workdir apontando para `usr/src` e depois o workdir passa a ser `usr/src/app`. O último para que o código fonte seja copiado em app em vez de usr.
 
 ## Comandos básicos do Docker
 
-docker build: constrói a imagem
+`docker build`: constrói a imagem
 
-docker run: executa o container
+`docker run`: executa o container
 
-docker ps / docker ps -a: mostra os contêineres em execução / mostra os contêineres parados e executando
+`docker ps` / `docker ps -a`: mostra os contêineres em execução / mostra os contêineres parados e executando
 
-docker images: lista as imagens construídas
+`docker images`: lista as imagens construídas
 
-docker system prune: para remoção de artefatos do Docker (imagens, contêineres, volumes, redes) 
+`docker system prune`: para remoção de artefatos do Docker (imagens, contêineres, volumes, redes) 
 
 ## Conclusão
 

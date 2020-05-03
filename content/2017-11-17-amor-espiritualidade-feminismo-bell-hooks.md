@@ -1,15 +1,9 @@
-Title:  "Amor, Espiritualidade e Feminismo por Bell Hooks"
-modified:   2017-11-17
+Title:  Amor, Espiritualidade e Feminismo por Bell Hooks
+date:   2017-11-17
 categories: feminismo-negro
-tags: [feminismo-negro, bell-hooks]
-comments: true
-share: true
-excerpt: "Afinal Amor e Espiritualidade são antagônicos ao Feminismo?"
-image: 
-  feature: greenleaf.jpg
-  credit: Google
-  creditlink: qualquer
-Status: draft
+tags: feminismo-negro, bell-hooks
+summary: Afinal Amor e Espiritualidade são antagônicos ao Feminismo?
+cover: images/greenleaf.jpg
 
 A foto acima é da série [GreenLeaf](https://www.netflix.com/title/80140955){:target="_blank"} . Grace é uma pastora e durante o seriado demonstra atitudes feministas.
 
@@ -30,10 +24,7 @@ Bell desafia a noção do amor que o patriarcado prega em nossa vidas, que vou c
 
 Em um sistema patriarcal, o masculino é priorizado e dado a ele poder, e nas relações romantico-afetivas o homem usa disso:
 
-<figure>
-	<a href="#"> <img src="/images/algoritmofeminicidio.jpg" alt="image" /></a>
-	<figcaption><a href="#" title="Busca no Google sobre morta por vs morto por">Busca no Google sobre morta por vs morto por</a>.</figcaption>
-</figure>
+![Busca no Google sobre morta por vs morto por">Busca no Google sobre morta por vs morto por](/images/algoritmofeminicidio.jpg)
 
 <u>O amor romântico patriarcal não é exclusivo a relações heterossexuais. É um dos entendimentos que tenho nas muitas falas de Bell ao longo do livro, e de relatos pessoais que já escutei. Mas esse não é meu lugar de fala e convido as mulheres e homens homossexuais a expressarem sua opinião sobre o assunto.</u>
 
@@ -46,9 +37,9 @@ Enfim, Bell propõe repensarmos o Amor, para aquele que se baseia no mútuo, em 
 
 <hr>
 
-Chamamos de sistema patriarcal, de sistema racista, pois não se trata de casos isolados de violência contra a Mulher e a pessoas Negras. Quando falamos de um sistema, ele perpassa as dinâmicas do nosso dia-a-dia (piadas racistas) à práticas institucionalizadas de racismo como [a Polícia brasileira que mata jovens negros a rodo e a sociedade e estado agem como se isso fosse um indício normal](https://anistia.org.br/campanhas/jovemnegrovivo/) (normal para quem é branco ou quem pensa como a branquitude). [E não deixemos de falar que o Brasil é o país que mais mata transexuais e travestis.](http://www.otempo.com.br/capa/brasil/brasil-j%C3%A1-tem-61-transexuais-e-travestis-assassinados-em-2017-1.1477509)
+A sociedade em que vivemos, chamamos de patriarcal, de racista, pois não se trata de casos isolados de violência contra a Mulher e a pessoas Negras. Quando falamos de uma estrutura de opressões, ele perpassa as dinâmicas do nosso dia-a-dia (piadas racistas) à práticas institucionalizadas de racismo como [a Polícia brasileira que mata jovens negros a rodo e a sociedade e estado agem como se isso fosse um indício normal](https://anistia.org.br/campanhas/jovemnegrovivo/) (normal para quem é branco ou quem pensa como a branquitude). [E não deixemos de falar que o Brasil é o país que mais mata transexuais e travestis.](http://www.otempo.com.br/capa/brasil/brasil-j%C3%A1-tem-61-transexuais-e-travestis-assassinados-em-2017-1.1477509)
 
-A violência contra esses grupos se dá como consequência da manutenção de um sistema que insiste em ensinar, sim ensinar, que homens podem isso, que isso não é coisa de Mulher, que cabelo tem que ser liso, que quem quer consegue "subir na vida", por que estava vestindo isso, o que estava fazendo ali àquela hora?, que existem homens e existem mulheres e tudo atrelado a seus órgãos genitais, somente e respectivamente, etc.
+A violência contra esses grupos se dá como consequência da manutenção de um sistema que insiste em ensinar, sim ensinar, que homens podem isso, que isso não é coisa de Mulher, que cabelo tem que ser liso, que quem quer consegue "subir na vida", por que estava vestindo isso? o que estava fazendo ali àquela hora?, que existem somente o genero e suas expressoes masculinas e femininas, e tudo atrelado a seus órgãos genitais, somente e respectivamente, etc.
 
 <hr>
 
@@ -57,7 +48,7 @@ O Amor e a Espiritualidade não estão fora desses sistemas de opressão.
 > "Espiritualidade feminista criou um espaço para todas as pessoas interrogarem sistemas de crenças ultrapassados e criar novos caminhos.
 > Representando as divindidades em diversas maneiras, recuperando nosso respeito pelo sagrado feminino, tem ajudado a encontrar novas maneiras de afirmar e/ou reafirmar a importância da vida espiritual."
 
-No capítulo Espiritualidade Feminista, Bell Hooks explora como as matrizes Cristãs foram moldadas também no patriarcado: sim o tal "amor cristão" também desmerece a mulher, e privilegia o homem em relações de opressão. Isso porque só estou me propondo a analisar a questão gênero, mas também podemos explorar essa afirmação com a comunidade LGBT.
+No capítulo Espiritualidade Feminista, Bell Hooks explora como as matrizes Cristãs foram moldadas também no patriarcado: sim o tal "amor cristão" também desmerece a mulher, e privilegia o homem em relações de opressão. 
 
 Mas Bells também coloca que houve/há uma disruptura dessas bases no Cristianismo, quando relata:
 
@@ -81,9 +72,11 @@ E portanto, as religiões devem ser repensadas. Afinal mesmo com o divino envolv
 
 <hr>
 
-O livro Feminism is for everybody: eu não tenho conhecimento se há uma edição do livro em Português, mas quem tem o privilégio de ler em Inglês é uma ótima fonte de conhecimento sobre o Feminismo, sua história, Feminismo Negro, o papel das lésbicas no movimento, relações de classe, direitos reprodutivos (assunto tão necessário e em evidência com a [PEC 181](https://www.brasildefato.com.br/2017/11/09/deputados-aprovam-proibicao-do-aborto-ate-em-casos-de-estupro/?platform=hootsuite)).
+Sobre o livro *Feminism is for everybody*, eu não tenho conhecimento se há uma edição do livro em Português, mas quem tem o privilégio de ler em Inglês é uma ótima fonte de conhecimento sobre o Feminismo, sua história, Feminismo Negro, o papel das lésbicas no movimento, relações de classe, direitos reprodutivos (assunto tão necessário e em evidência com a [PEC 181](https://www.brasildefato.com.br/2017/11/09/deputados-aprovam-proibicao-do-aborto-ate-em-casos-de-estupro/?platform=hootsuite)).
 
 Espero que logo tenhamos a edição traduzida para termos mais inclusão nos debates feministas. Não que não tenhamos aqui nossas companheiras que desafiam os pensamentos sexistas e racistas da nossa sociedade brasileira:
+
+[RACISMO E SEXISMO NA CULTURA BRASILEIRA](https://edisciplinas.usp.br/pluginfile.php/247561/mod_resource/content/1/RACISMO%20E%20SEXISMO%20NA%20CULTURA%20BRASILEIRA.pdf) por Lelia Gonzalez
 
 http://blogueirasnegras.org/
 

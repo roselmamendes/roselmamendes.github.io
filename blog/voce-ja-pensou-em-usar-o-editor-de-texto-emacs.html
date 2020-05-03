@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Você já pensou em usar o editor de texto Emacs?</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="/" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html" rel="canonical" />
+
+    <meta name="description" content="Conhecendo o editor GNU Emacs">
+
+    <meta name="author" content="roselmamendes">
+
+    <meta name="tags" content="editor">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Blog da Roselma Mendes"/>
+<meta property="og:title" content="Você já pensou em usar o editor de texto Emacs?"/>
+<meta property="og:description" content="Conhecendo o editor GNU Emacs"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-12-02 00:00:00-03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/roselmamendes.html">
+<meta property="article:section" content="misc"/>
+<meta property="article:tag" content="editor"/>
+<meta property="og:image" content="/images/emacs/emacs.png">
+
+<!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@roselmamendes">
+    <meta name="twitter:title" content="Você já pensou em usar o editor de texto Emacs?">
+    <meta name="twitter:url" content="/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html">
+
+        <meta name="twitter:image:src" content="/images/emacs/emacs.png">
+
+      <meta name="twitter:description" content="Conhecendo o editor GNU Emacs">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Você já pensou em usar o editor de texto Emacs?",
+  "headline": "Você já pensou em usar o editor de texto Emacs?",
+  "datePublished": "2017-12-02 00:00:00-03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "roselmamendes",
+    "url": "/author/roselmamendes.html"
+  },
+  "image": "/images/emacs/emacs.png",
+  "url": "/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html",
+  "description": "Conhecendo o editor GNU Emacs"
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Você já pensou em usar o editor de texto Emacs?</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="/author/roselmamendes.html">Roselma Mendes</a>
+            | <time datetime="Sat 02 December 2017">Sat 02 December 2017</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('/images/emacs/emacs.png')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <h2>Emacs</h2>
+<p><a href="https://www.gnu.org/software/emacs/">GNU Emacs</a> é um editor de texto da família Emacs. É código aberto, portável e customizável. Muito usado pela comunidade de pessoas que desenvolvem software.</p>
+<p>O Emacs (estou suprimindo o GNU) funciona na maior parte dos sistemas operacionais conhecidos, como Mac OS, Windows e Linux. E você pode customizar seu Emacs tanto usando <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Major-Modes.html#Major-Modes">major modes</a> como criando customizações com a linguagem Lisp, na qual GNU Emacs é feito.</p>
+<p>O seu uso é geralmente por teclado (atalhos). O uso do mouse é desencorajado. Acredito que por isso, e pela proposta de uma interface que diminui o número de interrupções ao longo da escrita, é que o GNU Emacs é amplamente usado pela comunidade de tecnologia. Assim como seu concorrente o <a href="http://www.vim.org/">Vim</a>.</p>
+<p>Dá pra fazer de um tudo um pouco no Emacs: <a href="https://www.emacswiki.org/emacs/CategoryWebBrowser">abrir sites</a>, <a href="https://github.com/krisajenkins/helm-spotify">usar o Spotify</a>, <a href="http://www.nongnu.org/emacsdoc-fr/manuel/shell.html">executar linha de comando</a>, <a href="https://www.masteringemacs.org/article/how-to-write-a-book-in-emacs">escrever livros</a>, artigos, e claro escrever código, etc. Esse post eu fiz todo usando Emacs.</p>
+<p><img alt="meu Emacs aberto com o eww e o arquivo markdown deste post" src="/images/emacs/este-post-emacs.png">
+https://www.emacswiki.org/emacs/eww</p>
+<h2>Major modes</h2>
+<p>Um major mode é o modo de edição ativo no momento. Para saber qual está ativo no momento veja na parte de baixo da tela entre parenteses.</p>
+<p>Eles dizem respeito algumas configurações específicas para o tipo de conteúdo editado no momento, por exemplo, quando eu abro um arquivo markdown, o Emacs identifica isso e carrega o major mode Markdown. Veja a figura abaixo.</p>
+<p><img alt="" src="/images/emacs/major-mode.png"></p>
+<p>Há vários major modes para customizar seu Emacs. Alguns que estou usando:</p>
+<p><a href="https://github.com/dominikh/go-mode.el">Go</a></p>
+<p><a href="https://jblevins.org/projects/markdown-mode/">Markdown</a></p>
+<p><a href="https://www.emacswiki.org/emacs/ScssMode">SCSS</a></p>
+<p><a href="https://www.emacswiki.org/emacs/List_Of_Major_And_Minor_Modes">Aqui</a> uma lista dos major modes disponíveis.</p>
+<h2>Instalando</h2>
+<p>Nesta <a href="https://www.gnu.org/software/emacs/download.html">página</a> você pode encontrar as instruções especificas a seu sistema operacional.</p>
+<h2>Comandos básicos</h2>
+<p>A ajuda do Emacs é C-h ?. Onde C significa a tecla Control: segure o Control, pressione h e depois interrogação.</p>
+<p>Quando descrevendo os comandos, que se chamam key sequence, a documentação usa das terminologias C e M, onde o primeiro é para a tecla Control e a segunda para a tecla ESC/Alt.</p>
+<p>Neste <a href="https://gist.github.com/roselmamendes/41c8d476b6e11712110d7549ede3e71e">gist</a> coloquei os comandos que me são mais úteis no uso do Emacs.</p>
+<h2>Referências</h2>
+<p><a href="http://www2.lib.uchicago.edu/keith/tcl-course/emacs-tutorial.html">Tutorial do Emacs</a></p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Você já pensou em usar o editor de texto Emacs?&amp;url=/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=/voce-ja-pensou-em-usar-o-editor-de-texto-emacs.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="/tag/editor.html">editor</a>                </aside>
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+
+
+                        <figure class="post-author-avatar">
+                            <img src="/images/roselma_.jpg" alt="Roselma Mendes" />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="/author/roselmamendes.html">Roselma Mendes</a></h4>
+                            <p class="post-author-about">Feminista Negra Interseccional que ama programação e trabalha na área desde 2010. Baiana. Uma ThoughtWorker. Curte programação fullstack. Se interessa por Arquitetura de Sistemas: Entrega de Software, infra, design de aplicações, segurança, e por ai vai.</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Recife/Brasil</span>
+                            <span class="post-author-website"><a href="http://roselmamendes.github.io/blog"><i class="ic ic-link"></i> Website</a></span>
+                        <!-- Social linkes in alphabet order. -->
+                            <span class="post-author-github"><a target="_blank" href="https://github.com/roselmamendes"><i class="ic ic-link"></i> GitHub</a></span>
+                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/roselmamendes"><i class="ic ic-twitter"></i> Twitter</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="/theme/js/script.js"></script>
+
+</body>
+</html>

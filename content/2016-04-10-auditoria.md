@@ -1,11 +1,9 @@
 Title: Logging
 Date: 2018-11-02
-Modified:  2018-11-02
 Summary: Se você não loga na sua aplicação, eu aconselho começar a faze-lo.
 Category: Monitoramento
 Tags: auditoria, logs, log estruturado
-Image: /logging/print-log.png
-Status: published
+cover: images/logging/print-log.png
 Slug: tec/logging
 ---
 Toda a aplicação deveria "falar" sobre o que está acontecendo durante sua execução: quando a pessoa clica em um botão, quando alguém faz um request a uma API, quando a busca no banco gera um erro.
@@ -22,7 +20,7 @@ Se você é uma pessoa desenvolvedora, e reparar, logs fazem parte do nosso dia-
 
 Logs podem ser guardados em simples arquivos de texto, como .npm-log do NPM. e/ou também mostrados em terminais/consoles.
 
-![Figura mostrando a tela de um terminal com mensagens de log.](../theme/images/logging/example.png)
+![Figura mostrando a tela de um terminal com mensagens de log](/images/logging/example.png)
 
 A simples chamada de um print() do Python, ou system.out.println() do Java, informando o que está ocorrendo já é um log.
 

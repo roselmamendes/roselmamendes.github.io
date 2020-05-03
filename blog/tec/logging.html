@@ -1,88 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection">
+  <title>Logging</title>
 
-    <link rel="stylesheet" href="../theme/estilo.css" media="screen,projection">
 
-    <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="/" rel="canonical" />
 
-    <meta charset="UTF-8">
+  <!-- Feed -->
 
-     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
 
-    <!-- Place this data between the <head> tags of your website -->
-  <title>Blog da Roselma Mendes</title>
-  <meta name="description" content="<p>Se você não loga na sua aplicação, eu aconselho começar a faze-lo.</p>" />
+  <!-- Code highlight color scheme -->
+      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
 
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" value="summary">
 
-  <!-- Open Graph data -->
-  <meta property="og:title" content="Logging" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://roselmamendes.github.io/blog/tec/logging.html" />
-  <meta property="og:image" content="https://roselmamendes.github.io/blog/theme/images//logging/print-log.png" />
-  <meta property="og:description" content="<p>Se você não loga na sua aplicação, eu aconselho começar a faze-lo.</p>" />
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 
-  <script>window.twttr = (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-      t = window.twttr || {};
-    if (d.getElementById(id)) return t;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js, fjs);
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-    t._e = [];
-    t.ready = function(f) {
-      t._e.push(f);
-    };
 
-    return t;
-  }(document, "script", "twitter-wjs"));</script>
+  <link href="/tec/logging.html" rel="canonical" />
 
+    <meta name="description" content="Se você não loga na sua aplicação, eu aconselho começar a faze-lo.">
+
+    <meta name="author" content="roselmamendes">
+
+    <meta name="tags" content="auditoria">
+    <meta name="tags" content="logs">
+    <meta name="tags" content="log estruturado">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Blog da Roselma Mendes"/>
+<meta property="og:title" content="Logging"/>
+<meta property="og:description" content="Se você não loga na sua aplicação, eu aconselho começar a faze-lo."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/tec/logging.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-11-02 00:00:00-03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/roselmamendes.html">
+<meta property="article:section" content="Monitoramento"/>
+<meta property="article:tag" content="auditoria"/>
+<meta property="article:tag" content="logs"/>
+<meta property="article:tag" content="log estruturado"/>
+<meta property="og:image" content="/images/logging/print-log.png">
+
+<!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@roselmamendes">
+    <meta name="twitter:title" content="Logging">
+    <meta name="twitter:url" content="/tec/logging.html">
+
+        <meta name="twitter:image:src" content="/images/logging/print-log.png">
+
+      <meta name="twitter:description" content="Se você não loga na sua aplicação, eu aconselho começar a faze-lo.">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Logging",
+  "headline": "Logging",
+  "datePublished": "2018-11-02 00:00:00-03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "roselmamendes",
+    "url": "/author/roselmamendes.html"
+  },
+  "image": "/images/logging/print-log.png",
+  "url": "/tec/logging.html",
+  "description": "Se você não loga na sua aplicação, eu aconselho começar a faze-lo."
+}
+</script>
 </head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
 
 
-
-<body>
-  <div class="container brown">
-
-<div class="row">
-    <div class="col s12">
-        <a href="/blog"><h1 class="blog-titulo">Blog da Roselma Mendes</h1></a>
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
     </div>
-</div>
-    <div class="row">
 
-      <div class="col s12 m12">
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Logging</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="/author/roselmamendes.html">Roselma Mendes</a>
+            | <time datetime="Fri 02 November 2018">Fri 02 November 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('/images/logging/print-log.png')">
+      </div>
+    </header>
 
-        <div class="card">
+  <section id="wrapper">
+    <a class="hidden-close"></a>
 
-          <div class="card-image">
-            <img src="../theme/images/logging/print-log.png">
-          </div>
-
-          <div class="card-content">
-            <span class="post-titulo card-title"><h1>Logging</h1></span>
-            <p>02 November 2018</p>
-<div class="social-media">
-
-  <a class="twitter-share-button"
-     href="https://twitter.com/intent/tweet?text=Logging&url=https://roselmamendes.github.io/blog/tec/logging.html&via=roselmamendes"
-     data-size="small">
-    Tweet
-  </a>
-  </div>            <p>Toda a aplicação deveria "falar" sobre o que está acontecendo durante sua execução: quando a pessoa clica em um botão, quando alguém faz um request a uma API, quando a busca no banco gera um erro.</p>
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>Toda a aplicação deveria "falar" sobre o que está acontecendo durante sua execução: quando a pessoa clica em um botão, quando alguém faz um request a uma API, quando a busca no banco gera um erro.</p>
 <p>Por isso logs existem. Para nos contar o que está acontecendo em nossas aplicações e é uma das ferramentas dentro de monitoramento de sistemas.</p>
 <h2>Logging</h2>
 <p>Se você é uma pessoa desenvolvedora, e reparar, logs fazem parte do nosso dia-a-dia, desde aqueles que geramos em nossos sistemas, desde aqueles que <strong>interpretamos</strong> de sistemas de terceiros.</p>
@@ -91,7 +152,7 @@
 <p>"(Logs são) um fluxo de mensagens distintas geradas a partir da execução de um programa."</p>
 </blockquote>
 <p>Logs podem ser guardados em simples arquivos de texto, como .npm-log do NPM. e/ou também mostrados em terminais/consoles.</p>
-<p><img alt="Figura mostrando a tela de um terminal com mensagens de log." src="../theme/images/logging/example.png"></p>
+<p><img alt="Figura mostrando a tela de um terminal com mensagens de log" src="/images/logging/example.png"></p>
 <p>A simples chamada de um print() do Python, ou system.out.println() do Java, informando o que está ocorrendo já é um log.</p>
 <p>As linguagens e frameworks geralmente possuem módulos, libs que abstraem o trabalho de criar logs, como <a href="http://logging.apache.org/log4j/2.x/manual/index.html">log4j</a> para Java.</p>
 <h2>Logging Estruturado</h2>
@@ -148,21 +209,71 @@
 <h2>Links</h2>
 <p><a href="http://www.tiagomatos.com/blog/voce-sabe-o-que-e-log">Você sabe o que é Log?</a></p>
 <p><a href="http://gregoryszorc.com/blog/category/logging/">Thoughts on Logging - Part 1 - Structured Logging</a></p>
-<div class="social-media">
+            </section>
 
-  <a class="twitter-share-button"
-     href="https://twitter.com/intent/tweet?text=Logging&url=https://roselmamendes.github.io/blog/tec/logging.html&via=roselmamendes"
-     data-size="small">
-    Tweet
-  </a>
-  </div>          </div>
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Logging&amp;url=/tec/logging.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/tec/logging.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=/tec/logging.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
 
-        </div>
+                <aside class="post-tags">
+<a href="/tag/auditoria.html">auditoria</a><a href="/tag/logs.html">logs</a><a href="/tag/log-estruturado.html">log estruturado</a>                </aside>
 
-    </div>
+                <div class="clear"></div>
 
-  </div>
-  </div>
+                <aside class="post-author">
+
+
+                        <figure class="post-author-avatar">
+                            <img src="/images/roselma_.jpg" alt="Roselma Mendes" />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="/author/roselmamendes.html">Roselma Mendes</a></h4>
+                            <p class="post-author-about">Feminista Negra Interseccional que ama programação e trabalha na área desde 2010. Baiana. Uma ThoughtWorker. Curte programação fullstack. Se interessa por Arquitetura de Sistemas: Entrega de Software, infra, design de aplicações, segurança, e por ai vai.</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Recife/Brasil</span>
+                            <span class="post-author-website"><a href="http://roselmamendes.github.io/blog"><i class="ic ic-link"></i> Website</a></span>
+                        <!-- Social linkes in alphabet order. -->
+                            <span class="post-author-github"><a target="_blank" href="https://github.com/roselmamendes"><i class="ic ic-link"></i> GitHub</a></span>
+                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/roselmamendes"><i class="ic ic-twitter"></i> Twitter</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="/theme/js/script.js"></script>
+
 </body>
-
 </html>

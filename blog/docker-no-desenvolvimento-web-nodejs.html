@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Docker no desenvolvimento web (nodejs)</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="/" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="/docker-no-desenvolvimento-web-nodejs.html" rel="canonical" />
+
+    <meta name="description" content="Como utilizar conteinerização para aplicações web e qual a vantagem disso.">
+
+    <meta name="author" content="roselmamendes">
+
+    <meta name="tags" content="docker">
+    <meta name="tags" content="node">
+    <meta name="tags" content="contêineres">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Blog da Roselma Mendes"/>
+<meta property="og:title" content="Docker no desenvolvimento web (nodejs)"/>
+<meta property="og:description" content="Como utilizar conteinerização para aplicações web e qual a vantagem disso."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/docker-no-desenvolvimento-web-nodejs.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-02-01 00:00:00-03:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/roselmamendes.html">
+<meta property="article:section" content="programacao"/>
+<meta property="article:tag" content="docker"/>
+<meta property="article:tag" content="node"/>
+<meta property="article:tag" content="contêineres"/>
+<meta property="og:image" content="/images/docker-dev-web/group_5622_0.png">
+
+<!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@roselmamendes">
+    <meta name="twitter:title" content="Docker no desenvolvimento web (nodejs)">
+    <meta name="twitter:url" content="/docker-no-desenvolvimento-web-nodejs.html">
+
+        <meta name="twitter:image:src" content="/images/docker-dev-web/group_5622_0.png">
+
+      <meta name="twitter:description" content="Como utilizar conteinerização para aplicações web e qual a vantagem disso.">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "Docker no desenvolvimento web (nodejs)",
+  "headline": "Docker no desenvolvimento web (nodejs)",
+  "datePublished": "2018-02-01 00:00:00-03:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "roselmamendes",
+    "url": "/author/roselmamendes.html"
+  },
+  "image": "/images/docker-dev-web/group_5622_0.png",
+  "url": "/docker-no-desenvolvimento-web-nodejs.html",
+  "description": "Como utilizar conteinerização para aplicações web e qual a vantagem disso."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="/" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Docker no desenvolvimento web (nodejs)</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="/author/roselmamendes.html">Roselma Mendes</a>
+            | <time datetime="Thu 01 February 2018">Thu 01 February 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('/images/docker-dev-web/group_5622_0.png')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <h2>Conteinerização</h2>
+<p>Assim como as máquinas virtuais, os contêineres possibilitam o isolamento de um ambiente de execução para uma aplicação.
+Esse isolamento compreende as dependências e componentes da sua aplicação. </p>
+<p>Em outras palavras, se chamarmos container de pacote então: temos um pacote com as configurações necessárias para executar seu programa, e esse pacote é facilmente distribuído entre seu time e/ou ambientes (implantação e desenvolvimento local).</p>
+<p>O processo de implantação pode ser otimizado com a ajuda de contêineres no que diz respeito às práticas de Entrega e Implantação Contínua, quando se pensa na propagação da configuração de mais um ambiente ao longo de uma pipeline. Ou pensando simples, na garantia de que a mesma configuração do ambiente da desenvolvedora vai ser replicado para o ambiente de produção.</p>
+<p>Diferente de uma máquina virtual, os contêineres são mais "leves". Contêineres se utilizam dos recursos do sistema operacional do "computador host" para execução dos processos. Enquanto as máquinas virtuais "levantam" um sistema operacional completo dentro do "computador host".</p>
+<p><img alt="visão geral de um container" src="/images/docker-dev-web/Container-Overview.png"></p>
+<p>O uso de contêineres não é só para sistemas distribuídos ou microsserviços. A conteinerização é uma vantagem também para arquiteturas simples com componentes como frontend, backend/api, etc. No final a intenção é manter uma implantação segura e fácil de distribuir.</p>
+<h2>Vantagens da Conteinerização</h2>
+<p>Do <a href="https://www.digitalocean.com/community/tutorials/o-ecossistema-do-docker-uma-introducao-aos-componentes-comuns-pt">post</a> do Digital Ocean:</p>
+<ul>
+<li>Utilização leve de recursos: Em vez da virtualização de um sistema operacional inteiro, os contêineres isolam no nível de processos e utilizam o kernel do host.</li>
+<li>Portabilidade: Todas as dependências para uma aplicação conteinerizada são empacotadas dentro do contêiner, permitindo-a executar em qualquer host Docker.</li>
+<li>Previsibilidade: O host não se importa com o que está sendo executado dentro do contêiner e o contêiner não se importa em qual host ele está executando. As interfaces são padronizadas e as interações são previsíveis.</li>
+</ul>
+<p>Estes pontos significam que é possível ter um onboarding no time (pessoas novas no seu time) mais rápido e simples; um processo de implantação rápido e seguro (AWS e Heroku são exemplos de serviços que permitem o deploy de aplicações usando Docker); garantia de que “se na minha máquina funciona na sua também é para funcionar” (desenvolvedora, testadora e ambiente de produção usando a mesma configuração de ambiente).</p>
+<h2>Docker</h2>
+<p><figure>
+    <a href="#"><img src="/images/docker-dev-web/dados-docker.png" alt="image"></a>
+    <figcaption><a href="https://www.docker.com/company" title="">https://www.docker.com/company</a></figcaption>
+</figure></p>
+<p><a href="https://www.docker.com/">Docker</a> é uma plataforma open source para a construção e execução de contêineres. Em 2013, a plataforma começou sua história que revolucionou o uso de contêineres no desenvolvimento de software. </p>
+<p><img src="/images/docker-dev-web/docker-logo.png" />
+Hoje falar em dockerizar uma aplicação já é um termo na comunidade de TI.</p>
+<h2>Imagem e contêiner</h2>
+<p>Uma imagem, <a href="https://docs.docker.com/get-started/#a-brief-explanation-of-containers">como no próprio site do Docker relata</a>, é um pacote executável com tudo necessário para rodar um componente de software. Um dockerfile terá as instruções para montar uma imagem, mas ela precisa ser construída para termos um contêiner.</p>
+<p>Já um contêiner é uma instância da imagem. Como falamos mais acima sobre o que é um contêiner, um ambiente isolado no "computador host" que acessa arquivos e portas, se configurado para a tal.</p>
+<h2>Dockerizando uma aplicação web</h2>
+<p>A primeira coisa que você precisa é ter um arquivo Dockerfile na pasta do seu repositório.</p>
+<p>Como minha aplicação vai usar pacotes Node, vou utilizar uma imagem pronta de Node. No <a href="https://hub.docker.com/">Docker Hub</a> eu encontrei <a href="https://hub.docker.com/_/node/">essa</a> imagem e no meu Dockerfile vou colocar:</p>
+<p _="%" endhighlight>{% highlight python linenos %}
+FROM node:8.7.0</p>
+<p>Node possui imagens para várias versões. Isso acontece com outras imagens no Docker Hub, como por exemplo, <a href="https://hub.docker.com/_/postgres/">essa</a> imagem para Postgres.</p>
+<p>Para construir uma imagem para minha aplicação posso executar o comando <code>docker build -t docker-apresentacao .</code>, e então eu obtenho mais ou menos essa saída no meu terminal:</p>
+<figure>
+    <img src="/images/docker-dev-web/saida-docker-build-from.png" />
+</figure>
+
+<p>Dentro do arquivo Dockerfile, a palavra reservada <code>FROM</code> seguida de <code>node:8.7.0</code>, diz ao Docker para montar minha imagem "herdando" da imagem <code>node:8.7.0</code> (linha 1). A imagem do node copia o arquivo <code>package.json</code> para a pasta do container (linha 8) e executa o <code>npm install</code> dentro do próprio container (linha 9).</p>
+<figure><img src="/images/docker-dev-web/dockerfile-node-onbuild.png" />
+<figcaption><a href="https://github.com/nodejs/docker-node/blob/15d780e932fc8cd4a145a36cff405610c8c71b0c/8.7/onbuild/Dockerfile">Veja mais no Github</a></figcaption>
+</figure>
+
+<figure><img src="/images/docker-dev-web/docker-build-image-diagram.png" />
+<figcaption>construindo uma imagem</figcaption></figure>
+
+<p>Executando <code>docker images</code> veremos a imagem para <code>docker-apresentacao</code> na lista de imagens.</p>
+<figure><img src="/images/docker-dev-web/saida-docker-images.png" /></figure>
+
+<p>Após construir a imagem, executo o <code>docker run -p 3000:3000 -t docker-apresentacao npm start</code>. Isto deve permiti que eu acesse em <i>http://localhost:3000</i> a aplicação.</p>
+<p><b>package.json</b></p>
+<p>Com node, para otimizar a construção de uma imagem você precisa separar o momento de instalar os pacotes da cópia do código fonte para o container. Isto facilita quando você modifica um arquivo em específico e isso não dispara a instalação das dependências desnecessariamente.</p>
+<figure><img src="/images/docker-dev-web/dockerfile-packagejson.png"/></figure>
+
+<p><b>Montando volumes</b></p>
+<p>Para que você possa editar os arquivos e isto reflita no container o comando <code>docker run</code> precisa ter <code>-v &lt;pasta-host&gt;:&lt;pasta-container&gt;</code> e definido o diretório de trabalho com o parâmetro <code>-w &lt;pasta-container&gt;</code>.</p>
+<p><code>docker run --rm -p 3000:3000 &lt;b&gt;-v "$PWD":/usr/src/app&lt;/b&gt; -w /usr/src/app -it nome-container yarn test</code></p>
+<p><b>Como acessar uma aplicação localmente</b></p>
+<p>Para que seja possível eu acessar na minha máquina o endereço http://localhost:3000, é necessário usar <code>-p &lt;porta-host&gt;:&lt;port-container&gt;</code>. No Dockerfile colocar o <code>EXPOSE &lt;porta-container&gt;</code>.</p>
+<p><code>docker run --rm &lt;b&gt;-p 3000:3000&lt;/b&gt; -v "$PWD":/usr/src/app -w /usr/src/app -it nome-projeto yarn test</code></p>
+<p>Use o parâmetro --rm para garantir que ao "fechar" o container, ele seja destruído. </p>
+<p><strong>node_modules</strong></p>
+<p>Quando docker, na construção da imagem, chama o npm install, o node_modules é criado e a pasta fica na raiz do repositório. Porém isto traz problemas se você executa o comando docker run com -v. O -v diz para "sincronizar" sua pasta do repositório (sem node_modules) para a pasta do container. Então o comando quebra dizendo que o mesmo não existe, porque o node_modules já não está lá.</p>
+<p>O truque que uso é que ao construir a imagem, no Dockerfile, especifico que o npm install execute dentro de uma pasta acima da pasta onde ficará o código fonte.</p>
+<div class="highlight"><pre><span></span><span class="err">+-- /usr/src</span>
+<span class="err">    +-- node_modules</span>
+<span class="err">    +-- app</span>
+</pre></div>
+
+
+<p>No Dockerfile fica como nas linhas 7 a 13:</p>
+<script src="https://gist.github.com/roselmamendes/51c1b0b6ca1f786c9c3d5e018e7316e4.js"></script>
+
+<p>Perceba que primeiro a construção da imagem começa com o workdir apontando para <code>usr/src</code> e depois o workdir passa a ser <code>usr/src/app</code>. O último para que o código fonte seja copiado em app em vez de usr.</p>
+<h2>Comandos básicos do Docker</h2>
+<p><code>docker build</code>: constrói a imagem</p>
+<p><code>docker run</code>: executa o container</p>
+<p><code>docker ps</code> / <code>docker ps -a</code>: mostra os contêineres em execução / mostra os contêineres parados e executando</p>
+<p><code>docker images</code>: lista as imagens construídas</p>
+<p><code>docker system prune</code>: para remoção de artefatos do Docker (imagens, contêineres, volumes, redes) </p>
+<h2>Conclusão</h2>
+<p>Conteiner não é um termo novo, mas seu uso tem se tornado mais aparente dentro da comunidade recentemente.
+É um movimento muito defendido no DevOps, e quando se fala de ter uma entrega (release) confiável muitos estão adotando-a, assim como Infraestrutura como código.</p>
+<h2>Referências</h2>
+<p><a href="https://www.mundotibrasil.com.br/docker-da-teoria-ao-hands-on/">Docker… da teoria ao Hands on</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/o-ecossistema-do-docker-uma-introducao-aos-componentes-comuns-pt">O Ecossistema do Docker: Uma Introdução aos Componentes Comuns</a></p>
+<p><a href="https://medium.com/google-cloud/a-survival-guide-for-containerizing-your-infrastructure-part-1-why-switch-8e8dee9fc66">A Survival Guide for Containerizing your Infrastructure — Part 1: Why switch?</a></p>
+<p><a href="http://blog.aquasec.com/a-brief-history-of-containers-from-1970s-chroot-to-docker-2016">A Brief History of Containers: From 1970s chroot to Docker 2016</a></p>
+<p><a href="https://www.sdxcentral.com/listings/docker-inc/">Docker Inc</a></p>
+<p><a href="https://docs.docker.com/get-started/#a-brief-explanation-of-containers">Get Started, Part 1: Orientation and setup</a></p>
+<p><a href="https://docs.docker.com/get-started/part2/">Get Started, Part 2: Containers</a></p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Docker no desenvolvimento web (nodejs)&amp;url=/docker-no-desenvolvimento-web-nodejs.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=/docker-no-desenvolvimento-web-nodejs.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=/docker-no-desenvolvimento-web-nodejs.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="/tag/docker.html">docker</a><a href="/tag/node.html">node</a><a href="/tag/conteineres.html">contêineres</a>                </aside>
+
+                <div class="clear"></div>
+
+                <aside class="post-author">
+
+
+                        <figure class="post-author-avatar">
+                            <img src="/images/roselma_.jpg" alt="Roselma Mendes" />
+                        </figure>
+                    <div class="post-author-bio">
+                        <h4 class="post-author-name"><a href="/author/roselmamendes.html">Roselma Mendes</a></h4>
+                            <p class="post-author-about">Feminista Negra Interseccional que ama programação e trabalha na área desde 2010. Baiana. Uma ThoughtWorker. Curte programação fullstack. Se interessa por Arquitetura de Sistemas: Entrega de Software, infra, design de aplicações, segurança, e por ai vai.</p>
+                            <span class="post-author-location"><i class="ic ic-location"></i> Recife/Brasil</span>
+                            <span class="post-author-website"><a href="http://roselmamendes.github.io/blog"><i class="ic ic-link"></i> Website</a></span>
+                        <!-- Social linkes in alphabet order. -->
+                            <span class="post-author-github"><a target="_blank" href="https://github.com/roselmamendes"><i class="ic ic-link"></i> GitHub</a></span>
+                            <span class="post-author-twitter"><a target="_blank" href="https://twitter.com/roselmamendes"><i class="ic ic-twitter"></i> Twitter</a></span>
+                    </div>
+                    <div class="clear"></div>
+                </aside>
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="/theme/js/script.js"></script>
+
+</body>
+</html>
