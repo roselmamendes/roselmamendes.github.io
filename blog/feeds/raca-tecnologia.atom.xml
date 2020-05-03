@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blog da Roselma Mendes - raca-tecnologia</title><link href="https://roselmamendes.github.io/blog/" rel="alternate"></link><link href="https://roselmamendes.github.io/blog/feeds/raca-tecnologia.atom.xml" rel="self"></link><id>https://roselmamendes.github.io/blog/</id><updated>2018-04-14T00:00:00-03:00</updated><entry><title>Estamos construindo tecnologias racistas?</title><link href="https://roselmamendes.github.io/blog/tec/racismo-tecnologia.html" rel="alternate"></link><published>2018-03-30T00:00:00-03:00</published><updated>2018-04-14T00:00:00-03:00</updated><author><name>roselmamendes</name></author><id>tag:roselmamendes.github.io,2018-03-30:/blog/tec/racismo-tecnologia.html</id><summary type="html">&lt;p&gt;Enquanto tecnologistas qual nossa parcela de contribuição quanto as injustiças sociais?&lt;/p&gt;</summary><content type="html">&lt;p&gt;Enquanto tecnologistas qual nossa parcela de contribuição quanto as injustiças sociais?&lt;/p&gt;
+&lt;p&gt;Minha resposta é: uma boa parte de contribuição.&lt;/p&gt;
+&lt;p&gt;Quando não nos perguntamos as bases da construção de qualquer tecnologia, nós podemos perpetuar injustiças.&lt;/p&gt;
+&lt;p&gt;A computação no final das contas é "segui as instruções de um ser humano", repetidamente. A computação trouxe facilidades nas nossas decisões diárias, mas como isso é construído?&lt;/p&gt;
+&lt;p&gt;"Eu só programo meu Rails/Django/React/etc, o que é que eu tenho a ver?"&lt;/p&gt;
+&lt;h2&gt;O que é que temos a ver&lt;/h2&gt;
+&lt;p&gt;Quando se é uma Mulher Negra tecnologista, você sabe que ser da área de Tecnologia/Computação não é só uma profissão, é um ato político também.&lt;/p&gt;
+&lt;p&gt;Ser Mulher Negra, se dizer ser Mulher Negra, viver a negritude, trabalhar, predominar em uma profissão - &lt;b&gt;ainda dominada pela branquitude&lt;/b&gt; - é um ato político, &lt;a href="https://super.abril.com.br/videos/2-minutos-para-entender/2-minutos-para-entender-desigualdade-racial-no-brasil/"&gt;porque estou aonde não deveria está de acordo com a lógica social que vivemos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Há uma frase da &lt;a href="https://www.cartacapital.com.br/sociedade/angela-davis-e-o-significado-da-emancipacao-da-mulher-negra"&gt;Angela Davis&lt;/a&gt; sobre o movimento das Mulheres Negras:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://brasil.elpais.com/brasil/2017/07/27/politica/1501114503_610956.html"&gt;"Quando a mulher negra se movimenta, toda a estrutura da sociedade se movimenta com ela"&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Eu e tantas outras Mulheres Negras sabemos o papel que uma tecnologia racista tem em nossas vidas.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/racismo-tecnologia/franchesca-ramsey-equality.gif"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;b&gt;Aliado/Aliada são verbos.&lt;/b&gt; &lt;/p&gt;
+&lt;p&gt;Link pro vídeo da Franchesca (a que está no gif acima) ao lado -&amp;gt;&lt;/p&gt;
+&lt;p&gt;A luta das Mulheres Negras é por dar acesso a esse grupo os mesmos direitos que pessoas brancas possuem, e não tirar direitos de alguém. Quando você branco luta - também, ao lado - contra o racismo, você está lutando por um mundo melhor para você e todas as pessoas a seu redor. &lt;b&gt;Ninguém perde quando se dá voz a quem não tinha direito a ter voz.&lt;/b&gt; &lt;/p&gt;
+&lt;p&gt;Isso é justiça na vida real &lt;b&gt;e no campo da Computação também&lt;/b&gt;.&lt;/p&gt;
+&lt;h2&gt;Tecnologia pode ser racista?&lt;/h2&gt;
+&lt;p&gt;Ovetta Sampson nos questiona com seu &lt;a href="https://www.linkedin.com/pulse/can-technology-racist-ovetta-sampson?articleId=6166609662327152640#comments-6166609662327152640&amp;amp;trk=prof-post"&gt;texto&lt;/a&gt;. Ela relata a conversa que teve com uma pessoa sobre isso, e já começa o texto falando do vídeo de um rapaz que tenta utlizar um dispenser de sabão:&lt;/p&gt;
+&lt;div class="video-container"&gt;
+    &lt;iframe height="315" src="https://www.youtube.com/embed/1lgDiAInFLY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br&gt;
+Agora vamos a um &lt;a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"&gt;relatório&lt;/a&gt; da Propublica sobre o sistema Compas. &lt;/p&gt;
+&lt;p&gt;O Compas é um algortimo que se propoe a calcular a reincidencia de uma pessoa réu em julgamento nos Estados Unidos. A partir de uma investigação da Propublica: &lt;a href="https://www.propublica.org/article/bias-in-criminal-risk-scores-is-mathematically-inevitable-researchers-say"&gt;"[...]Os dados mostraram que os acusados ​​negros tinham duas vezes mais chances de serem erroneamente rotulados como de maior risco do que os réus brancos.[...]"&lt;/a&gt; no sistema.&lt;/p&gt;
+&lt;p&gt;A empresa do algoritmo se negou a divulgar como o algoritmo tomava a decisão, mas fica evidente que o "código neutro" do programa não levou em consideração todo o historico opressor a que pessoas negras são expostas em suas vidas. O algoritmo ainda não consegue processar as complexidades das nossas relações sociais. Ou pelo menos nós seres humanos ainda não conseguimos "programar" as máquinas para tal.&lt;/p&gt;
+&lt;p&gt;E ...&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mashable.com/2015/07/01/google-photos-black-people-gorillas/#oaCoVg0AJuq7"&gt;Em 2015, a ferramenta Photos do Google colocou a legenda de um album de fotos como Gorilas. O album tinha fotos de pessoas negras.&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.theguardian.com/technology/2017/apr/13/ai-programs-exhibit-racist-and-sexist-biases-research-reveals"&gt;Algoritmos que classificam nomes afro-descendentes como não "agradaveis".&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=t4DT3tQqgRM"&gt;Em 2009, a HP lançou computadores com webcams que acompanhavam a pessoa ao passo que ela se movia, mas isso não funcionava com pessoas negras&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.tecmundo.com.br/inteligencia-artificial/102782-tay-twitter-conseguiu-corromper-ia-microsoft-24-horas.htm"&gt;A tecnologia não é racista, mas ela aprende de nós como ser.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;A &lt;strike&gt;coisa&lt;/strike&gt; tecnologia tá preta&lt;/h2&gt;
+&lt;p&gt;Existem muitas iniciativas voltadas pra discuti sobre o viés algortimico. Alguma delas:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.mathwashing.com/"&gt;MathWashing&lt;/a&gt;(vou traduzi livremente para &lt;i&gt;Cegueira Matemática&lt;/i&gt;): algoritmos não são neutros, pense criticamente, exija transparência.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.ajlunited.org/"&gt;Algorithm Justice League&lt;/a&gt;(Liga da Justiça Algoritmica): discuti os algoritmos que podem ser discriminatórios e como podemos preveni a construção deles.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://medium.com/@YESHICAN/an-open-letter-to-facebook-from-the-data-for-black-lives-movement-81e693c6b46c"&gt;Data for Black Lives&lt;/a&gt;(Dados por vidas Negras): usando dados pelas pessoas negras.&lt;/p&gt;
+&lt;p&gt;Quando falamos de não construi tecnologias racistas, isso significa também equipes racialmente diversas, onde pessoas negras possam ter suas vozes escutadas. Pois somos, contra tudo e todos, programadoras, cientistas, engenheiras, analistas, e tudo o mais.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Michael Burnham - Star Trek" src="/images/racismo-tecnologia/burnham-tardigrade-scans.jpg"&gt;&lt;/p&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://apublica.org/2016/06/software-que-avalia-reus-americanos-cria-injusticas-na-vida-real/"&gt;Sobre estudo da Propublica e o software Compas&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.theguardian.com/technology/2017/dec/04/racist-facial-recognition-white-coders-black-people-police"&gt;How white engineers built racist code – and why it's dangerous for black people&lt;/a&gt;&lt;/p&gt;</content><category term="bias algorithm"></category><category term="racismo"></category><category term="IA"></category><category term="programação"></category></entry></feed>

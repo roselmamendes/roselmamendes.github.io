@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'roselmamendes'
 SITENAME = 'Blog da Roselma Mendes'
-SITEURL = ''
+SITEURL = 'https://roselmamendes.github.io/blog'
 
 HEADER_COVER = 'images/capa3.jpeg'
 AUTHORS_BIO = {
@@ -45,7 +45,7 @@ SOCIAL = (('twitter', 'https://twitter.com/roselmamendes'),
 
 DEFAULT_PAGINATION = 5
 
-THEME='attila-1.3'
+THEME="attila-1.3"
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
