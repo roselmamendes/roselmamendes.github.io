@@ -15,7 +15,7 @@ O seu uso é geralmente por teclado (atalhos). O uso do mouse é desencorajado. 
 
 Dá pra fazer de um tudo um pouco no Emacs: [abrir sites](https://www.emacswiki.org/emacs/CategoryWebBrowser), [usar o Spotify](https://github.com/krisajenkins/helm-spotify), [executar linha de comando](http://www.nongnu.org/emacsdoc-fr/manuel/shell.html), [escrever livros](https://www.masteringemacs.org/article/how-to-write-a-book-in-emacs), artigos, e claro escrever código, etc. Esse post eu fiz todo usando Emacs.
 
-![meu Emacs aberto com o eww e o arquivo markdown deste post](/images/emacs/este-post-emacs.png)
+![meu Emacs aberto com o eww e o arquivo markdown deste post]({static}/images/emacs/este-post-emacs.png)
 https://www.emacswiki.org/emacs/eww
 
 
@@ -25,7 +25,7 @@ Um major mode é o modo de edição ativo no momento. Para saber qual está ativ
 
 Eles dizem respeito algumas configurações específicas para o tipo de conteúdo editado no momento, por exemplo, quando eu abro um arquivo markdown, o Emacs identifica isso e carrega o major mode Markdown. Veja a figura abaixo.
 
-![](/images/emacs/major-mode.png)
+![]({static}/images/emacs/major-mode.png)
 
 
 Há vários major modes para customizar seu Emacs. Alguns que estou usando:
