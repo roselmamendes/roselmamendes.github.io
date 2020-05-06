@@ -28,7 +28,7 @@ Há uma frase da [Angela Davis](https://www.cartacapital.com.br/sociedade/angela
 
 Eu e tantas outras Mulheres Negras sabemos o papel que uma tecnologia racista tem em nossas vidas.
 
-![](/images/racismo-tecnologia/franchesca-ramsey-equality.gif)
+![]({static}/images/racismo-tecnologia/franchesca-ramsey-equality.gif)
 
 <br>
 <b>Aliado/Aliada são verbos.</b> 
@@ -76,7 +76,7 @@ Existem muitas iniciativas voltadas pra discuti sobre o viés algortimico. Algum
 
 Quando falamos de não construi tecnologias racistas, isso significa também equipes racialmente diversas, onde pessoas negras possam ter suas vozes escutadas. Pois somos, contra tudo e todos, programadoras, cientistas, engenheiras, analistas, e tudo o mais.
 
-![Michael Burnham - Star Trek](/images/racismo-tecnologia/burnham-tardigrade-scans.jpg)
+![Michael Burnham - Star Trek]({static}/images/racismo-tecnologia/burnham-tardigrade-scans.jpg)
 
 ## Links
 

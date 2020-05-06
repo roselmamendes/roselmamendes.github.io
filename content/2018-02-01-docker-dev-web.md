@@ -40,7 +40,7 @@ Estes pontos significam que é possível ter um onboarding no time (pessoas nova
 
 [Docker](https://www.docker.com/) é uma plataforma open source para a construção e execução de contêineres. Em 2013, a plataforma começou sua história que revolucionou o uso de contêineres no desenvolvimento de software. 
 
-<img src="/images/docker-dev-web/docker-logo.png" />
+<img src="{static}/images/docker-dev-web/docker-logo.png" />
 Hoje falar em dockerizar uma aplicação já é um termo na comunidade de TI.
 
 ## Imagem e contêiner
