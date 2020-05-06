@@ -149,7 +149,7 @@ Esse isolamento compreende as dependências e componentes da sua aplicação. </
 <p>Em outras palavras, se chamarmos container de pacote então: temos um pacote com as configurações necessárias para executar seu programa, e esse pacote é facilmente distribuído entre seu time e/ou ambientes (implantação e desenvolvimento local).</p>
 <p>O processo de implantação pode ser otimizado com a ajuda de contêineres no que diz respeito às práticas de Entrega e Implantação Contínua, quando se pensa na propagação da configuração de mais um ambiente ao longo de uma pipeline. Ou pensando simples, na garantia de que a mesma configuração do ambiente da desenvolvedora vai ser replicado para o ambiente de produção.</p>
 <p>Diferente de uma máquina virtual, os contêineres são mais "leves". Contêineres se utilizam dos recursos do sistema operacional do "computador host" para execução dos processos. Enquanto as máquinas virtuais "levantam" um sistema operacional completo dentro do "computador host".</p>
-<p><img alt="visão geral de um container" src="/images/docker-dev-web/Container-Overview.png"></p>
+<p><img alt="visão geral de um container" src="https://roselmamendes.github.io/blog/images/docker-dev-web/Container-Overview.png"></p>
 <p>O uso de contêineres não é só para sistemas distribuídos ou microsserviços. A conteinerização é uma vantagem também para arquiteturas simples com componentes como frontend, backend/api, etc. No final a intenção é manter uma implantação segura e fácil de distribuir.</p>
 <h2>Vantagens da Conteinerização</h2>
 <p>Do <a href="https://www.digitalocean.com/community/tutorials/o-ecossistema-do-docker-uma-introducao-aos-componentes-comuns-pt">post</a> do Digital Ocean:</p>
@@ -161,7 +161,7 @@ Esse isolamento compreende as dependências e componentes da sua aplicação. </
 <p>Estes pontos significam que é possível ter um onboarding no time (pessoas novas no seu time) mais rápido e simples; um processo de implantação rápido e seguro (AWS e Heroku são exemplos de serviços que permitem o deploy de aplicações usando Docker); garantia de que “se na minha máquina funciona na sua também é para funcionar” (desenvolvedora, testadora e ambiente de produção usando a mesma configuração de ambiente).</p>
 <h2>Docker</h2>
 <p><figure>
-    <a href="#"><img src="/images/docker-dev-web/dados-docker.png" alt="image"></a>
+    <a href="#"><img src="https://roselmamendes.github.io/blog/images/docker-dev-web/dados-docker.png" alt="image"></a>
     <figcaption><a href="https://www.docker.com/company" title="">https://www.docker.com/company</a></figcaption>
 </figure></p>
 <p><a href="https://www.docker.com/">Docker</a> é uma plataforma open source para a construção e execução de contêineres. Em 2013, a plataforma começou sua história que revolucionou o uso de contêineres no desenvolvimento de software. </p>
@@ -178,24 +178,24 @@ FROM node:8.7.0</p>
 <p>Node possui imagens para várias versões. Isso acontece com outras imagens no Docker Hub, como por exemplo, <a href="https://hub.docker.com/_/postgres/">essa</a> imagem para Postgres.</p>
 <p>Para construir uma imagem para minha aplicação posso executar o comando <code>docker build -t docker-apresentacao .</code>, e então eu obtenho mais ou menos essa saída no meu terminal:</p>
 <figure>
-    <img src="/images/docker-dev-web/saida-docker-build-from.png" />
+    <img src="https://roselmamendes.github.io/blog/images/docker-dev-web/saida-docker-build-from.png" />
 </figure>
 
 <p>Dentro do arquivo Dockerfile, a palavra reservada <code>FROM</code> seguida de <code>node:8.7.0</code>, diz ao Docker para montar minha imagem "herdando" da imagem <code>node:8.7.0</code> (linha 1). A imagem do node copia o arquivo <code>package.json</code> para a pasta do container (linha 8) e executa o <code>npm install</code> dentro do próprio container (linha 9).</p>
-<figure><img src="/images/docker-dev-web/dockerfile-node-onbuild.png" />
+<figure><img src="https://roselmamendes.github.io/blog/images/docker-dev-web/dockerfile-node-onbuild.png" />
 <figcaption><a href="https://github.com/nodejs/docker-node/blob/15d780e932fc8cd4a145a36cff405610c8c71b0c/8.7/onbuild/Dockerfile">Veja mais no Github</a></figcaption>
 </figure>
 
-<figure><img src="/images/docker-dev-web/docker-build-image-diagram.png" />
+<figure><img src="https://roselmamendes.github.io/blog/images/docker-dev-web/docker-build-image-diagram.png" />
 <figcaption>construindo uma imagem</figcaption></figure>
 
 <p>Executando <code>docker images</code> veremos a imagem para <code>docker-apresentacao</code> na lista de imagens.</p>
-<figure><img src="/images/docker-dev-web/saida-docker-images.png" /></figure>
+<figure><img src="https://roselmamendes.github.io/blog/images/docker-dev-web/saida-docker-images.png" /></figure>
 
 <p>Após construir a imagem, executo o <code>docker run -p 3000:3000 -t docker-apresentacao npm start</code>. Isto deve permiti que eu acesse em <i>http://localhost:3000</i> a aplicação.</p>
 <p><b>package.json</b></p>
 <p>Com node, para otimizar a construção de uma imagem você precisa separar o momento de instalar os pacotes da cópia do código fonte para o container. Isto facilita quando você modifica um arquivo em específico e isso não dispara a instalação das dependências desnecessariamente.</p>
-<figure><img src="/images/docker-dev-web/dockerfile-packagejson.png"/></figure>
+<figure><img src="https://roselmamendes.github.io/blog/images/docker-dev-web/dockerfile-packagejson.png"/></figure>
 
 <p><b>Montando volumes</b></p>
 <p>Para que você possa editar os arquivos e isto reflita no container o comando <code>docker run</code> precisa ter <code>-v &lt;pasta-host&gt;:&lt;pasta-container&gt;</code> e definido o diretório de trabalho com o parâmetro <code>-w &lt;pasta-container&gt;</code>.</p>

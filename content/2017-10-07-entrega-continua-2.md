@@ -15,7 +15,7 @@ Esta é a segunda parte. Se você não leu a primeira parte, aqui: [capítulo 1]
 
 #### Integração Contínua
 
-![https://circleci.com/gh/roselmamendes/continuous-delivery-blog/14](/images/entrega-continua/unit-tests-on-circle.png)
+![https://circleci.com/gh/roselmamendes/continuous-delivery-blog/14]({static}/images/entrega-continua/unit-tests-on-circle.png)
 
 Com testes bem escritos e com boa cobertura, nós garantimos que os requisitos do sistema estão satisfeitos.
 
@@ -33,7 +33,7 @@ Como time, tenham estórias consistentes, pequenas, com valor e com critérios d
 
 Use uma ferramenta de Entrega e Implantação Contínua (CI/CD em inglês-Continuous Integration e Continuous Deployment). Existem muitas opções no mercado: [Circle CI](https://circleci.com/), [Go CD](https://www.gocd.org/), [Travis CI](https://travis-ci.org/), [Concourse CI](https://concourse-ci.org/), etc. Elas ajudam a ter um lugar centralizado onde seu time pode seguir a situação do código: testes, análises de qualidade, implantação entre os ambientes, e por aí vai.
 
-![Circle CI builds](/images/entrega-continua/circle-ci-builds.png)
+![Circle CI builds]({static}/images/entrega-continua/circle-ci-builds.png)
 
 Com a prática da [Integração Contínua](http://blog.caelum.com.br/integracao-continua/), você garante a junção dos códigos vindos dos pares ou pessoas no seu time e que o código integrado está ideal para uso. Vá além dos testes unitários. Há outros tipos de testes, mais alto nível, que podem ajudar a fazer a entrega mais confiável. Alguns exemplos de tipos de testes: End to end (preferir não traduzir), Funcionais, Integração.
 
@@ -49,7 +49,7 @@ No projeto do Blog ([capítulo 1](/tec/entrega-continua-1)), eu adicionei uma ve
 
 Já que consigo usar estas verificações por linha de comando, eu posso adicioná-las junto com outras verificações em uma ferramenta de Entrega e/ou Implantação contínua. Com isso posso monitorar se um novo código não está seguro. E isso não só para mim, mas também para as pessoas que estão contribuindo/usando meu projeto.
 
-![console no circleci built para o repositório continuous-delivery-blog](/images/entrega-continua/circle-erro-dependency-check.png) 
+![console no circleci built para o repositório continuous-delivery-blog]({static}/images/entrega-continua/circle-erro-dependency-check.png) 
 
 Pense em análise de dependências, análise de segurança [estática](https://before-you-ship.18f.gov/security/static-analysis/) (infelizmente fontes em inglês) e [dinâmica](https://before-you-ship.18f.gov/security/dynamic-scanning/) para seu projeto. Alguns destas análises podem ser integradas na ferramenta de Integração/Implantação Contínua.
 
@@ -61,7 +61,7 @@ Outras fontes em inglês: https://devops.com/automated-security-testing-continuo
 
 #### A tal da implantação
 
-![console no circleci built para o repositório continuous-delivery-blog](/images/entrega-continua/entrega-continua-1.png)
+![console no circleci built para o repositório continuous-delivery-blog]({static}/images/entrega-continua/entrega-continua-1.png)
 
 Lembra do processo de implantação (ou deployment pipeline)?
 
@@ -89,7 +89,7 @@ Eu escolhi Heroku por ser a ferramenta que tenho mais contexto.
 
 Heroku tem uma funcionalidade chamada Pipeline. Diferente de uma ferramenta como Circle, uma pipeline no Heroku é exclusivo para monitorar/disparar as implantações para uma aplicação, e não rodar verificações tipo testes.
 
-![Uma pipeline para o repositório continuous-delivery-blog](/images/entrega-continua/entrega-continua-2.png)
+![Uma pipeline para o repositório continuous-delivery-blog]({static}/images/entrega-continua/entrega-continua-2.png)
 
 É possível começar uma [implantação (deploy) no Heroku usando commandos Git](https://devcenter.heroku.com/articles/git) (inglês). Mas <b>falando em Entrega Contínua, nós precisamos pensar em automação</b>.
 
@@ -100,7 +100,7 @@ Abaixo .circleci/config.yml no repositório continuous-delivery-blog para usar o
 
 <b>Eu não vou fazer [Implantação Contínua](https://www.infoq.com/br/news/2011/05/implantacao-continua) (Continuous Deployment), isso significa que minha implantação em produção será manual</b>. Eu tenho um botão "On Hold" no Circle para começar a implantação no ambiente de produção.
 
-![Funcionalidade Workflow do Circle: https://circleci.com/workflow-run/eb07571a-eab7-48cf-a705-ae4bc56fe6a7](/images/entrega-continua/circleci-workflow.png)
+![Funcionalidade Workflow do Circle: https://circleci.com/workflow-run/eb07571a-eab7-48cf-a705-ae4bc56fe6a7]({static}/images/entrega-continua/circleci-workflow.png)
 
 É isso. Eu naveguei pelos conceitos que sou exposta no meu dia-a-dia:
 

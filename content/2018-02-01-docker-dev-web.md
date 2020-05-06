@@ -16,7 +16,7 @@ O processo de implantação pode ser otimizado com a ajuda de contêineres no qu
 
 Diferente de uma máquina virtual, os contêineres são mais "leves". Contêineres se utilizam dos recursos do sistema operacional do "computador host" para execução dos processos. Enquanto as máquinas virtuais "levantam" um sistema operacional completo dentro do "computador host".
 
-![visão geral de um container](/images/docker-dev-web/Container-Overview.png)
+![visão geral de um container]({static}/images/docker-dev-web/Container-Overview.png)
 
 O uso de contêineres não é só para sistemas distribuídos ou microsserviços. A conteinerização é uma vantagem também para arquiteturas simples com componentes como frontend, backend/api, etc. No final a intenção é manter uma implantação segura e fácil de distribuir.
 
@@ -34,7 +34,7 @@ Estes pontos significam que é possível ter um onboarding no time (pessoas nova
 
 ## Docker
 <figure>
-	<a href="#"><img src="/images/docker-dev-web/dados-docker.png" alt="image"></a>
+	<a href="#"><img src="{static}/images/docker-dev-web/dados-docker.png" alt="image"></a>
 	<figcaption><a href="https://www.docker.com/company" title="">https://www.docker.com/company</a></figcaption>
 </figure>
 
@@ -63,21 +63,21 @@ Node possui imagens para várias versões. Isso acontece com outras imagens no D
 Para construir uma imagem para minha aplicação posso executar o comando `docker build -t docker-apresentacao .`, e então eu obtenho mais ou menos essa saída no meu terminal:
 
 <figure>
-	<img src="/images/docker-dev-web/saida-docker-build-from.png" />
+	<img src="{static}/images/docker-dev-web/saida-docker-build-from.png" />
 </figure>
 
 Dentro do arquivo Dockerfile, a palavra reservada `FROM` seguida de `node:8.7.0`, diz ao Docker para montar minha imagem "herdando" da imagem `node:8.7.0` (linha 1). A imagem do node copia o arquivo `package.json` para a pasta do container (linha 8) e executa o `npm install` dentro do próprio container (linha 9).
 
-<figure><img src="/images/docker-dev-web/dockerfile-node-onbuild.png" />
+<figure><img src="{static}/images/docker-dev-web/dockerfile-node-onbuild.png" />
 <figcaption><a href="https://github.com/nodejs/docker-node/blob/15d780e932fc8cd4a145a36cff405610c8c71b0c/8.7/onbuild/Dockerfile">Veja mais no Github</a></figcaption>
 </figure>
 
-<figure><img src="/images/docker-dev-web/docker-build-image-diagram.png" />
+<figure><img src="{static}/images/docker-dev-web/docker-build-image-diagram.png" />
 <figcaption>construindo uma imagem</figcaption></figure>
 
 Executando `docker images` veremos a imagem para `docker-apresentacao` na lista de imagens.
 
-<figure><img src="/images/docker-dev-web/saida-docker-images.png" /></figure>
+<figure><img src="{static}/images/docker-dev-web/saida-docker-images.png" /></figure>
 
 Após construir a imagem, executo o `docker run -p 3000:3000 -t docker-apresentacao npm start`. Isto deve permiti que eu acesse em <i>http://localhost:3000</i> a aplicação.
 
@@ -85,7 +85,7 @@ Após construir a imagem, executo o `docker run -p 3000:3000 -t docker-apresenta
 
 Com node, para otimizar a construção de uma imagem você precisa separar o momento de instalar os pacotes da cópia do código fonte para o container. Isto facilita quando você modifica um arquivo em específico e isso não dispara a instalação das dependências desnecessariamente.
 
-<figure><img src="/images/docker-dev-web/dockerfile-packagejson.png"/></figure>
+<figure><img src="{static}/images/docker-dev-web/dockerfile-packagejson.png"/></figure>
 
 <b>Montando volumes</b>
 

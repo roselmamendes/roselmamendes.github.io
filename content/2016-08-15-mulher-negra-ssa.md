@@ -12,12 +12,10 @@ Mulheres negras ocupando os espaços digitais, mostrando que produzimos sim tecn
 
 As mulheres contaram suas experiências no desenvolvimento de software, na robótica,, nas comunicações, nas artes audiovisuais, na academia e o papel da mulher negra nesses espaços.
 
-![](/images/)
-
 ## Instituto Mídia Étnica
 
 
- ![](/images/midia-etnica2.jpg)
+ ![]({static}/images/midia-etnica2.jpg)
   
 
 O [Instituto de Mídia Étnica](http://www.midiaetnica.com.br/), criado em 2005, surgiu da inquietação de um grupo de jovens com a representação das negras e negros na mídia.
@@ -35,7 +33,7 @@ O Vojo, através de voz , SMS ou [MMS](https://en.wikipedia.org/wiki/Multimedia_
 A tecnologia é open source, criada por pesquisadores do Center for Civic Media do MIT ( Instituto de Tecnologia de Massachusetts) com suporte da [VozMob](https://vozmob.net/en/main), [VOIP Drupal](https://www.drupal.org/project/voipdrupal) e  [Mirabot Technology Cooperative](http://mirabot.coop/).
 
 
-  ![](/images/midia-etnica-3.jpg)
+  ![]({static}/images/midia-etnica-3.jpg)
 
 ### Vojo Brasil
 

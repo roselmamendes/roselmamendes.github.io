@@ -24,7 +24,7 @@ Bell desafia a noção do amor que o patriarcado prega em nossa vidas, que vou c
 
 Em um sistema patriarcal, o masculino é priorizado e dado a ele poder, e nas relações romantico-afetivas o homem usa disso:
 
-![Busca no Google sobre morta por vs morto por">Busca no Google sobre morta por vs morto por](/images/algoritmofeminicidio.jpg)
+![Busca no Google sobre morta por vs morto por">Busca no Google sobre morta por vs morto por]({static}/images/algoritmofeminicidio.jpg)
 
 <u>O amor romântico patriarcal não é exclusivo a relações heterossexuais. É um dos entendimentos que tenho nas muitas falas de Bell ao longo do livro, e de relatos pessoais que já escutei. Mas esse não é meu lugar de fala e convido as mulheres e homens homossexuais a expressarem sua opinião sobre o assunto.</u>
 

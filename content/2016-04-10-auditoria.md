@@ -20,7 +20,7 @@ Se você é uma pessoa desenvolvedora, e reparar, logs fazem parte do nosso dia-
 
 Logs podem ser guardados em simples arquivos de texto, como .npm-log do NPM. e/ou também mostrados em terminais/consoles.
 
-![Figura mostrando a tela de um terminal com mensagens de log](/images/logging/example.png)
+![Figura mostrando a tela de um terminal com mensagens de log]({static}/images/logging/example.png)
 
 A simples chamada de um print() do Python, ou system.out.println() do Java, informando o que está ocorrendo já é um log.
 

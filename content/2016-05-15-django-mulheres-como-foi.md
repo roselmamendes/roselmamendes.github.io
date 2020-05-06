@@ -16,11 +16,11 @@ Até o momento já participei de 3 eventos voltados para mulheres na computaçã
  Para realizar o evento, o grupo do Django Girls estabelece um modelo e ferramentas que ajudam na realização do mesmo. O modelo é uma sugestão permitindo a quem organiza propor outros formatos que sempre deve almejar expor as mulheres ao desenvolvimento Web.
 
 
-![](/images/django-girls/django-girls-logo.png)
+![]({static}/images/django-girls/django-girls-logo.png)
 
 A proposta são dois dias de atividades voltadas para um tutorial onde as mulheres devem construir um blog. O blog é feito com o <a href="https://www.djangoproject.com/">framework Django</a> na linguagem <a href="https://www.python.org/">Python</a>.
 
-![](/images/django-girls/django-python.png)
+![]({static}/images/django-girls/django-python.png)
 
 
 ## Por que mulheres e não girls?
@@ -39,7 +39,7 @@ Por isso tentamos ao máximo usar Django Mulheres e não Django Girls.
 
 Aqui em Recife, realizamos o evento no escritório da [ThoughtWorks](https://www.thoughtworks.com/pt) recebendo mais ou menos 30 mulheres e 15 treinadora/es.
 
-![](/images/django-girls/django-girls-1.jpg)
+![]({static}/images/django-girls/django-girls-1.jpg)
 Na imagem a sala da ThoughtWorks Recife com as mulheres no evento
 
 Como já mencionei, o formato mais executado é o de dois dias que para nós foi sexta a noite e sábado o dia todo.
@@ -47,28 +47,28 @@ Como já mencionei, o formato mais executado é o de dois dias que para nós foi
 O primeiro dia, a noite, dedicamos o tempo para instalação do ambiente nas máquinas. Nesse primeiro momento elas, enquanto configurando seus ambientes, já começaram a conhecer umas as outras e trocar experiências.
 
 
- ![](/images/django-girls/django-girls-2.jpg)
+ ![]({static}/images/django-girls/django-girls-2.jpg)
 
 O segundo dia, sábado, ajudamos as mulheres a seguirem o tutorial proposto pelo Django Girls onde propomos a elas que se dividissem em grupo a fim de ajudar o suporte da/os treinadora/es. 
 
-![](/images/django-girls/django-girls-3.jpg)
+![]({static}/images/django-girls/django-girls-3.jpg)
 
 O dia de sábado começou com uma apresentação introduzindo alguns conceitos do desenvolvimento Web e algumas estruturas da linguagem Python. 
 
 Para a primeira apresentação, achamos importante pegar um pouco do que é dito no inicio do tutorial para que as mulheres iniciassem conhecendo um pouco do que elas seriam expostas ali. 
 
-![](/images/django-girls/django-girls-4.jpg)
+![]({static}/images/django-girls/django-girls-4.jpg)
 
 A tarde tivemos a apresentação da Wandecleya Martins, que falou um pouco sobre Responsividade.
 
-![](/images/django-girls/django-girls-5.jpg)
+![]({static}/images/django-girls/django-girls-5.jpg)
 
 Ao longo do dia parávamos alguns momentos para que todas conversassem sobre as dúvidas mais frequentes que nós treinadora/es percebíamos. Falamos sobre como é a estrutura de uma aplicação Django (projeto e apps), versionamento, deploy (implantação, produção). Tudo bem simples para não sobrecarregá-las de tanta informação e que no momento achamos que não deveria ser tão profunda.
 
 No final batemos um papo todas juntas trocando como foi a experiência de cada uma programando :)
 <a style="color: #f2f2f2">rosto sorrindo</a>
 
-![](/images/django-girls/django-girls-6.jpg)
+![]({static}/images/django-girls/django-girls-6.jpg)
 
 ## Impressões
 

@@ -33,7 +33,7 @@ Pela felicidade de todas as pessoas envolvidas com sua aplicação, você precis
 
 E isso é automatizado o máximo possível.
 
-![Um processo de implantação (deployment pipeline), termo do livro Entrega Contínua](/images/entrega-continua/entrega-continua-1.png)
+![Um processo de implantação (deployment pipeline), termo do livro Entrega Contínua]({static}/images/entrega-continua/entrega-continua-1.png)
 
 #### Ao blog
 

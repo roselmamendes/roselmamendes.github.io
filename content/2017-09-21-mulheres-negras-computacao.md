@@ -42,7 +42,7 @@ Joy Buolamwini iniciou um projeto, o [Algorithmic Justice League](https://www.aj
 
 Para além de só consumir tecnologias. Nós mulheres negras fazemos tecnologia. E vamos ser reconhecidas por isso.
 
-![](/images/post-mulheres-negras-em-ti.png)
+![]({static}/images/post-mulheres-negras-em-ti.png)
 
 Mesmo em tempos onde vemos [várias iniciativas bacanas de incentivo a mais mulheres na programação](https://mulheresnacomputacao.com/2016/03/12/mapeamento-colaborativo-das-iniciativas-de-mulheres-na-tecnologia-pelo-pais-3/) — se faz necessário fazer recortes.
 

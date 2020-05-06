@@ -152,7 +152,7 @@
 <p>Esta é a segunda parte. Se você não leu a primeira parte, aqui: <a href="/entrega-continua-o-que-aprendi-parte-1.html">capítulo 1</a>.</p>
 <p>(Antes de voltarmos a esse papo de Entrega Contínua. Um ponto. Houve alguns termos que são minhas traduções livres. Se você conhece traduções melhores comenta logo abaixo. Obrigada!)</p>
 <h4>Integração Contínua</h4>
-<p><img alt="https://circleci.com/gh/roselmamendes/continuous-delivery-blog/14" src="/images/entrega-continua/unit-tests-on-circle.png"></p>
+<p><img alt="https://circleci.com/gh/roselmamendes/continuous-delivery-blog/14" src="https://roselmamendes.github.io/blog/images/entrega-continua/unit-tests-on-circle.png"></p>
 <p>Com testes bem escritos e com boa cobertura, nós garantimos que os requisitos do sistema estão satisfeitos.</p>
 <p>Testes nos dão a segurança que novos códigos no fonte não mudarão funcionalidades já existentes ou garantir que novas funcionalidades façam o que se espera delas. Os testes precisam traduzir como o sistema deve funcionar.</p>
 <p>"Falhe rápido, falhe frequentemente" (tradução livre-“Fail fast, fail often”)</p>
@@ -161,7 +161,7 @@
 <p>Tenha uma suite de testes consistente. Como desenvolvedora pense nos possíveis cenários, de sucesso e erro, que você consegue elaborar.</p>
 <p>Como time, tenham estórias consistentes, pequenas, com valor e com critérios de aceitação (acceptance criteria). Aqui um texto sobre usar <a href="http://ihd.net.br/blog/invest-estorias-dos-usuarios-metodos-ageis-gestao-projetos">I.N.V.E.S.T</a>, uma técnica para escrever estórias.</p>
 <p>Use uma ferramenta de Entrega e Implantação Contínua (CI/CD em inglês-Continuous Integration e Continuous Deployment). Existem muitas opções no mercado: <a href="https://circleci.com/">Circle CI</a>, <a href="https://www.gocd.org/">Go CD</a>, <a href="https://travis-ci.org/">Travis CI</a>, <a href="https://concourse-ci.org/">Concourse CI</a>, etc. Elas ajudam a ter um lugar centralizado onde seu time pode seguir a situação do código: testes, análises de qualidade, implantação entre os ambientes, e por aí vai.</p>
-<p><img alt="Circle CI builds" src="/images/entrega-continua/circle-ci-builds.png"></p>
+<p><img alt="Circle CI builds" src="https://roselmamendes.github.io/blog/images/entrega-continua/circle-ci-builds.png"></p>
 <p>Com a prática da <a href="http://blog.caelum.com.br/integracao-continua/">Integração Contínua</a>, você garante a junção dos códigos vindos dos pares ou pessoas no seu time e que o código integrado está ideal para uso. Vá além dos testes unitários. Há outros tipos de testes, mais alto nível, que podem ajudar a fazer a entrega mais confiável. Alguns exemplos de tipos de testes: End to end (preferir não traduzir), Funcionais, Integração.</p>
 <p>Ainda sobre testes, pesquise sobre <a href="https://www.thoughtworks.com/insights/blog/introducing-software-testing-cupcake-anti-pattern">Pirâmide de Testes e o anti padrão Ice Cream Cone</a>.</p>
 <h4>Testes de segurança</h4>
@@ -169,13 +169,13 @@
 <p>Três coisas que vem a minha mente: evite o <a href="https://www.thoughtworks.com/radar/techniques/security-sandwich">security sandwich</a> (infelizmente não encontrei fontes em pt-br), use a ferramenta de Entrega e Implantação Contínua para rodar os testes de segurança e <a href="http://blog.rivendel.com.br/2016/10/13/5-praticas-devops-para-aprimorar-a-seguranca-na-engenharia-de-software/">faça o ambiente para executar seus builds seguro</a>.</p>
 <p>No projeto do Blog (<a href="/tec/entrega-continua-1">capítulo 1</a>), eu adicionei uma verificação nas dependências, procurando por dependências vulneráveis (<a href="https://www.npmjs.com/package/nsp">nsp</a>) e também um teste de segurança estático (<a href="https://eslint.org/">eslint</a>-não só para verificações lint, scanjs, no-unsafe-innerhtml).</p>
 <p>Já que consigo usar estas verificações por linha de comando, eu posso adicioná-las junto com outras verificações em uma ferramenta de Entrega e/ou Implantação contínua. Com isso posso monitorar se um novo código não está seguro. E isso não só para mim, mas também para as pessoas que estão contribuindo/usando meu projeto.</p>
-<p><img alt="console no circleci built para o repositório continuous-delivery-blog" src="/images/entrega-continua/circle-erro-dependency-check.png"> </p>
+<p><img alt="console no circleci built para o repositório continuous-delivery-blog" src="https://roselmamendes.github.io/blog/images/entrega-continua/circle-erro-dependency-check.png"> </p>
 <p>Pense em análise de dependências, análise de segurança <a href="https://before-you-ship.18f.gov/security/static-analysis/">estática</a> (infelizmente fontes em inglês) e <a href="https://before-you-ship.18f.gov/security/dynamic-scanning/">dinâmica</a> para seu projeto. Alguns destas análises podem ser integradas na ferramenta de Integração/Implantação Contínua.</p>
 <p>Uma boa fonte sobre o assunto de segurança é o site do <a href="https://www.owasp.org/index.php/Main_Page">OWASP</a> (inglês) onde você encontra o <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project#tab=OWASP_Top_10_for_2017_Release_Candidate_1">OWASP Top 10</a> além de vários textos sobre o tema. O Top 10 consiste de uma lista das vulnerabilidades mais encontradas em sistemas pelo mundo.</p>
 <p>Outras fontes em inglês: https://devops.com/automated-security-testing-continuous-delivery-pipeline/.</p>
 <p>(complicado achar conteúdo em português sobre o assunto)</p>
 <h4>A tal da implantação</h4>
-<p><img alt="console no circleci built para o repositório continuous-delivery-blog" src="/images/entrega-continua/entrega-continua-1.png"></p>
+<p><img alt="console no circleci built para o repositório continuous-delivery-blog" src="https://roselmamendes.github.io/blog/images/entrega-continua/entrega-continua-1.png"></p>
 <p>Lembra do processo de implantação (ou deployment pipeline)?</p>
 <p>Nas seções/<a href="/tec/entrega-continua-1">posts</a> anteriores lemos sobre CI, tests e análises de segurança. Isto cobre desde estágio de commit (Commit Stage) até os testes manuais (Manual Testing).</p>
 <p>Agora vamos ler sobre a Entrega (Release).</p>
@@ -189,13 +189,13 @@
 <h4>Implantando o blog</h4>
 <p>Eu escolhi Heroku por ser a ferramenta que tenho mais contexto.</p>
 <p>Heroku tem uma funcionalidade chamada Pipeline. Diferente de uma ferramenta como Circle, uma pipeline no Heroku é exclusivo para monitorar/disparar as implantações para uma aplicação, e não rodar verificações tipo testes.</p>
-<p><img alt="Uma pipeline para o repositório continuous-delivery-blog" src="/images/entrega-continua/entrega-continua-2.png"></p>
+<p><img alt="Uma pipeline para o repositório continuous-delivery-blog" src="https://roselmamendes.github.io/blog/images/entrega-continua/entrega-continua-2.png"></p>
 <p>É possível começar uma <a href="https://devcenter.heroku.com/articles/git">implantação (deploy) no Heroku usando commandos Git</a> (inglês). Mas <b>falando em Entrega Contínua, nós precisamos pensar em automação</b>.</p>
 <p>O Circle 2.0 usa o arquivo .circleci/config.yml. Então…</p>
 <p>Abaixo .circleci/config.yml no repositório continuous-delivery-blog para usar o Circle.
 <script src="https://gist.github.com/roselmamendes/286d8686c69b4426752bff2756acd461.js"></script></p>
 <p><b>Eu não vou fazer <a href="https://www.infoq.com/br/news/2011/05/implantacao-continua">Implantação Contínua</a> (Continuous Deployment), isso significa que minha implantação em produção será manual</b>. Eu tenho um botão "On Hold" no Circle para começar a implantação no ambiente de produção.</p>
-<p><img alt="Funcionalidade Workflow do Circle: https://circleci.com/workflow-run/eb07571a-eab7-48cf-a705-ae4bc56fe6a7" src="/images/entrega-continua/circleci-workflow.png"></p>
+<p><img alt="Funcionalidade Workflow do Circle: https://circleci.com/workflow-run/eb07571a-eab7-48cf-a705-ae4bc56fe6a7" src="https://roselmamendes.github.io/blog/images/entrega-continua/circleci-workflow.png"></p>
 <p>É isso. Eu naveguei pelos conceitos que sou exposta no meu dia-a-dia:</p>
 <ul>
 <li>Integração Contínua: faça pushes ao master, commits pequenos, não puxe sem rodar os testes localmente, seu time deve usar uma ferramenta para Integração e Entrega Contínua;</li>

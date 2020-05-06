@@ -142,11 +142,11 @@ Pelo serializer tenho liberdade de mexer em como desejo representar uma ou mais 
 Tirando alguns outros passos não mencionados, teremos a url `http://localhost:8000/v1/perguntas` recebendo um json (método POST) e recebendo um outro json em resposta.
 
 
-![resposta-exemplo](/images/resposta-exemplo.png)
+![resposta-exemplo]({static}/images/resposta-exemplo.png)
 
 Para facilitar a vida de quem desenvolve, o Django Rest disponibiliza uma interface web que nos permite explorar os verbos implementados.
 
-![print-django-rest-interface](images/print-django-rest-interface.png)
+![print-django-rest-interface]({static}/images/print-django-rest-interface.png)
 
 ### Por fim
 
